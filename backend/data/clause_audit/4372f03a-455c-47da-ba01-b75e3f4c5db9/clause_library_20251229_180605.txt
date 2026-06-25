@@ -1,0 +1,53 @@
+================================================================================
+CLAUSE LIBRARY - ORGANIZED BY CATEGORY
+Contract ID: 4372f03a-455c-47da-ba01-b75e3f4c5db9
+Generated: 2025-12-29T18:06:05.716545
+Categories: 2
+================================================================================
+
+TABLE OF CONTENTS:
+--------------------------------------------------------------------------------
+0. Payment Terms (1 clauses)
+1. Payment Terms (1 clauses)
+
+
+================================================================================
+CATEGORY 0: PAYMENT TERMS
+================================================================================
+Total Clauses: 1
+
+
+--------------------------------------------------------------------------------
+Payment Terms - Clause 1
+--------------------------------------------------------------------------------
+?? In the event that consultant declines to approve the materials submittals which will
+be submitted by Prime Technologies or shall delete the whole of the scope of the
+supply works before the commencement thereof, then in such case sky international
+shall have the right to terminate this agreement and in either case no rights, claims or
+dues whatsoever shall accrue to Prime Technologies there under or in law arising
+from such lack of approval or deletion or resulting from such termination by sky
+international. In case of termination for SIT contract with main contractor concerning this project. Settlement of Disputes
+
+In the event that any disputes or difference of any kind whatsoever shall arise between SIT and
+the supplier in connection with or arising out of this agreement, whether during the progress of
+the supply/ Works or after the completion thereof and whether before or after the termination,
+abandonment or breach of agreement, it shall be referred to the exclusive jurisdiction
+
+================================================================================
+CATEGORY 1: PAYMENT TERMS
+================================================================================
+Total Clauses: 1
+
+
+--------------------------------------------------------------------------------
+Payment Terms - Clause 1
+--------------------------------------------------------------------------------
+Payment Terms:
+
+A Materials
+
+10% CDC as advance payment of complete order to be used for copper booking.
+
+================================================================================
+END OF CLAUSE LIBRARY
+================================================================================

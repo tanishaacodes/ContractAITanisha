@@ -1,0 +1,18 @@
+ai chat needs to improve 
+classification contract add more contracts 
+
+http://localhost:8081/share
+
+https://www.myntra.com/checkout/cart?loggedIn=true
+
+extracted con
+feature - tree like structuce (automatic clause library creation) 
+from ai clause library button on left below that create tree control where all the extracted clause will be displayed(10 classes of contracts)
+
+2) read alfresco contracts will be shown in grid it will action like open contracts risk analysis and extracted clauses 
+
+(initial demo)--ocr feature 
+
+on 3th jan --work on ocr 1) find out right platform ocr(test mistral or tesseract) 
+
+improve ui

@@ -1,0 +1,40 @@
+
+SUPPLY AGREEMENT
+
+Date: February 10, 2026
+
+Supplier: InnovateCo
+Purchaser: Zenith Corporation
+
+1. PRODUCTS
+The Supplier agrees to supply computer hardware to the Purchaser.
+
+2. QUANTITY AND PRICING
+Quantity: 9132 units per month
+Unit Price: $58
+Total Monthly Value: $5,555
+
+3. DELIVERY TERMS
+- Delivery Location: San Francisco, CA
+- Shipping Terms: FOB San Francisco, CA
+- Delivery Schedule: First Monday of each month
+
+4. PAYMENT TERMS
+Payment: Net 30 days from invoice date
+Total Contract Value: $100,000
+
+5. QUALITY STANDARDS
+All products must meet ISO 9001 standards and pass quality inspection.
+
+6. WARRANTIES
+12-month warranty on all products against defects in materials and workmanship.
+
+7. TERM
+Contract Period: 18 months from February 10, 2026
+Renewal: Automatic renewal unless 60 days written notice provided.
+
+8. TERMINATION
+Either party may terminate with 60 days written notice.
+
+_____________________          _____________________
+InnovateCo                    Zenith Corporation

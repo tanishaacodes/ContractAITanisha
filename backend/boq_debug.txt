@@ -1,0 +1,186 @@
+=== PAGE 6 ===
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+             SECTION 5: BILL OF QUANTITIES (BOQ)                                    
+                                                                                    
+             ===========================================================================
+             =====                                                                  
+                                                                                    
+                                                                                    
+                                                                                    
+             SCHEDULE A – SOLAR PV SUPPLY AND INSTALLATION                          
+                                                                                    
+                                                                                    
+                                                                                    
+             S.No Descrip(cid:415)on Unit Qty Rate(Rs.) Amount(Rs.)                 
+             ---- ------------------------------------------------ ---- ------ --------- -----------
+                                                                                    
+             A.1 Monocrystalline Solar Panel ≥540 Wp (MNRE listed) No. 9260 14500 134270000
+                                                                                    
+             A.2 String Inverter 50 KW (grid-(cid:415)ed, IP65) No. 100 95000 9500000
+                                                                                    
+             A.3 Module Moun(cid:415)ng Structure (per KWp, GI) KWp 5000 4200 21000000
+                                                                                    
+             A.4 DC Cable 6 sqmm (FR-LSH, UV resistant) m 180000 42 7560000         
+             A.5 AC Cable 35 sqmm (armoured) m 12000 185 2220000                    
+                                                                                    
+             A.6 DC Junc(cid:415)on Box (8-string, weatherproof) No. 620 3200 1984000
+                                                                                    
+             A.7 Surge Protec(cid:415)on Device (DC + AC, Type 2) Set 240 2800 672000
+                                                                                    
+             A.8 Bi-direc(cid:415)onal Energy Meter (DLMS/COSEM, DISCOM) No. 120 8500 1020000
+                                                                                    
+             A.9 Remote Monitoring System (per site, GPRS/4G) No. 120 12000 1440000 
+                                                                                    
+             A.10 Lightning Arrestor + Earthing (per site) Set 120 6500 780000      
+                                                                                    
+                                                                                    
+             SCHEDULE B – CIVIL AND STRUCTURAL                                      
+                                                                                    
+                                                                                    
+                                                                                    
+             B.1 Structural assessment and roof waterproofing Sqm 48000 850 40800000
+                                                                                    
+             B.2 Conduit & Cable Tray installa(cid:415)on (per site avg) LS 120 18000 2160000
+             B.3 Safety barrier and signage (per site) Set 120 4500 540000          
+                                                                                    
+             B.4 Fire ex(cid:415)nguisher (ABC 5 kg, per site) No. 120 1800 216000  
+                                                                                    
+                                                                                    
+                                                                                    
+             SCHEDULE C – GRID CONNECTION AND METERING                              
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+
+=== PAGE 7 ===
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+             C.1 Net metering applica(cid:415)on charges (per DISCOM) No. 120 5000 600000
+                                                                                    
+             C.2 Protec(cid:415)on panel and DISCOM coordina(cid:415)on No. 120 22000 2640000
+                                                                                    
+                                                                                    
+                                                                                    
+             SCHEDULE D – ENGINEERING AND COMMISSIONING                             
+                                                                                    
+                                                                                    
+             D.1 Drone/LiDAR site survey and shadow analysis No. 120 8000 960000    
+                                                                                    
+             D.2 PVsyst detailed design report (per site) No. 120 4500 540000       
+                                                                                    
+             D.3 ERDA/CPRI commissioning inspec(cid:415)on No. 120 6000 720000      
+                                                                                    
+             D.4 Training of building maintenance staff (per site) No. 120 2500 300000
+                                                                                    
+             D.5 As-built drawings and documenta(cid:415)on set No. 120 3000 360000 
+                                                                                    
+                                                                                    
+             SCHEDULE E – OPERATION AND MAINTENANCE (7 YEARS)                       
+                                                                                    
+                                                                                    
+                                                                                    
+             E.1 O&M Year 1 (365-day comprehensive) LS 1 2400000 2400000            
+                                                                                    
+             E.2 O&M Year 2           LS 1 2520000 2520000                          
+             E.3 O&M Year 3           LS 1 2646000 2646000                          
+                                                                                    
+             E.4 O&M Year 4           LS 1 2778000 2778000                          
+                                                                                    
+             E.5 O&M Year 5           LS 1 2917000 2917000                          
+                                                                                    
+             E.6 O&M Year 6           LS 1 3063000 3063000                          
+                                                                                    
+             E.7 O&M Year 7           LS 1 3216000 3216000                          
+                                                                                    
+                                                                                    
+                        TOTAL ESTIMATED COST (A+B+C+D+E): Rs. 28,75,00,000/-        
+                                                                                    
+                                                                                    
+                                                                                    
+             NOTE: All rates inclusive of GST, transporta(cid:415)on, insurance, and incidentals.
+                                                                                    
+             Panel and inverter supply must be from MNRE-approved list valid at (cid:415)me of supply.
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+
+=== PAGE 8 ===
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+             ===========================================================================
+                                                                                    
+             =====                                                                  
+             SECTION 6: COMMERCIAL TERMS AND CONDITIONS                             
+                                                                                    
+             ===========================================================================
+             =====                                                                  
+                                                                                    
+                                                                                    
+                                                                                    
+             6.1 PAYMENT TERMS                                                      
+                                                                                    
+             Stage 1: 5% on signing of Contract Agreement                           
+                                                                                    
+             Stage 2: 50% on pro-rata basis against supply and delivery at respec(cid:415)ve sites
+                (against GRN, inspec(cid:415)on report, and REDC site engineer's cer(cid:415)fica(cid:415)on)
+                                                                                    
+             Stage 3: 25% on commissioning of each site cluster (per district milestone)
+                                                                                    
+             Stage 4: 10% on receipt of net metering approval from respec(cid:415)ve DISCOM
+                                                                                    
+             Stage 5: 5% on submission and approval of first year energy genera(cid:415)on report
+                                                                                    
+             Stage 6: Remaining 5% retained as reten(cid:415)on money; released a(cid:332)er DLP expiry.
+                                                                                    
+                                                                                    
+             O&M Payment: Bi-annual (every 6 months) in arrears, subject to:        
+                                                                                    
+             - SLA up(cid:415)me compliance verifica(cid:415)on by REDC             
+                                                                                    
+             - Submission of maintenance logs, cleaning records, and energy reports 
+                                                                                    
+             - PR not below 72% for the period (else propor(cid:415)onate deduc(cid:415)on)
+                                                                                    
+                                                                                    
+             6.2 LIQUIDATED DAMAGES                                                 
+                                                                                    
+             6.2.1 Delay in Commissioning: 0.5% per week delay, maximum 7.5% of contract value.
+                                                                                    
+             6.2.2 Energy Produc(cid:415)on Shor(cid:414)all: If actual genera(cid:415)on < 80% of guaranteed P50
+                                                                                    
+               yield in any year, contractor liable at Rs. 4.50/- per unit shor(cid:414)all.
+                                                                                    
+             6.2.3 Up(cid:415)me SLA Breach: Rs. 10,000/- per site per month below 97% up(cid:415)me.
+                                                                                    
+                                                                                    
+             6.3 PERFORMANCE GUARANTEE                                              
+                                                                                    
+             Bank Guarantee: 5% of contract value, valid for 7 years + 90 days post-commissioning.
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+

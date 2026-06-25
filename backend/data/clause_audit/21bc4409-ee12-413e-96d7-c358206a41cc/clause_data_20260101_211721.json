@@ -1,0 +1,28 @@
+{
+  "contract_id": "21bc4409-ee12-413e-96d7-c358206a41cc",
+  "contract_name": "CYBER001 (1).docx",
+  "clusters": 3,
+  "cluster_names": {
+    "1": "Payment Terms",
+    "0": "Warranty Clause",
+    "2": "Contract"
+  },
+  "clause_groups": {
+    "1": [
+      "Confidentiality. Each party agrees to take precautions to maintain the confidentiality of Confidential Information by using at least the same degree of care as such party employs with respect to its own Confidential Information of a like-kind nature, but in no case less than a commercially reasonable standard of care. During the term of this MSA and the Services, Birch Cline shall employ and maintain reasonable and appropriate safeguards designed to: (a) reasonably protect all Customer Data in Birch Cline’ possession from unauthorized use, alteration, access or disclosure; (b) detect and prevent against a Breach (as defined below); and (c) ensure that Birch Cline’ employees and agents are appropriately trained to maintain the confidentiality and security of Customer Data in Birch Cline’ possession. Birch Cline shall not be liable for any breach of this Section 7 (“Confidentiality”) resulting from a hack or intrusion by a third party (except any third-party subcontractor of Birch Cline)",
+      "Termination. 1 Termination for Breach. If this MSA or the Service Order and/or SOW is terminated by Customer prior to the Service term expiration date for any reason other than Birch Cline’ breach, Customer agrees to pay to Birch Cline: (i) for the Consulting Services, all unpaid Consulting Service fees as set forth on the Service Order and/or SOW for the Consulting Services performed through the effective termination date; and (ii) for MSS Services, all unpaid MSS Service fees as set forth on the Service Order for the MSS Services performed through the \neffective termination date plus a termination fee equal to the MSS Service fees that will become due during the remaining term of the Service Order(s). If this MSA or the Service Order and/or SOW is terminated by Customer prior to the Service term expiration date for any reason other than Birch Cline’ breach, Customer agrees to pay to Birch Cline: (i) for the Consulting Services, all unpaid Consulting Service fees as set forth on the S",
+      "As between Customer and Birch Cline, Customer will own all right, title and interest in and to (i) any data provided by Customer and/or its Affiliate(s) to Birch Cline and/or Customer and/or its Affiliate(s)’ data accessed or used by Birch Cline or transmitted by Customer and/or its Affiliate(s) to Birch Cline or Birch Cline Equipment in connection with Birch Cline’ provision of the Services, including, but not limited to, Customer and/or its Affiliate(s)’ data included in any written or printed summaries, analyses or reports generated in connection with the Services (Customer and its Affiliate(s)’ data, collectively, the “Customer Data”), (ii) all intellectual property, including patents, copyrights, trademarks, trade secrets and other proprietary information (“IP”) of Customer that may be made available to Birch Cline in the course of providing Services under this MSA, and (iii) all confidential or proprietary information of Customer or Customer Affiliates, including, but not limited"
+    ],
+    "0": [
+      "3 Force Majeure. Neither party shall be liable to the other party for any failure to perform any of its obligations under this MSA during any period in which such performance is delayed by circumstances beyond its reasonable control including, but not limited to, fire, flood, war, embargo, strike, riot or the intervention of any governmental authority (a “Force Majeure”). In such event, however, the delayed party must promptly \nprovide the other party with written notice of the Force Majeure. The delayed party’s time for performance will be excused for the duration of the Force Majeure, but if the Force Majeure event lasts longer than thirty (30) days, or fifteen (15) business days as to a Force Majeure delaying Customer's performance of its payment obligations, the other party may immediately terminate the applicable Service Order and/or SOW by giving written notice to the delayed party. The delayed party’s time for performance will be excused for the duration of the Force Majeure, bu",
+      "Warranties; Limitation of Liability. 2 Limitation of Liability."
+    ],
+    "2": [
+      "Indemnification. 4 Indemnification Procedures.",
+      "8 Dispute Resolution.",
+      "5 Governing Law, Forum and Language."
+    ]
+  },
+  "total_clauses": 8,
+  "processing_timestamp": 1767282441.7945764
+}

@@ -1,0 +1,266 @@
+# rag.py
+import os
+import requests
+import time
+from qdrant_client import QdrantClient
+from sentence_transformers import SentenceTransformer
+
+# --------------------------------------
+# CONFIG
+# --------------------------------------
+QDRANT_URL = os.environ.get("QDRANT_URL", "http://localhost:6333")
+COLLECTION = os.environ.get("QDRANT_COLLECTION", "contracts")
+EMBED_MODEL = "all-MiniLM-L6-v2"
+
+# ✅ FORCE OLLAMA ONLY
+LLM_PROVIDER = "ollama"
+
+# ✅ FIXED OLLAMA ENDPOINT (THIS WAS YOUR 404 ISSUE)
+OLLAMA_API = os.environ.get("OLLAMA_API", "http://localhost:11434/api/generate")
+
+# ✅ KEEP YOUR MODEL
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:0.5b")
+
+# --------------------------------------
+# CLIENTS
+# --------------------------------------
+client = QdrantClient(url=QDRANT_URL)
+embedder = SentenceTransformer(EMBED_MODEL)
+
+
+# --------------------------------------
+# HELPER — Build context into plain text (STABLE ORDER)
+# --------------------------------------
+def build_context_text(contexts):
+    contexts = sorted(contexts, key=lambda x: (-x["score"], x["chunk_index"]))
+    return "\n\n---\n\n".join([c["text"] for c in contexts])
+
+
+# --------------------------------------
+# RETRIEVE CONTEXTS (Qdrant v1.16)
+# --------------------------------------
+def retrieve_contexts(query: str, top_k: int = 6):
+    print(f"\n{'='*60}")
+    print(f"[RAG] RETRIEVAL STARTED")
+    print(f"{'='*60}")
+    print(f"Query: {query[:100]}..." if len(query) > 100 else f"Query: {query}")
+    print(f"Retrieving top {top_k} chunks from Qdrant...")
+
+    start_time = time.time()
+    q_emb = embedder.encode(query).tolist()
+    embed_time = time.time() - start_time
+    print(f"[OK] Query embedded in {embed_time:.2f}s")
+
+    result = client.query_points(
+        collection_name=COLLECTION,
+        query=q_emb,
+        limit=top_k,
+        with_payload=True,
+        score_threshold=0.15
+    )
+
+    contexts = []
+    for pt in result.points:
+        payload = pt.payload or {}
+        contexts.append({
+            "score": pt.score,
+            "text": payload.get("text", ""),
+            "filename": payload.get("filename", ""),
+            "chunk_index": payload.get("chunk_index", 0),
+        })
+
+    print(f"[OK] Found {len(contexts)} relevant chunks")
+    return contexts
+
+
+# --------------------------------------
+# CALL LLM — FULLY DETERMINISTIC OLLAMA ONLY
+# --------------------------------------
+def call_llm(prompt, max_tokens=1500, temperature=0.0, stream=True):
+    print(f"\n{'='*60}")
+    print(f"[LLM] GENERATION STARTED")
+    print(f"{'='*60}")
+    print(f"Provider: OLLAMA")
+    print(f"Model: {OLLAMA_MODEL}")
+    print(f"Max tokens: {max_tokens}")
+    print(f"Temperature: 0.0 (LOCKED)")
+    print(f"Streaming: {stream}")
+
+    llm_start = time.time()
+
+    timeout = 300 if max_tokens > 1000 else 120
+    print(f"[LLM] Calling Ollama API (timeout: {timeout}s)...")
+
+    payload = {
+        "model": OLLAMA_MODEL,
+        "messages": [
+            {"role": "user", "content": prompt}
+        ],
+        "options": {
+            "num_predict": max_tokens,
+            "temperature": 0.0,     # ✅ NO randomness
+            "top_k": 1,             # ✅ Always best token
+            "top_p": 0.1,           # ✅ Tight probability
+            "repeat_penalty": 1.2   # ✅ Prevent wording drift
+        },
+        "stream": stream
+    }
+
+    r = requests.post(OLLAMA_API, json=payload, timeout=timeout, stream=stream)
+    r.raise_for_status()
+
+    full_response = ""
+    print("[LLM] Generating response: ", end="", flush=True)
+
+    for line in r.iter_lines():
+        if line:
+            import json
+            chunk = json.loads(line)
+            if "message" in chunk and "content" in chunk["message"]:
+                token = chunk["message"]["content"]
+                full_response += token
+                print(token, end="", flush=True)
+
+            if chunk.get("done", False):
+                break
+
+    llm_time = time.time() - llm_start
+    print(f"\n[OK] LLM completed in {llm_time:.2f}s")
+    print(f"[OK] Generated {len(full_response)} characters")
+
+    return {"response": full_response.strip()}
+
+
+# --------------------------------------
+# Q&A FLOW — STRICT + DETERMINISTIC
+# --------------------------------------
+def qa_flow(query: str):
+    pipeline_start = time.time()
+    print(f"\n{'#'*60}")
+    print(f"[Q&A] PIPELINE STARTED")
+    print(f"{'#'*60}")
+    print(f"Question: {query}")
+
+    contexts = retrieve_contexts(query, top_k=6)
+    context_text = build_context_text(contexts)
+
+    print(f"\n[LLM] Building prompt with {len(context_text)} chars of context...")
+
+    prompt = f"""
+You are a Legal Contract Question Answering System.
+
+ANSWER RULES (STRICT):
+- Only output facts found directly in the context.
+- Do NOT reword creatively.
+- Do NOT infer missing data.
+- If the answer is missing, output exactly:
+  "Not specified in the provided contract."
+- Output maximum 3 bullet points.
+- Same question must produce the same answer every time.
+
+Context:
+{context_text}
+
+Question:
+{query}
+
+Final Answer (bullet points only):
+"""
+
+    resp = call_llm(prompt, max_tokens=300)
+
+    total_time = time.time() - pipeline_start
+    print(f"\n{'#'*60}")
+    print(f"[Q&A] PIPELINE COMPLETED")
+    print(f"{'#'*60}")
+    print(f"Total time: {total_time:.2f}s")
+    print(f"Answer length: {len(resp.get('response', ''))} characters")
+    print(f"{'#'*60}\n")
+
+    return {"contexts": contexts, "ollama": resp}
+
+
+# --------------------------------------
+# CONTRACT GENERATION FLOW — STABLE LONG CONTRACT
+# --------------------------------------
+def generate_contract_flow(instruction: str):
+    pipeline_start = time.time()
+    print(f"\n{'#'*60}")
+    print(f"[CONTRACT] GENERATION PIPELINE STARTED")
+    print(f"{'#'*60}")
+    print(f"Instruction: {instruction[:150]}..." if len(instruction) > 150 else f"Instruction: {instruction}")
+
+    contexts = retrieve_contexts(instruction, top_k=5)
+    context_text = build_context_text(contexts)
+
+    print(f"\n[LLM] Building prompt with {len(context_text)} chars of context...")
+
+    prompt = f"""
+You are a Professional Legal Contract Drafting Assistant.
+
+TASK:
+Generate a FULL LEGAL CONTRACT based on:
+- User instructions
+- Clauses from the retrieved context
+- Industry-standard contract structure
+
+RULES:
+- Include headings, sections, clauses.
+- Keep it formal & legally accurate.
+- If data missing, use <Insert ...>.
+- Do NOT write short answers here — write a full contract.
+- Maintain consistency across the entire contract.
+
+User instruction:
+{instruction}
+
+Context:
+{context_text}
+
+Write the full contract below:
+"""
+
+    resp = call_llm(prompt, max_tokens=1500)
+
+    total_time = time.time() - pipeline_start
+    print(f"\n{'#'*60}")
+    print(f"[CONTRACT] GENERATION PIPELINE COMPLETED")
+    print(f"{'#'*60}")
+    print(f"Total time: {total_time:.2f}s ({total_time/60:.1f} min)")
+    print(f"Contract length: {len(resp.get('response', ''))} characters")
+    print(f"{'#'*60}\n")
+
+    return {"contexts": contexts, "ollama": resp}
+
+
+# --------------------------------------
+# STREAMING CONTRACT GENERATION
+# --------------------------------------
+def generate_contract_stream(instruction: str):
+    contexts = retrieve_contexts(instruction, top_k=5)
+
+    prompt = f"""
+You are a Professional Legal Contract Drafting Assistant.
+
+TASK:
+Generate a FULL LEGAL CONTRACT based on:
+- User instructions
+- Clauses from the retrieved context
+- Industry-standard contract structure
+
+RULES:
+- Include headings, sections, clauses.
+- Keep it formal & legally accurate.
+- If data missing, use <Insert ...>.
+- Do NOT write short answers here — write a full contract.
+
+User instruction:
+{instruction}
+
+Context:
+{build_context_text(contexts)}
+
+Write the full contract below:
+"""
+
+    return call_llm(prompt, max_tokens=1500, stream=True)

@@ -1,0 +1,45 @@
+
+MASTER SERVICES AGREEMENT
+
+Effective Date: November 29, 2025
+
+Company A: BlueSky Systems
+Company B: Global Solutions Ltd
+
+1. SERVICES
+BlueSky Systems will provide IT support services as detailed in individual Statements of Work.
+
+2. TERM
+Initial Term: 18 months
+Renewal: Automatic annual renewal
+
+3. FEES AND PAYMENT
+Estimated Annual Value: $2,500,000
+Payment Terms: Net 30 days
+Late Payment: 1.5% monthly interest
+
+4. INTELLECTUAL PROPERTY
+- Pre-existing IP remains with original owner
+- New IP created under this agreement belongs to Global Solutions Ltd
+
+5. WARRANTIES
+BlueSky Systems warrants that services will be performed in a professional manner consistent with industry standards.
+
+6. LIMITATION OF LIABILITY
+Total liability capped at $2,500,000 or fees paid in preceding 12 months, whichever is less.
+
+7. INDEMNIFICATION
+Each party indemnifies the other against third-party claims arising from their breach.
+
+8. CONFIDENTIALITY
+Both parties agree to maintain confidentiality of all proprietary information.
+
+9. TERMINATION
+- For convenience: 90 days written notice
+- For cause: Immediate upon material breach
+
+10. GOVERNING LAW
+Jurisdiction: Washington
+
+_____________________          _____________________
+BlueSky Systems                    Global Solutions Ltd

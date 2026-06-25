@@ -1,0 +1,4 @@
+vendor_name,registration_number,financial_rating,past_performance_score,round_number,total_price,technical_score,commercial_score,legal_risk_score,delay_probability,deviation_score,notes
+YOUR_VENDOR_1,REG001,0.85,0.78,1,295000000,85.5,78.2,0.25,0.15,0.18,Replace with actual vendor 1 data
+YOUR_VENDOR_2,REG002,0.72,0.81,1,298000000,82.3,85.1,0.30,0.18,0.22,Replace with actual vendor 2 data
+YOUR_VENDOR_3,REG003,0.90,0.85,1,305000000,90.5,88.0,0.10,0.08,0.05,Replace with actual vendor 3 data

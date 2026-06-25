@@ -1,0 +1,28 @@
+{
+  "contract_id": "7e66a235-6aa5-4eaa-9a7e-4b374d8b5312",
+  "contract_name": "MASTER SERVICES AGREEMENT.docx",
+  "clusters": 3,
+  "cluster_names": {
+    "0": "Indemnification Clause",
+    "1": "Dispute Resolution Clause",
+    "2": "Payment Terms"
+  },
+  "clause_groups": {
+    "0": [
+      "═══════════════════════════════════════════════════════════════════════════════\n                    ARTICLE 5: INDEMNIFICATION (UNLIMITED)\n═══════════════════════════════════════════════════════════════════════════════\n5. 1 CLIENT INDEMNIFICATION OBLIGATIONS\nClient shall defend, indemnify, and hold harmless Service Provider, its affiliates, officers,\ndirectors, employees, agents, and subcontractors from and against any and all claims, damages,\nlosses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from\nor relating to:\n(a) Client's use or misuse of the Services\n(b) Any breach of this Agreement by Client\n(c) Client's business operations, products, or services\n(d) Any third-party claims related to Client's data or content\n(e) Any regulatory violations or compliance failures\n(f) Any employment claims by Client's personnel\n(g) Any intellectual property infringement claims\n(h) Any data breaches or security incidents\n(i) Any acts or omissions of Client or its ",
+      "═══════════════════════════════════════════════════════════════════════════════\n                         ARTICLE 2: TERM AND TERMINATION\n═══════════════════════════════════════════════════════════════════════════════\n2. 2 TERMINATION FOR CONVENIENCE\nClient may terminate this Agreement at any time for any reason or no reason upon providing\nthirty (30) days written notice to Service Provider. Upon such termination, Client shall\nimmediately pay all amounts due for services rendered plus termination fees equal to 100%\nof the remaining contract value. Upon such termination, Client shall\nimmediately pay all amounts due for services rendered plus termination fees equal to 100%\nof the remaining contract value. 3 TERMINATION CONSEQUENCES\nUpon termination, Service Provider shall have no obligation to provide transition assistance\nor return any Client data unless Client pays all outstanding amounts plus a data retrieval\nfee of $500,000. 3 TERMINATION CONSEQUENCES\nUpon termination, Service Provide",
+      "═══════════════════════════════════════════════════════════════════════════════\n              ARTICLE 4: INTELLECTUAL PROPERTY AND OWNERSHIP\n═══════════════════════════════════════════════════════════════════════════════\n4. 1 SERVICE PROVIDER OWNERSHIP\nAll work product, deliverables, code, documentation, methodologies, tools, templates, and\nany intellectual property created or developed by Service Provider in connection with this\nAgreement shall remain the exclusive property of Service Provider, regardless of whether\nClient paid for such development. 1 CLIENT INDEMNIFICATION OBLIGATIONS\nClient shall defend, indemnify, and hold harmless Service Provider, its affiliates, officers,\ndirectors, employees, agents, and subcontractors from and against any and all claims, damages,\nlosses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from\nor relating to:\n(a) Client's use or misuse of the Services\n(b) Any breach of this Agreement by Client\n(c) Client's business ",
+      "2 CLIENT WARRANTIES\nClient represents, warrants, and covenants that:\n(a) It has full authority to enter into this Agreement\n(b) It will comply with all applicable laws and regulations\n(c) It will not use the Services for any unlawful purpose\n(d) All information provided to Service Provider is accurate and complete\n(e) It will maintain adequate insurance coverage as required herein\n(f) It will indemnify Service Provider as set forth in Article 5\n═══════════════════════════════════════════════════════════════════════════════\n                    ARTICLE 7: LIMITATION OF LIABILITY\n═══════════════════════════════════════════════════════════════════════════════\n7."
+    ],
+    "1": [
+      "2 DISPUTE RESOLUTION\nAny disputes shall be resolved through binding arbitration in the Cayman Islands under\nthe rules of the Cayman Islands Arbitration Centre. 2 DISPUTE RESOLUTION\nAny disputes shall be resolved through binding arbitration in the Cayman Islands under\nthe rules of the Cayman Islands Arbitration Centre.",
+      "═══════════════════════════════════════════════════════════════════════════════\n                      ARTICLE 10: GOVERNING LAW AND DISPUTES\n═══════════════════════════════════════════════════════════════════════════════\n10. 1 GOVERNING LAW\nThis Agreement shall be governed by the laws of the Cayman Islands, without regard to\nconflicts of law principles.",
+      "2 DISPUTE RESOLUTION\nAny disputes shall be resolved through binding arbitration in the Cayman Islands under\nthe rules of the Cayman Islands Arbitration Centre."
+    ],
+    "2": [
+      "3 PAYMENT TERMS\nAll invoices are due within 15 days of receipt."
+    ]
+  },
+  "total_clauses": 8,
+  "processing_timestamp": 1770630567.2560928
+}

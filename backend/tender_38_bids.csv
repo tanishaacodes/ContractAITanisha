@@ -1,0 +1,6 @@
+vendor_name,registration_number,financial_rating,past_performance_score,round_number,total_price,technical_score,commercial_score,legal_risk_score,delay_probability,deviation_score,notes
+Vendor A Construction,REG-2024-001,0.85,0.78,1,303800000,85.5,78.2,0.25,0.15,0.18,Initial bid - matches estimate exactly
+Vendor B Builders,REG-2024-002,0.72,0.81,1,295000000,82.3,85.1,0.30,0.18,0.22,L1 bidder - 2.9% below estimate
+Vendor C Engineers,REG-2024-003,0.90,0.85,1,315000000,90.5,88.0,0.10,0.08,0.05,Premium bid - 3.7% above estimate
+Vendor D Infrastructure,REG-2024-004,0.80,0.75,1,298000000,80.0,80.0,0.20,0.12,0.15,Competitive pricing
+Vendor E Constructions,REG-2024-005,0.88,0.82,1,310000000,88.0,84.5,0.15,0.10,0.12,High technical score

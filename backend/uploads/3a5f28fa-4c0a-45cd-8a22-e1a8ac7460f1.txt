@@ -1,0 +1,45 @@
+
+MASTER SERVICES AGREEMENT
+
+Effective Date: June 06, 2025
+
+Company A: Acme Corporation
+Company B: Atlas Global
+
+1. SERVICES
+Acme Corporation will provide training services as detailed in individual Statements of Work.
+
+2. TERM
+Initial Term: 12 months
+Renewal: Automatic annual renewal
+
+3. FEES AND PAYMENT
+Estimated Annual Value: $250,000
+Payment Terms: Net 30 days
+Late Payment: 1.5% monthly interest
+
+4. INTELLECTUAL PROPERTY
+- Pre-existing IP remains with original owner
+- New IP created under this agreement belongs to Atlas Global
+
+5. WARRANTIES
+Acme Corporation warrants that services will be performed in a professional manner consistent with industry standards.
+
+6. LIMITATION OF LIABILITY
+Total liability capped at $250,000 or fees paid in preceding 12 months, whichever is less.
+
+7. INDEMNIFICATION
+Each party indemnifies the other against third-party claims arising from their breach.
+
+8. CONFIDENTIALITY
+Both parties agree to maintain confidentiality of all proprietary information.
+
+9. TERMINATION
+- For convenience: 90 days written notice
+- For cause: Immediate upon material breach
+
+10. GOVERNING LAW
+Jurisdiction: Washington
+
+_____________________          _____________________
+Acme Corporation                    Atlas Global

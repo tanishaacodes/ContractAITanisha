@@ -1,0 +1,360 @@
+{
+  "frameworks": [
+    {
+      "code": "GDPR",
+      "name": "General Data Protection Regulation",
+      "description": "EU regulation on data protection and privacy for individuals within the EU",
+      "jurisdiction": "European Union",
+      "effective_date": "2018-05-25",
+      "version": "2016/679",
+      "is_active": true,
+      "priority": 1,
+      "requirements": [
+        {
+          "requirement_code": "GDPR Art. 6",
+          "requirement_name": "Lawfulness of processing",
+          "description": "Processing shall be lawful only if and to the extent that at least one of the following applies: (a) the data subject has given consent, (b) processing is necessary for contract performance, (c) processing is necessary for legal obligation, (d) processing is necessary to protect vital interests, (e) processing is necessary for public task, (f) processing is necessary for legitimate interests",
+          "requirement_type": "DATA_PROTECTION",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["consent", "data processing", "lawful basis", "legitimate interest", "personal data processing", "data subject consent", "processing purpose", "legal obligation"],
+          "risk_weight": 2.0,
+          "compliance_score_weight": 2.0,
+          "legal_reference": "https://gdpr-info.eu/art-6-gdpr/"
+        },
+        {
+          "requirement_code": "GDPR Art. 7",
+          "requirement_name": "Conditions for consent",
+          "description": "Where processing is based on consent, the controller shall be able to demonstrate that the data subject has consented to processing of their personal data",
+          "requirement_type": "CONSENT",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["explicit consent", "informed consent", "consent mechanism", "opt-in", "permission", "data subject agreement"],
+          "risk_weight": 2.0,
+          "compliance_score_weight": 2.0,
+          "legal_reference": "https://gdpr-info.eu/art-7-gdpr/"
+        },
+        {
+          "requirement_code": "GDPR Art. 9",
+          "requirement_name": "Processing of special categories of personal data",
+          "description": "Processing of personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and processing of genetic data, biometric data for identification purposes, data concerning health or data concerning sex life or sexual orientation shall be prohibited unless explicit consent or other legal basis applies",
+          "requirement_type": "DATA_PROTECTION",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["special category", "sensitive data", "biometric", "health data", "genetic data", "sexual orientation", "religious belief"],
+          "risk_weight": 2.5,
+          "compliance_score_weight": 2.5,
+          "legal_reference": "https://gdpr-info.eu/art-9-gdpr/"
+        },
+        {
+          "requirement_code": "GDPR Art. 13",
+          "requirement_name": "Information to be provided where personal data are collected from the data subject",
+          "description": "Where personal data relating to a data subject are collected from the data subject, the controller shall provide the data subject with all of the following information at the time when personal data are obtained",
+          "requirement_type": "DATA_PROTECTION",
+          "criticality": "HIGH",
+          "detection_keywords": ["data collection", "information provision", "privacy notice", "data subject information", "collection statement"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://gdpr-info.eu/art-13-gdpr/"
+        },
+        {
+          "requirement_code": "GDPR Art. 17",
+          "requirement_name": "Right to erasure ('right to be forgotten')",
+          "description": "The data subject shall have the right to obtain from the controller the erasure of personal data concerning them without undue delay, and the controller shall have the obligation to erase personal data without undue delay",
+          "requirement_type": "DATA_PROTECTION",
+          "criticality": "HIGH",
+          "detection_keywords": ["data deletion", "right to erasure", "right to be forgotten", "data removal", "delete personal data", "erasure request"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://gdpr-info.eu/art-17-gdpr/"
+        },
+        {
+          "requirement_code": "GDPR Art. 32",
+          "requirement_name": "Security of processing",
+          "description": "The controller and processor shall implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk, including inter alia: (a) pseudonymization and encryption, (b) ability to restore availability, (c) process for regularly testing effectiveness",
+          "requirement_type": "SECURITY",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["data security", "encryption", "security measures", "technical safeguards", "data protection measures", "security breach", "data breach notification", "pseudonymization"],
+          "risk_weight": 2.0,
+          "compliance_score_weight": 2.0,
+          "legal_reference": "https://gdpr-info.eu/art-32-gdpr/"
+        },
+        {
+          "requirement_code": "GDPR Art. 33",
+          "requirement_name": "Notification of a personal data breach to the supervisory authority",
+          "description": "In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of the personal data breach, notify the personal data breach to the supervisory authority",
+          "requirement_type": "BREACH_NOTIFICATION",
+          "criticality": "HIGH",
+          "detection_keywords": ["breach notification", "data breach", "security incident", "unauthorized access", "breach reporting", "incident notification", "72 hours"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://gdpr-info.eu/art-33-gdpr/"
+        },
+        {
+          "requirement_code": "GDPR Art. 35",
+          "requirement_name": "Data Protection Impact Assessment",
+          "description": "Where a type of processing in particular using new technologies, is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall, prior to the processing, carry out an assessment of the impact of the envisaged processing operations on the protection of personal data",
+          "requirement_type": "AUDIT",
+          "criticality": "MEDIUM",
+          "detection_keywords": ["DPIA", "data protection impact assessment", "risk assessment", "processing assessment", "impact analysis"],
+          "risk_weight": 1.0,
+          "compliance_score_weight": 1.0,
+          "legal_reference": "https://gdpr-info.eu/art-35-gdpr/"
+        },
+        {
+          "requirement_code": "GDPR Art. 45",
+          "requirement_name": "Transfers on the basis of an adequacy decision",
+          "description": "A transfer of personal data to a third country may take place where the European Commission has decided that the third country ensures an adequate level of protection",
+          "requirement_type": "DATA_PROTECTION",
+          "criticality": "HIGH",
+          "detection_keywords": ["data transfer", "international transfer", "third country", "adequacy decision", "cross-border data", "data export"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://gdpr-info.eu/art-45-gdpr/"
+        }
+      ]
+    },
+    {
+      "code": "SOX",
+      "name": "Sarbanes-Oxley Act",
+      "description": "US federal law for financial record accuracy and corporate governance, established in response to accounting scandals",
+      "jurisdiction": "United States",
+      "effective_date": "2002-07-30",
+      "version": "2002",
+      "is_active": true,
+      "priority": 2,
+      "requirements": [
+        {
+          "requirement_code": "SOX Section 302",
+          "requirement_name": "Corporate Responsibility for Financial Reports",
+          "description": "CEO and CFO must certify the accuracy of financial statements and the effectiveness of internal controls",
+          "requirement_type": "FINANCIAL_CONTROLS",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["financial reporting", "financial controls", "audit trail", "financial accuracy", "financial certification", "financial records", "accounting controls", "financial statements"],
+          "risk_weight": 2.0,
+          "compliance_score_weight": 2.0,
+          "legal_reference": "https://www.soxlaw.com/section-302.html"
+        },
+        {
+          "requirement_code": "SOX Section 302(b)",
+          "requirement_name": "Internal Control Certification",
+          "description": "Officers certifying financial reports must also certify responsibility for establishing internal controls and their effectiveness",
+          "requirement_type": "FINANCIAL_CONTROLS",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["internal controls", "control effectiveness", "management responsibility", "control framework", "control assessment"],
+          "risk_weight": 2.0,
+          "compliance_score_weight": 2.0,
+          "legal_reference": "https://www.soxlaw.com/section-302.html"
+        },
+        {
+          "requirement_code": "SOX Section 302(a)(4)",
+          "requirement_name": "Fraud Disclosure",
+          "description": "Report any fraud involving management or employees involved in internal controls",
+          "requirement_type": "REPORTING",
+          "criticality": "HIGH",
+          "detection_keywords": ["fraud disclosure", "fraud reporting", "management fraud", "employee fraud", "fraud notification"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://www.soxlaw.com/section-302.html"
+        },
+        {
+          "requirement_code": "SOX Section 404",
+          "requirement_name": "Management Assessment of Internal Controls",
+          "description": "Annual report must include internal control assessment and attestation of control effectiveness",
+          "requirement_type": "AUDIT",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["internal controls", "audit requirements", "control assessment", "financial audit", "control framework", "audit procedures", "attestation"],
+          "risk_weight": 2.0,
+          "compliance_score_weight": 2.0,
+          "legal_reference": "https://www.soxlaw.com/section-404.html"
+        },
+        {
+          "requirement_code": "SOX Section 409",
+          "requirement_name": "Real Time Issuer Disclosures",
+          "description": "Issuers must disclose material changes in financial condition or operations on a rapid and current basis",
+          "requirement_type": "REPORTING",
+          "criticality": "HIGH",
+          "detection_keywords": ["real-time disclosure", "material change", "financial condition", "issuer disclosure", "rapid reporting"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://www.soxlaw.com/section-409.html"
+        },
+        {
+          "requirement_code": "SOX Section 802",
+          "requirement_name": "Criminal Penalties for Altering Documents",
+          "description": "Whoever knowingly destroys, conceals, covers up, falsifies, or makes false entries in any record document or tangible object with the intent to obstruct or influence federal investigation shall be subject to criminal penalties",
+          "requirement_type": "AUDIT",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["record retention", "document destruction", "document alteration", "falsification", "evidence tampering", "audit trail"],
+          "risk_weight": 2.5,
+          "compliance_score_weight": 2.5,
+          "legal_reference": "https://www.soxlaw.com/section-802.html"
+        },
+        {
+          "requirement_code": "SOX Section 906",
+          "requirement_name": "Criminal Penalties for False Certification",
+          "description": "CEO and CFO certifying reports knowing they are false shall be subject to criminal penalties including fines and imprisonment",
+          "requirement_type": "REPORTING",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["false certification", "misrepresentation", "knowingly false", "certification accuracy"],
+          "risk_weight": 2.5,
+          "compliance_score_weight": 2.5,
+          "legal_reference": "https://www.soxlaw.com/section-906.html"
+        }
+      ]
+    },
+    {
+      "code": "HIPAA",
+      "name": "Health Insurance Portability and Accountability Act",
+      "description": "US law for protection of sensitive patient health information and privacy",
+      "jurisdiction": "United States",
+      "effective_date": "1996-08-21",
+      "version": "1996",
+      "is_active": true,
+      "priority": 3,
+      "requirements": [
+        {
+          "requirement_code": "HIPAA Privacy Rule",
+          "requirement_name": "Protected Health Information (PHI) Privacy",
+          "description": "Establishes national standards to protect individuals' medical records and health information from being used or disclosed without patient knowledge and consent",
+          "requirement_type": "HEALTH_DATA",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["PHI", "protected health information", "health data", "patient data", "medical records", "health information privacy", "HIPAA compliance", "health data protection"],
+          "risk_weight": 2.0,
+          "compliance_score_weight": 2.0,
+          "legal_reference": "https://www.hhs.gov/hipaa/for-professionals/privacy/index.html"
+        },
+        {
+          "requirement_code": "HIPAA Security Rule",
+          "requirement_name": "Security Standards for ePHI",
+          "description": "National standards for protecting electronic PHI, including technical and organizational safeguards",
+          "requirement_type": "SECURITY",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["ePHI", "electronic health records", "health data security", "medical data encryption", "health information security", "HIPAA security", "PHI encryption"],
+          "risk_weight": 2.0,
+          "compliance_score_weight": 2.0,
+          "legal_reference": "https://www.hhs.gov/hipaa/for-professionals/security/index.html"
+        },
+        {
+          "requirement_code": "HIPAA Breach Notification",
+          "requirement_name": "Breach Notification Requirements",
+          "description": "Requirements for notification following breach of unsecured PHI, including notification to affected individuals and relevant authorities",
+          "requirement_type": "BREACH_NOTIFICATION",
+          "criticality": "HIGH",
+          "detection_keywords": ["breach notification", "data breach", "PHI breach", "security incident", "unauthorized access", "breach reporting", "incident notification"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html"
+        },
+        {
+          "requirement_code": "HIPAA Administrative Safeguards",
+          "requirement_name": "Administrative, Physical, and Technical Safeguards",
+          "description": "Covered entities must implement administrative, physical, and technical safeguards to protect ePHI",
+          "requirement_type": "SECURITY",
+          "criticality": "CRITICAL",
+          "detection_keywords": ["administrative safeguards", "physical safeguards", "technical safeguards", "access controls", "authentication", "encryption"],
+          "risk_weight": 2.0,
+          "compliance_score_weight": 2.0,
+          "legal_reference": "https://www.hhs.gov/hipaa/for-professionals/security/index.html"
+        },
+        {
+          "requirement_code": "HIPAA Patient Rights",
+          "requirement_name": "Patient Rights to Access and Amendment",
+          "description": "Patients have the right to access their medical records, request amendments, and receive an accounting of disclosures",
+          "requirement_type": "DATA_PROTECTION",
+          "criticality": "HIGH",
+          "detection_keywords": ["patient rights", "right to access", "amendment rights", "record access", "disclosure accounting"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://www.hhs.gov/hipaa/for-professionals/privacy/index.html"
+        },
+        {
+          "requirement_code": "HIPAA Minimum Necessary",
+          "requirement_name": "Minimum Necessary Standard",
+          "description": "Covered entities must limit PHI use, disclosure, and requests to the minimum necessary to accomplish intended purpose",
+          "requirement_type": "DATA_PROTECTION",
+          "criticality": "HIGH",
+          "detection_keywords": ["minimum necessary", "PHI usage", "data minimization", "limited access", "purpose limitation"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://www.hhs.gov/hipaa/for-professionals/privacy/index.html"
+        }
+      ]
+    },
+    {
+      "code": "GST",
+      "name": "Goods and Services Tax / Tax Compliance",
+      "description": "Tax compliance requirements for contracts involving goods and services transactions",
+      "jurisdiction": "Various (India, Australia, etc.)",
+      "effective_date": "2017-07-01",
+      "version": "2017",
+      "is_active": true,
+      "priority": 4,
+      "requirements": [
+        {
+          "requirement_code": "GST Registration",
+          "requirement_name": "GST Registration Requirement",
+          "description": "Businesses must register under GST if turnover exceeds threshold, typically 20 lakhs for services or 40 lakhs for goods",
+          "requirement_type": "TAX_COMPLIANCE",
+          "criticality": "HIGH",
+          "detection_keywords": ["GST registration", "tax registration", "GSTIN", "GST number", "tax identification", "GST compliance"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://www.gst.gov.in/"
+        },
+        {
+          "requirement_code": "GST Invoice",
+          "requirement_name": "GST-Compliant Invoicing",
+          "description": "Invoices must include GST registration number, tax amount breakdown, HSN/SAC codes, and other mandatory details",
+          "requirement_type": "TAX_COMPLIANCE",
+          "criticality": "MEDIUM",
+          "detection_keywords": ["GST invoice", "tax invoice", "invoice format", "tax breakdown", "GST details", "invoice requirements", "GSTIN on invoice"],
+          "risk_weight": 1.0,
+          "compliance_score_weight": 1.0,
+          "legal_reference": "https://www.gst.gov.in/"
+        },
+        {
+          "requirement_code": "Tax Withholding (TDS)",
+          "requirement_name": "Tax Deduction at Source (TDS)",
+          "description": "Requirement to withhold and remit taxes on specified payments as per applicable TDS sections",
+          "requirement_type": "TAX_COMPLIANCE",
+          "criticality": "HIGH",
+          "detection_keywords": ["TDS", "tax withholding", "withholding tax", "tax deduction", "tax remittance", "source deduction"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://www.incometaxindia.gov.in/"
+        },
+        {
+          "requirement_code": "GST Return Filing",
+          "requirement_name": "Periodic GST Return Filing",
+          "description": "Businesses must file GST returns on monthly, quarterly, or annual basis depending on taxable turnover and registration type",
+          "requirement_type": "REPORTING",
+          "criticality": "HIGH",
+          "detection_keywords": ["GST return", "return filing", "monthly return", "quarterly return", "return submission", "GSTR forms"],
+          "risk_weight": 1.5,
+          "compliance_score_weight": 1.5,
+          "legal_reference": "https://www.gst.gov.in/"
+        },
+        {
+          "requirement_code": "ITC (Input Tax Credit)",
+          "requirement_name": "Input Tax Credit Provisions",
+          "description": "Rules for claiming input tax credit on GST paid on purchases for business purposes",
+          "requirement_type": "TAX_COMPLIANCE",
+          "criticality": "MEDIUM",
+          "detection_keywords": ["ITC", "input tax credit", "tax credit", "inbound supply", "inbound GST"],
+          "risk_weight": 1.0,
+          "compliance_score_weight": 1.0,
+          "legal_reference": "https://www.gst.gov.in/"
+        },
+        {
+          "requirement_code": "Payment Terms & Timing",
+          "requirement_name": "Payment Settlement Requirements",
+          "description": "Clear definition of payment terms, settlement procedures, and currency considerations in contracts",
+          "requirement_type": "TAX_COMPLIANCE",
+          "criticality": "MEDIUM",
+          "detection_keywords": ["payment terms", "settlement", "due date", "payment method", "currency", "payment schedule"],
+          "risk_weight": 1.0,
+          "compliance_score_weight": 1.0,
+          "legal_reference": "https://www.gst.gov.in/"
+        }
+      ]
+    }
+  ]
+}

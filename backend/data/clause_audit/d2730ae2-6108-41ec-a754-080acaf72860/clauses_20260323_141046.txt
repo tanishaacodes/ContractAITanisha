@@ -1,0 +1,230 @@
+================================================================================
+CONTRACT CLAUSE AUDIT TRAIL
+Contract ID: d2730ae2-6108-41ec-a754-080acaf72860
+Generated: 2026-03-23T14:10:46.835615
+Total Clauses: 10
+================================================================================
+
+METADATA:
+--------------------------------------------------------------------------------
+contract_name: Legal Review.pdf
+total_clauses: 10
+clusters: 5
+processing_time: 25.30s
+
+
+================================================================================
+CLAUSE #1
+================================================================================
+
+Clause Name: Arbitration
+Clause Type: Arbitration Clause
+Cluster Label: 1
+Confidence: 100.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 13 - DISPUTE RESOLUTION AND ARBITRATION 
+13. 1, either party 
+may submit the dispute to final and binding arbitration administered by the Singapore 
+International Arbitration Centre (SIAC) in accordance with the SIAC Arbitration Rules 2025. 1, either party 
+may submit the dispute to final and binding arbitration administered by the Singapore 
+International Arbitration Centre (SIAC) in accordance with the SIAC Arbitration Rules 2025. 1, either party 
+may submit the dispute to final and binding arbitration administered by the Singapore 
+International Arbitration Centre (SIAC) in accordance with the SIAC Arbitration Rules 2025. The seat of arbitration shall be Singapore. The language of arbitration shall be English. 3 The parties agree to keep all arbitration proceedings, submissions, evidence, and 
+awards strictly confidential, except as required by law or regulation. 2 For matters not subject to arbitration under Article 13, the parties irrevocably submit to 
+the exclusive juris
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #2
+================================================================================
+
+Clause Name: Confidentiality
+Clause Type: Confidentiality Obligations
+Cluster Label: 0
+Confidence: 100.00
+
+TEXT:
+--------------------------------------------------------------------------------
+2 shall not apply to: (a) liability for death or 
+personal injury caused by negligence; (b) liability for fraud or fraudulent misrepresentation; 
+(c) liability arising under the indemnification obligations in Article 4; (d) wilful breach or 
+gross misconduct; or (e) breach of confidentiality obligations under Article 7. ARTICLE 7 - CONFIDENTIALITY AND NON-DISCLOSURE 
+7. 2 The obligations of confidentiality shall continue for a period of five (5) years after the 
+expiration or termination of this Agreement, and indefinitely with respect to any information 
+constituting trade secrets under applicable law. 3 The Receiving Party may disclose Confidential Information to its employees, contractors, 
+and professional advisers who have a strict need to know, provided such persons are bound 
+by confidentiality obligations at least as protective as those in this Ag reement. 2 The Service Provider may subcontract specific technical tasks to pre-approved 
+subcontractors listed in Schedule C, provi
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #3
+================================================================================
+
+Clause Name: Force Majeure
+Clause Type: Force Majeure
+Cluster Label: 2
+Confidence: 100.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 9 - FORCE MAJEURE 
+9. 1 Neither party shall be liable for any failure or delay in the performance of its obligations 
+under this Agreement to the extent such failure or delay is caused by a Force Majeure Event. A "Force Majeure Event" means any event beyond a party's reasonable control, including but 
+not limited to: acts of God, war, terrorism, civil unrest, earthquake, flood, pandemic, 
+epidemic (including any resurgence of COVID-19 or emergence of a new pathogen), 
+government sanctions, export control restrictions, cyberattacks on critical national 
+infrastructure, nationwide internet outages, or actions of governmental authorities. 2 The party claiming a Force Majeure Event must: (a) notify the other party in writing 
+within forty-eight (48) hours of the commencement of the event; (b) use all reasonable 
+endeavours to mitigate the effects of the Force Majeure Event and resume perform ance as 
+soon as reasonably practicable; and (c) provide weekly written updates on the stat
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #4
+================================================================================
+
+Clause Name: Indemnification
+Clause Type: Confidentiality Obligations
+Cluster Label: 0
+Confidence: 100.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 4 - INDEMNIFICATION 
+4. 3 Each party's indemnification obligations shall survive the expiration or termination of this 
+Agreement for a period of six (6) years. 4 A party seeking indemnification must provide prompt written notice of the claim, 
+cooperate fully with the indemnifying party, and grant the indemnifying party sole control of 
+the defence and settlement of the claim, provided that no settlement shall be  made that 
+imposes any obligation on the indemnified party without its prior written consent. 2 shall not apply to: (a) liability for death or 
+personal injury caused by negligence; (b) liability for fraud or fraudulent misrepresentation; 
+(c) liability arising under the indemnification obligations in Article 4; (d) wilful breach or 
+gross misconduct; or (e) breach of confidentiality obligations under Article 7.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #5
+================================================================================
+
+Clause Name: Intellectual Property
+Clause Type: Confidentiality Obligations
+Cluster Label: 0
+Confidence: 100.00
+
+TEXT:
+--------------------------------------------------------------------------------
+4 "Intellectual Property Rights" means all patents, copyrights, trademarks, trade secrets, 
+moral rights, database rights, and any other intellectual or industrial property rights existing 
+anywhere in the world, whether registered or unregistered. 1 The Service Provider shall indemnify, defend, and hold harmless the Client, its directors, 
+officers, employees, agents, successors, and assigns from and against any and all claims, 
+damages, losses, costs, expenses (including reasonable attorneys' fees) , judgments, fines, 
+and liabilities of any kind arising out of or related to: (a) any breach by the Service Provider 
+of its representations, warranties, or obligations under this Agreement; (b) any infringement 
+
+--- Page 3 ---
+or alleged infringement of any third-party Intellectual Property Rights caused by the 
+Deliverables; (c) any gross negligence or wilful misconduct of the Service Provider or its 
+personnel; (d) any breach of applicable data protection laws; and (e) any death  or p
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #6
+================================================================================
+
+Clause Name: Termination
+Clause Type: Confidentiality Obligations
+Cluster Label: 0
+Confidence: 100.00
+
+TEXT:
+--------------------------------------------------------------------------------
+3 Each party's indemnification obligations shall survive the expiration or termination of this 
+Agreement for a period of six (6) years. 2 The obligations of confidentiality shall continue for a period of five (5) years after the 
+expiration or termination of this Agreement, and indefinitely with respect to any information 
+constituting trade secrets under applicable law. 1 During the Term and for a period of twenty- four (24) months following the termination 
+or expiration of this Agreement, the Service Provider shall not, directly or indirectly, engage 
+in, own, manage, operate, control, be employed by, or provide services to any business that 
+directly competes with the Client's core ERP business operations in the United States, India, 
+Singapore, and the United Kingdom. 2 During the Term and for a period of eighteen (18) months following termination, neither 
+party shall directly or indirectly solicit, recruit, or hire any employee or contractor of the 
+other party who was involved
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #7
+================================================================================
+
+Clause Name: Governing Law
+Clause Type: Contract
+Cluster Label: 4
+Confidence: 70.00
+
+TEXT:
+--------------------------------------------------------------------------------
+5 "Governing Law" means the laws of England and Wales shall govern this Agreement and 
+any dispute arising hereunder, except as otherwise expressly stated for specific clauses. ARTICLE 14 - GOVERNING LAW AND JURISDICTION 
+
+--- Page 8 ---
+14.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #8
+================================================================================
+
+Clause Name: Limitation of Liability
+Clause Type: Contract
+Cluster Label: 4
+Confidence: 70.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 5 - LIMITATION OF LIABILITY 
+5. 3 The limitation of liability set out in Clause 5.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #9
+================================================================================
+
+Clause Name: Dispute Resolution
+Clause Type: Arbitration Clause
+Cluster Label: 1
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 13 - DISPUTE RESOLUTION AND ARBITRATION 
+13.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #10
+================================================================================
+
+Clause Name: Payment Terms
+Clause Type: Payment Terms
+Cluster Label: 3
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 3 - PAYMENT TERMS AND INVOICING 
+3.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+END OF CLAUSE AUDIT TRAIL
+================================================================================

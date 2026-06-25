@@ -1,0 +1,40 @@
+
+SUPPLY AGREEMENT
+
+Date: November 07, 2025
+
+Supplier: Quantum Industries
+Purchaser: Meridian Systems
+
+1. PRODUCTS
+The Supplier agrees to supply industrial supplies to the Purchaser.
+
+2. QUANTITY AND PRICING
+Quantity: 2491 units per month
+Unit Price: $417
+Total Monthly Value: $2,083
+
+3. DELIVERY TERMS
+- Delivery Location: Boston, MA
+- Shipping Terms: FOB Boston, MA
+- Delivery Schedule: First Monday of each month
+
+4. PAYMENT TERMS
+Payment: Net 30 days from invoice date
+Total Contract Value: $50,000
+
+5. QUALITY STANDARDS
+All products must meet ISO 9001 standards and pass quality inspection.
+
+6. WARRANTIES
+12-month warranty on all products against defects in materials and workmanship.
+
+7. TERM
+Contract Period: 24 months from November 07, 2025
+Renewal: Automatic renewal unless 60 days written notice provided.
+
+8. TERMINATION
+Either party may terminate with 60 days written notice.
+
+_____________________          _____________________
+Quantum Industries                    Meridian Systems

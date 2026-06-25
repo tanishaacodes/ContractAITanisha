@@ -1,0 +1,34 @@
+
+SOFTWARE LICENSE AGREEMENT
+
+This Agreement is entered into on February 28, 2026 between:
+
+Licensor: InnovateCo
+Licensee: Acme Corporation
+
+1. LICENSE GRANT
+The Licensor grants to the Licensee a non-exclusive, non-transferable license to use the Software.
+
+2. TERM
+This Agreement shall commence on February 28, 2026 and continue for 6 months.
+
+3. FEES
+The Licensee shall pay $500,000 for the license.
+
+4. WARRANTIES
+The Software is provided "as is" without warranties of any kind.
+
+5. LIMITATION OF LIABILITY
+In no event shall Licensor be liable for damages exceeding $500,000.
+
+6. TERMINATION
+Either party may terminate this agreement with 30 days written notice.
+
+7. GOVERNING LAW
+This Agreement shall be governed by the laws of Texas.
+
+Signed this February 28, 2026
+
+_____________________          _____________________
+InnovateCo                    Acme Corporation
+Authorized Signatory           Authorized Signatory

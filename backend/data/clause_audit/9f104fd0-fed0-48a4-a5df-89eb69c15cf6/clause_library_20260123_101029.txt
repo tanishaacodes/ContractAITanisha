@@ -1,0 +1,69 @@
+================================================================================
+CLAUSE LIBRARY - ORGANIZED BY CATEGORY
+Contract ID: 9f104fd0-fed0-48a4-a5df-89eb69c15cf6
+Generated: 2026-01-23T10:10:29.646068
+Categories: 3
+================================================================================
+
+TABLE OF CONTENTS:
+--------------------------------------------------------------------------------
+0. Payment Terms (3 clauses)
+1. Force Majeure (2 clauses)
+2. Legal Clause Category Name: Contract Terms (1 clauses)
+
+
+================================================================================
+CATEGORY 0: PAYMENT TERMS
+================================================================================
+Total Clauses: 3
+
+
+--------------------------------------------------------------------------------
+Payment Terms - Clause 1
+--------------------------------------------------------------------------------
+Any disputes in excess of Five Thousand Dollars ($5,000) shall be subject  to arbitration by a single arbitrator under the auspices of the American Arbitration Association  (“AAA”),  pursuant  to  its  Commercial  Arbitration  Rules. Any disputes in excess of Five Thousand Dollars ($5,000) shall be subject  to arbitration by a single arbitrator under the auspices of the American Arbitration Association  (“AAA”),  pursuant  to  its  Commercial  Arbitration  Rules. Any disputes in excess of Five Thousand Dollars ($5,000) shall be subject  to arbitration by a single arbitrator under the auspices of the American Arbitration Association  (“AAA”),  pursuant  to  its  Commercial  Arbitration  Rules. All   arbitration 
+
+--- Page 10 ---
+Master Service Agreement
+REV .
+
+--------------------------------------------------------------------------------
+Payment Terms - Clause 2
+--------------------------------------------------------------------------------
+PAYMENT TERMS. CLIENT agrees to the following payment terms: a. Payment terms will be determined based on credit application.
+
+--------------------------------------------------------------------------------
+Payment Terms - Clause 3
+--------------------------------------------------------------------------------
+TERM & TERMINATION. Upon termination, CLIENT shall promptly pay TSN all outstanding amounts due to TSN under this Agreement. The provisions in this document, which by their nature are intended to survive, shall survive the expiration or termination of this Agreement.
+
+================================================================================
+CATEGORY 1: FORCE MAJEURE
+================================================================================
+Total Clauses: 2
+
+
+--------------------------------------------------------------------------------
+Force Majeure - Clause 1
+--------------------------------------------------------------------------------
+CONFIDENTIALITY. Confidential Information does not include information that the receiving party can show: (a) is or becomes publicly known or available without breach of this Agreement: (b) is received by a receiving party from a third party without breach of any obligation of confidentiality; or (c) was previously known by the receiving party as shown by its written records. Both parties acknowledge that the breach of any of the confidentiality provisions or other agreements set forth in this Agreement would give rise to irreparable injury to the disclosing/non-defaulting party, which injury would be inadequately compensable in money damages.
+
+--------------------------------------------------------------------------------
+Force Majeure - Clause 2
+--------------------------------------------------------------------------------
+FORCE MAJEURE. Any party asserting Force Majeure as an excuse shall have the burden of proving that reasonable steps were taken (under the circumstances) to minimize delay or damages caused by foreseeable events, that all non-excused obligations were substantially fulfilled, and that the other party was timely notified of the likelihood or actual occurrence that would justify such an assertion, so that other prudent precautions could be contemplated.
+
+================================================================================
+CATEGORY 2: LEGAL CLAUSE CATEGORY NAME: CONTRACT TERMS
+================================================================================
+Total Clauses: 1
+
+
+--------------------------------------------------------------------------------
+Legal Clause Category Name: Contract Terms - Clause 1
+--------------------------------------------------------------------------------
+GOVERNING LAW.
+
+================================================================================
+END OF CLAUSE LIBRARY
+================================================================================

@@ -1,0 +1,504 @@
+import os
+"""
+Intent Mining Service
+====================
+LLM-powered discovery and extraction of legal intents, obligations, and rights from contract clauses.
+Uses a two-pass system:
+1. Discover intents → Normalize → Tag clauses
+2. Extract obligations & rights for each intent
+"""
+
+import requests
+import json
+import numpy as np
+from typing import List, Dict, Tuple
+from sklearn.metrics.pairwise import cosine_similarity
+from core.models import Clause, Intent, ClauseIntent, IntentObligation, IntentRight
+from django.db import transaction
+import logging
+
+# Import rule-based risk enrichment
+from api.risk_scoring_model import clause_risk_enricher
+
+# Import embedding service singleton
+from api.embedding_service import embedding_service
+
+logger = logging.getLogger(__name__)
+
+
+class IntentMiningService:
+    """Service for discovering and mining legal intents from contract clauses"""
+
+    def __init__(self):
+        self.ollama_url = os.getenv("OLLAMA_BASE_URL", os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")) + "/api/generate"
+        self.model_name = "qwen2.5:0.5b"  # Fast and efficient for intent mining (2GB RAM)
+        self.embedding_service = embedding_service
+        self.similarity_threshold = 0.85  # For intent deduplication
+
+    def discover_intent_from_clause(self, clause: Clause) -> Dict:
+        """
+        Discover the primary legal intent of a clause using LLM.
+        Returns intent name, description, and confidence.
+        """
+        prompt = f"""You are a legal contract analyst. Analyze this contract clause and identify its PRIMARY legal intent.
+
+CLAUSE: {clause.extracted_text or 'No text available'}
+
+Instructions:
+1. Determine the MAIN legal intent (e.g., "Payment Obligation", "Termination Rights", "Liability Limitation", "Confidentiality Obligation")
+2. Be specific but not overly granular
+3. Use standard legal terminology
+4. Provide a clear description of what this intent means in legal context
+
+Respond ONLY with valid JSON in this exact format:
+{{
+    "intent_name": "Primary Legal Intent Name",
+    "description": "Clear description of what this intent means",
+    "confidence": 0.95
+}}
+
+JSON Response:"""
+
+        try:
+            response = requests.post(
+                self.ollama_url,
+                json={
+                    "model": self.model_name,
+                    "prompt": prompt,
+                    "stream": False,
+                    "temperature": 0.3,
+                    "options": {"num_predict": 120},
+                },
+                timeout=45
+            )
+
+            if response.status_code == 200:
+                result = response.json()
+                response_text = result.get('response', '').strip()
+
+                # Extract JSON from response
+                intent_data = self._extract_json(response_text)
+
+                if intent_data and all(k in intent_data for k in ['intent_name', 'description', 'confidence']):
+                    return intent_data
+                else:
+                    logger.warning(f"Invalid intent discovery response for clause {clause.id}")
+                    return {
+                        "intent_name": "Unknown Intent",
+                        "description": "Could not determine intent",
+                        "confidence": 0.5
+                    }
+            else:
+                logger.error(f"Ollama request failed with status {response.status_code}")
+                return None
+
+        except Exception as e:
+            logger.error(f"Error discovering intent: {str(e)}")
+            return None
+
+    def normalize_and_deduplicate_intents(self, intents: List[Dict]) -> List[Dict]:
+        """
+        Normalize similar intents using semantic similarity.
+        Merges intents that are semantically similar (e.g., "Payment Terms" and "Payment Obligation").
+        """
+        if not intents:
+            return []
+
+        # Create embeddings for all intent names
+        intent_names = [intent['intent_name'] for intent in intents]
+        embeddings = self.embedding_service.embed_batch(intent_names)
+        embeddings = np.array(embeddings)  # Convert to numpy array for cosine_similarity
+
+        # Compute similarity matrix
+        similarity_matrix = cosine_similarity(embeddings)
+
+        # Group similar intents
+        grouped_intents = []
+        used_indices = set()
+
+        for i in range(len(intents)):
+            if i in used_indices:
+                continue
+
+            # Find all similar intents
+            similar_indices = np.where(similarity_matrix[i] >= self.similarity_threshold)[0]
+            similar_intents = [intents[j] for j in similar_indices]
+
+            # Mark as used
+            used_indices.update(similar_indices)
+
+            # Merge similar intents
+            merged_intent = self._merge_intents(similar_intents)
+            grouped_intents.append(merged_intent)
+
+        return grouped_intents
+
+    def _merge_intents(self, intents: List[Dict]) -> Dict:
+        """Merge multiple similar intents into one canonical intent"""
+        if len(intents) == 1:
+            return intents[0]
+
+        # Use the most common intent name or the one with highest confidence
+        sorted_by_confidence = sorted(intents, key=lambda x: x['confidence'], reverse=True)
+        canonical_intent = sorted_by_confidence[0]
+
+        # Average confidence across all similar intents
+        avg_confidence = sum(i['confidence'] for i in intents) / len(intents)
+        canonical_intent['confidence'] = avg_confidence
+        canonical_intent['occurrence_count'] = len(intents)
+
+        return canonical_intent
+
+    def extract_obligations(self, clause: Clause, intent: Intent) -> List[Dict]:
+        """
+        Extract obligations from a clause using LLM.
+        Returns list of obligations with party, action, condition, deadline, priority, risk score.
+        """
+        prompt = f"""You are a legal contract analyst. Extract ALL obligations from this clause.
+
+CLAUSE: {clause.extracted_text or 'No text available'}
+INTENT: {intent.name} - {intent.description}
+
+Instructions:
+1. Identify ALL obligations (what must be done)
+2. For each obligation, determine:
+   - Which party is obligated (YOUR_COMPANY, COUNTERPARTY, or BOTH)
+   - What action must be performed
+   - Under what conditions (if any)
+   - When it must be done (deadline/timeframe if specified)
+   - Priority level (HIGH, MEDIUM, LOW)
+   - Risk score (0.0 to 1.0, where 1.0 = highest risk)
+
+3. Risk scoring guidelines:
+   - HIGH (0.7-1.0): Time-sensitive, financial penalties, critical compliance
+   - MEDIUM (0.4-0.6): Important but flexible deadlines, moderate consequences
+   - LOW (0.0-0.3): Routine obligations, minimal consequences
+
+Respond ONLY with valid JSON array in this exact format:
+[
+    {{
+        "party": "YOUR_COMPANY",
+        "action": "Description of what must be done",
+        "condition": "Under what conditions (or null if unconditional)",
+        "deadline": "When it must be done (or null if no deadline)",
+        "priority": "HIGH",
+        "risk_score": 0.85
+    }}
+]
+
+If no obligations found, return empty array: []
+
+JSON Response:"""
+
+        try:
+            response = requests.post(
+                self.ollama_url,
+                json={
+                    "model": self.model_name,
+                    "prompt": prompt,
+                    "stream": False,
+                    "temperature": 0.2,
+                    "options": {"num_predict": 300},
+                },
+                timeout=45
+            )
+
+            if response.status_code == 200:
+                result = response.json()
+                response_text = result.get('response', '').strip()
+
+                # Extract JSON from response
+                obligations = self._extract_json(response_text)
+
+                if isinstance(obligations, list):
+                    return obligations
+                else:
+                    logger.warning(f"Invalid obligations response for clause {clause.id}")
+                    return []
+            else:
+                logger.error(f"Ollama request failed with status {response.status_code}")
+                return []
+
+        except Exception as e:
+            logger.error(f"Error extracting obligations: {str(e)}")
+            return []
+
+    def extract_rights(self, clause: Clause, intent: Intent) -> List[Dict]:
+        """
+        Extract rights from a clause using LLM.
+        Returns list of rights with party, entitlement, trigger, risk score.
+        """
+        prompt = f"""You are a legal contract analyst. Extract ALL rights from this clause.
+
+CLAUSE: {clause.extracted_text or 'No text available'}
+INTENT: {intent.name} - {intent.description}
+
+Instructions:
+1. Identify ALL rights (what parties are entitled to do)
+2. For each right, determine:
+   - Which party has the right (YOUR_COMPANY, COUNTERPARTY, or BOTH)
+   - What they are entitled to do
+   - What triggers this right (event or condition)
+   - Risk score (0.0 to 1.0 from YOUR_COMPANY's perspective)
+
+3. Risk scoring guidelines:
+   - HIGH (0.7-1.0): Rights that expose YOUR_COMPANY to significant liability or one-sided advantages for COUNTERPARTY
+   - MEDIUM (0.4-0.6): Rights that create moderate risk or mutual benefits
+   - LOW (0.0-0.3): Rights that protect YOUR_COMPANY or are standard/balanced
+
+Respond ONLY with valid JSON array in this exact format:
+[
+    {{
+        "party": "COUNTERPARTY",
+        "entitlement": "What the party is entitled to do",
+        "trigger": "What triggers this right (or null if always available)",
+        "risk_score": 0.75
+    }}
+]
+
+If no rights found, return empty array: []
+
+JSON Response:"""
+
+        try:
+            response = requests.post(
+                self.ollama_url,
+                json={
+                    "model": self.model_name,
+                    "prompt": prompt,
+                    "stream": False,
+                    "temperature": 0.2,
+                    "options": {"num_predict": 300},
+                },
+                timeout=45
+            )
+
+            if response.status_code == 200:
+                result = response.json()
+                response_text = result.get('response', '').strip()
+
+                # Extract JSON from response
+                rights = self._extract_json(response_text)
+
+                if isinstance(rights, list):
+                    return rights
+                else:
+                    logger.warning(f"Invalid rights response for clause {clause.id}")
+                    return []
+            else:
+                logger.error(f"Ollama request failed with status {response.status_code}")
+                return []
+
+        except Exception as e:
+            logger.error(f"Error extracting rights: {str(e)}")
+            return []
+
+    def _extract_json(self, text: str):
+        """Extract JSON from text response (handles markdown code blocks)"""
+        try:
+            # Remove markdown code blocks if present
+            if '```json' in text:
+                text = text.split('```json')[1].split('```')[0]
+            elif '```' in text:
+                text = text.split('```')[1].split('```')[0]
+
+            # Clean up and parse
+            text = text.strip()
+            return json.loads(text)
+        except json.JSONDecodeError as e:
+            logger.error(f"JSON decode error: {str(e)}\nText: {text}")
+            return None
+
+    @transaction.atomic
+    def process_contract_clauses(self, contract_id: str, contract_version_id: str = None) -> Dict:
+        """
+        Main method: Process all clauses for a contract to discover intents,
+        normalize them, and extract obligations and rights.
+
+        Args:
+            contract_id: Contract UUID
+            contract_version_id: Optional ContractVersion UUID to link intents to specific version
+        """
+        from core.models import Contract, ContractVersion
+
+        try:
+            contract = Contract.objects.get(id=contract_id)
+
+            # Get the contract version object
+            contract_version = None
+            if contract_version_id:
+                contract_version = ContractVersion.objects.get(id=contract_version_id)
+                logger.info(f"Processing intents for version {contract_version.version_number}")
+            else:
+                # Fallback: use latest version
+                contract_version = ContractVersion.objects.filter(contract=contract).order_by('-version_number').first()
+                if contract_version:
+                    logger.info(f"No version specified, using latest: v{contract_version.version_number}")
+
+            clauses = Clause.objects.filter(contract=contract, found=True)
+
+            if not clauses.exists():
+                return {
+                    'success': False,
+                    'error': 'No clauses found for this contract'
+                }
+
+            # Step 1: Discover intents from all clauses
+            logger.info(f"Discovering intents from {clauses.count()} clauses...")
+            discovered_intents = []
+            clause_intent_mappings = []
+
+            for clause in clauses:
+                intent_data = self.discover_intent_from_clause(clause)
+                if intent_data:
+                    discovered_intents.append(intent_data)
+                    clause_intent_mappings.append({
+                        'clause': clause,
+                        'intent_data': intent_data
+                    })
+
+            # Step 2: Normalize and deduplicate intents
+            logger.info(f"Normalizing {len(discovered_intents)} discovered intents...")
+            normalized_intents = self.normalize_and_deduplicate_intents(discovered_intents)
+
+            # Step 3: Create or update Intent records
+            logger.info(f"Creating {len(normalized_intents)} canonical intents...")
+            intent_objects = {}
+
+            for intent_data in normalized_intents:
+                intent, created = Intent.objects.get_or_create(
+                    name=intent_data['intent_name'],
+                    defaults={
+                        'description': intent_data['description'],
+                        'confidence': intent_data['confidence'],
+                        'occurrence_count': intent_data.get('occurrence_count', 1)
+                    }
+                )
+
+                if not created:
+                    # Update occurrence count
+                    intent.occurrence_count += intent_data.get('occurrence_count', 1)
+                    intent.save()
+
+                intent_objects[intent_data['intent_name']] = intent
+
+            # Step 4: Link clauses to intents
+            logger.info("Linking clauses to intents...")
+            for mapping in clause_intent_mappings:
+                clause = mapping['clause']
+                intent_data = mapping['intent_data']
+                intent = intent_objects.get(intent_data['intent_name'])
+
+                if intent:
+                    ClauseIntent.objects.get_or_create(
+                        clause=clause,
+                        intent=intent,
+                        defaults={
+                            'confidence': intent_data['confidence'],
+                            'is_primary': True,
+                            'contract_version': contract_version
+                        }
+                    )
+
+            # Step 5: Extract obligations and rights for each clause-intent pair
+            logger.info("Extracting obligations and rights...")
+            total_obligations = 0
+            total_rights = 0
+
+            for mapping in clause_intent_mappings:
+                clause = mapping['clause']
+                intent_data = mapping['intent_data']
+                intent = intent_objects.get(intent_data['intent_name'])
+
+                if not intent:
+                    continue
+
+                # Extract obligations
+                obligations = self.extract_obligations(clause, intent)
+                for obl in obligations:
+                    # ✅ ENRICH RISK SCORE with rule-based analysis
+                    llm_risk = obl.get('risk_score', 0.5)
+                    enrichment = clause_risk_enricher.enrich_risk(
+                        clause_text=clause.extracted_text or '',
+                        intent_name=intent.name,
+                        party=obl.get('party', 'BOTH'),
+                        base_risk=llm_risk,
+                        action=obl.get('action'),
+                        deadline=obl.get('deadline')
+                    )
+
+                    IntentObligation.objects.create(
+                        clause=clause,
+                        intent=intent,
+                        contract_version=contract_version,
+                        party=obl.get('party', 'BOTH'),
+                        action=obl.get('action', ''),
+                        condition=obl.get('condition'),
+                        deadline=obl.get('deadline'),
+                        priority=obl.get('priority', 'MEDIUM'),
+                        risk_score=enrichment['final_risk']  # Use enriched risk
+                    )
+                    total_obligations += 1
+
+                    logger.info(
+                        f"Enriched obligation risk: {llm_risk:.2f} → {enrichment['final_risk']:.2f} "
+                        f"({enrichment['severity']}) - {enrichment['explanation'][:100]}"
+                    )
+
+                # Extract rights
+                rights = self.extract_rights(clause, intent)
+                for right in rights:
+                    # ✅ ENRICH RISK SCORE with rule-based analysis
+                    llm_risk = right.get('risk_score', 0.5)
+                    enrichment = clause_risk_enricher.enrich_risk(
+                        clause_text=clause.extracted_text or '',
+                        intent_name=intent.name,
+                        party=right.get('party', 'BOTH'),
+                        base_risk=llm_risk,
+                        action=right.get('entitlement')
+                    )
+
+                    IntentRight.objects.create(
+                        clause=clause,
+                        intent=intent,
+                        contract_version=contract_version,
+                        party=right.get('party', 'BOTH'),
+                        entitlement=right.get('entitlement', ''),
+                        trigger=right.get('trigger'),
+                        risk_score=enrichment['final_risk']  # Use enriched risk
+                    )
+                    total_rights += 1
+
+                    logger.info(
+                        f"Enriched right risk: {llm_risk:.2f} → {enrichment['final_risk']:.2f} "
+                        f"({enrichment['severity']}) - {enrichment['explanation'][:100]}"
+                    )
+
+            return {
+                'success': True,
+                'contract_id': contract_id,
+                'clauses_processed': clauses.count(),
+                'intents_discovered': len(normalized_intents),
+                'obligations_extracted': total_obligations,
+                'rights_extracted': total_rights,
+                'intents': [
+                    {
+                        'name': intent.name,
+                        'description': intent.description,
+                        'occurrence_count': intent.occurrence_count
+                    }
+                    for intent in intent_objects.values()
+                ]
+            }
+
+        except Contract.DoesNotExist:
+            return {
+                'success': False,
+                'error': 'Contract not found'
+            }
+        except Exception as e:
+            logger.error(f"Error processing contract clauses: {str(e)}")
+            return {
+                'success': False,
+                'error': str(e)
+            }

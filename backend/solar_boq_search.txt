@@ -1,0 +1,49 @@
+Found "bill of quantities" at position 6602
+Context:
+ts, 72 hours for others
+4.5.8 Annual Energy Produc(cid:415)on Guarantee: 90% of PVsyst-simulated P50 yield
+===========================================================================
+=====
+SECTION 5: BILL OF QUANTITIES (BOQ)
+===========================================================================
+=====
+SCHEDULE A – SOLAR PV SUPPLY AND INSTALLATION
+S.No Descrip(cid:415)on Unit Qty Rate(Rs.) Amount(Rs.)
+---- ------------------------------------------------ ---- ------ --------- -----------
+A.1 Monocrystalline Solar Panel ≥540 Wp (MNRE listed) No. 9260 14500 134270000
+A.2 String Inverter 50 KW (grid-(cid:415)ed, IP65) No. 100 95000 9500000
+A.3 Module Moun(cid:415)ng Structure (per KWp, GI) KWp 5000 4200 21000000
+A.4 DC Cable 6 sqmm (FR-LSH, UV resistant) m 180000 42 7560000
+A.5 AC Cable 35 sqmm (armoured) m 12000 185 2220000
+A.6 DC Junc(cid:415)on Box (8-string, weatherproof) No. 620 3200 1984000
+A.7 Surge Protec(cid:415)on Device (DC + AC, Type 2) Set 240 2800 672000
+A.8 Bi-direc(cid:415)onal Energy Meter (DLMS/COSEM, DISCOM) No. 120 8500 1020000
+A.9 Remote Monitoring System (per site, GPRS/4G) No. 120 12000 1440000
+A.10 Lightning Arrestor + Earthing (per site) Set 120 6500 780000
+================================================================================
+
+Found "boq" at position 6622
+Context:
+ers
+4.5.8 Annual Energy Produc(cid:415)on Guarantee: 90% of PVsyst-simulated P50 yield
+===========================================================================
+=====
+SECTION 5: BILL OF QUANTITIES (BOQ)
+===========================================================================
+=====
+SCHEDULE A – SOLAR PV SUPPLY AND INSTALLATION
+S.No Descrip(cid:415)on Unit Qty Rate(Rs.) Amount(Rs.)
+---- ------------------------------------------------ ---- ------ --------- -----------
+A.1 Monocrystalline Solar Panel ≥540 Wp (MNRE listed) No. 9260 14500 134270000
+A.2 String Inverter 50 KW (grid-(cid:415)ed, IP65) No. 100 95000 9500000
+A.3 Module Moun(cid:415)ng Structure (per KWp, GI) KWp 5000 4200 21000000
+A.4 DC Cable 6 sqmm (FR-LSH, UV resistant) m 180000 42 7560000
+A.5 AC Cable 35 sqmm (armoured) m 12000 185 2220000
+A.6 DC Junc(cid:415)on Box (8-string, weatherproof) No. 620 3200 1984000
+A.7 Surge Protec(cid:415)on Device (DC + AC, Type 2) Set 240 2800 672000
+A.8 Bi-direc(cid:415)onal Energy Meter (DLMS/COSEM, DISCOM) No. 120 8500 1020000
+A.9 Remote Monitoring System (per site, GPRS/4G) No. 120 12000 1440000
+A.10 Lightning Arrestor + Earthing (per site) Set 120 6500 780000
+SCHEDULE B – CIVIL 
+================================================================================
+

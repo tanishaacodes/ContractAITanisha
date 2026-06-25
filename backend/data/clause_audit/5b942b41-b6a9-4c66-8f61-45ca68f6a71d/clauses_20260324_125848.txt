@@ -1,0 +1,138 @@
+================================================================================
+CONTRACT CLAUSE AUDIT TRAIL
+Contract ID: 5b942b41-b6a9-4c66-8f61-45ca68f6a71d
+Generated: 2026-03-24T12:58:48.869229
+Total Clauses: 8
+================================================================================
+
+METADATA:
+--------------------------------------------------------------------------------
+contract_name: EXCLUSIVE DISTRIBUTION AGREEMENT.pdf
+total_clauses: 8
+clusters: 5
+processing_time: 32.01s
+
+
+================================================================================
+CLAUSE #1
+================================================================================
+
+Clause Name: Confidentiality
+Clause Type: Confidentiality
+Cluster Label: 2
+Confidence: 70.00
+
+TEXT:
+--------------------------------------------------------------------------------
+CONFIDENTIALITY 8. 1 Cap: EXCEPT FOR INDEMNIFICATION OBLIGATIONS AND CONFIDENTIALITY BREACHES, NEITHER PARTY'S LIABILITY SHALL EXCEED THE TOTAL FEES PAID IN THE 12 MONTHS PRECEDING THE CLAIM.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #2
+================================================================================
+
+Clause Name: Intellectual Property
+Clause Type: Intellectual Property Rights
+Cluster Label: 0
+Confidence: 70.00
+
+TEXT:
+--------------------------------------------------------------------------------
+INTELLECTUAL PROPERTY --- Page 4 --- 5. 3 No Other Rights: All intellectual property remains Supplier's exclusive property.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #3
+================================================================================
+
+Clause Name: Force Majeure
+Clause Type: Payment Terms
+Cluster Label: 1
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+5 Force Majeure: Neither party liable for delays beyond reasonable control (excluding payment obliga ??ons).
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #4
+================================================================================
+
+Clause Name: Governing Law
+Clause Type: Governing Law
+Cluster Label: 3
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+1 Governing Law: Swedish law shall govern, excluding con???ict of law rules and CISG.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #5
+================================================================================
+
+Clause Name: Indemnification
+Clause Type: Confidentiality
+Cluster Label: 2
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+1 Cap: EXCEPT FOR INDEMNIFICATION OBLIGATIONS AND CONFIDENTIALITY BREACHES, NEITHER PARTY'S LIABILITY SHALL EXCEED THE TOTAL FEES PAID IN THE 12 MONTHS PRECEDING THE CLAIM.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #6
+================================================================================
+
+Clause Name: Limitation of Liability
+Clause Type: Confidentiality
+Cluster Label: 2
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+LIMITATION OF LIABILITY 9.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #7
+================================================================================
+
+Clause Name: Payment Terms
+Clause Type: Payment Terms
+Cluster Label: 1
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+3 Payment Terms: Net 45 days from invoice date.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #8
+================================================================================
+
+Clause Name: Termination
+Clause Type: Termination Provisions
+Cluster Label: 4
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+TERMINATION 10.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+END OF CLAUSE AUDIT TRAIL
+================================================================================

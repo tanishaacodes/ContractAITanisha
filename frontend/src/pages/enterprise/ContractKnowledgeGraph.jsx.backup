@@ -1,0 +1,768 @@
+import { useState, useEffect, useRef } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import {
+  ArrowLeft, Network, Loader2, AlertTriangle,
+  RefreshCw, ChevronDown, X, Info,
+  Package, Globe, Zap, Link2,
+  BarChart3, Activity
+} from 'lucide-react';
+import ContractGraph3D from '../../components/graph/ContractGraph3D';
+import enterpriseRiskService from '../../services/enterpriseRiskService';
+
+// Enhanced node types with more visual appeal
+const NODE_TYPES = {
+  Contract:        { color: '#a78bfa', border: '#7c3aed', glow: '#7c3aed', size: 100, emoji: '📄', bgGradient: 'from-violet-600 to-purple-700' },
+  Supplier:        { color: '#22d3ee', border: '#0891b2', glow: '#06b6d4', size: 70, emoji: '🏭', bgGradient: 'from-cyan-500 to-blue-600' },
+  Country:         { color: '#34d399', border: '#059669', glow: '#10b981', size: 65, emoji: '🌍', bgGradient: 'from-emerald-500 to-green-600' },
+  Commodity:       { color: '#fbbf24', border: '#d97706', glow: '#f59e0b', size: 65, emoji: '📦', bgGradient: 'from-amber-500 to-yellow-600' },
+  Liability:       { color: '#f66c6c', border: '#dc2626', glow: '#ef4444', size: 70, emoji: '⚠️', bgGradient: 'from-red-500 to-rose-600' },
+  GeoPoliticalRisk:{ color: '#fb923c', border: '#ea580c', glow: '#f97316', size: 60, emoji: '🌐', bgGradient: 'from-orange-500 to-amber-600' },
+  Sanction:        { color: '#e879f9', border: '#a21caf', glow: '#d946ef', size: 60, emoji: '🚫', bgGradient: 'from-fuchsia-500 to-pink-600' },
+};
+
+const EDGE_COLORS = {
+  DEPENDS_ON:       '#1dd4f0',
+  LOCATED_IN:       '#34d399',
+  HAS_GEO_RISK:     '#fb923c',
+  HAS_SANCTION:     '#e879f9',
+  USES_COMMODITY:   '#fbbf24',
+  HAS_LIABILITY:    '#f87171',
+};
+
+// Country coordinates for geographical visualization
+const COUNTRY_COORDS = {
+  'USA': { x: 20, y: 35, risk: 'low' },
+  'China': { x: 75, y: 35, risk: 'medium' },
+  'Russia': { x: 65, y: 25, risk: 'high' },
+  'India': { x: 70, y: 45, risk: 'medium' },
+  'Brazil': { x: 35, y: 70, risk: 'low' },
+  'Germany': { x: 50, y: 30, risk: 'low' },
+  'UK': { x: 48, y: 28, risk: 'low' },
+  'France': { x: 49, y: 32, risk: 'low' },
+  'Japan': { x: 82, y: 38, risk: 'low' },
+  'Mexico': { x: 18, y: 45, risk: 'medium' },
+  'Canada': { x: 22, y: 25, risk: 'low' },
+  'Australia': { x: 80, y: 75, risk: 'low' },
+  'South Africa': { x: 52, y: 75, risk: 'medium' },
+  'Saudi Arabia': { x: 60, y: 45, risk: 'medium' },
+  'UAE': { x: 62, y: 46, risk: 'low' },
+  'Singapore': { x: 74, y: 52, risk: 'low' },
+  'South Korea': { x: 79, y: 37, risk: 'low' },
+  'Italy': { x: 51, y: 34, risk: 'low' },
+  'Spain': { x: 47, y: 35, risk: 'low' },
+  'Turkey': { x: 56, y: 37, risk: 'medium' },
+  'Indonesia': { x: 76, y: 58, risk: 'medium' },
+  'Nigeria': { x: 50, y: 52, risk: 'high' },
+  'Argentina': { x: 33, y: 78, risk: 'medium' },
+  'Poland': { x: 52, y: 29, risk: 'low' },
+  'Netherlands': { x: 49, y: 29, risk: 'low' },
+  'Sweden': { x: 51, y: 23, risk: 'low' },
+  'Norway': { x: 50, y: 21, risk: 'low' },
+  'Ukraine': { x: 56, y: 30, risk: 'high' },
+  'Iran': { x: 62, y: 40, risk: 'high' },
+  'Vietnam': { x: 74, y: 48, risk: 'medium' },
+};
+
+export default function ContractKnowledgeGraph() {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const contractId = searchParams.get('contractId') || '';
+
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  const [graphElements, setGraphElements] = useState([]);
+  const [selectedNode, setSelectedNode] = useState(null);
+  const [availableContracts, setAvailableContracts] = useState([]);
+  const [selectedContracts, setSelectedContracts] = useState([]);
+  const [showContractDropdown, setShowContractDropdown] = useState(false);
+  const [stats, setStats] = useState({
+    nodes: 0, edges: 0, suppliers: 0, countries: 0, risks: 0,
+    totalValue: 0, avgRisk: 0, criticalPaths: 0
+  });
+  const [geoData, setGeoData] = useState([]);
+  const [hierarchyData, setHierarchyData] = useState([]);
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    loadAvailableContracts();
+  }, []);
+
+  useEffect(() => {
+    if (selectedContracts.length > 0) {
+      loadGraphData();
+    }
+  }, [selectedContracts]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowContractDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+
+  const getContractDisplayName = (contract) => {
+    if (!contract) return 'Unknown';
+    return contract.title || contract.name || contract.filename
+      || (contract.counterparty ? `${contract.counterparty}` : null)
+      || `Contract ${contract.id?.substring(0, 8)}`;
+  };
+
+  const loadAvailableContracts = async () => {
+    try {
+      const portfolio = await enterpriseRiskService.getPortfolioContracts();
+      if (portfolio.contracts && portfolio.contracts.length > 0) {
+        setAvailableContracts(portfolio.contracts);
+        if (contractId) {
+          const match = portfolio.contracts.find(c => c.id === contractId);
+          setSelectedContracts(match ? [contractId] : [portfolio.contracts[0].id]);
+        } else {
+          setSelectedContracts([portfolio.contracts[0].id]);
+        }
+      } else {
+        setError('No contracts found. Please upload a contract first to view the Knowledge Graph.');
+        setLoading(false);
+      }
+    } catch (err) {
+      setError(err.message || 'Failed to load contracts');
+      setLoading(false);
+    }
+  };
+
+  const loadGraphData = async () => {
+    try {
+      setLoading(true);
+      setError('');
+      setSelectedNode(null);
+
+      const allNodes = [];
+      const allEdges = [];
+      const nodeIds = new Set();
+      const countries = new Set();
+      let totalRisk = 0;
+      let riskCount = 0;
+
+      for (const cId of selectedContracts) {
+        const graphData = await enterpriseRiskService.getContractGraph(cId);
+
+        graphData.nodes.forEach(n => {
+          const node = n.data ? n : { data: n };
+          if (!nodeIds.has(node.data.id)) {
+            nodeIds.add(node.data.id);
+            const typeConf = NODE_TYPES[node.data.type] || NODE_TYPES.Contract;
+
+            // Calculate risk score if applicable
+            const risk = node.data.risk_score || (node.data.type === 'Liability' ? 0.8 :
+                         node.data.type === 'GeoPoliticalRisk' ? 0.7 :
+                         node.data.type === 'Sanction' ? 0.9 : 0.3);
+
+            if (node.data.type === 'Country') {
+              countries.add(node.data.label);
+            }
+
+            totalRisk += risk;
+            riskCount++;
+
+            allNodes.push({
+              data: {
+                ...node.data,
+                _color: typeConf.color,
+                _size: typeConf.size,
+                risk_score: risk,
+                emoji: typeConf.emoji
+              }
+            });
+          }
+        });
+
+        graphData.edges.forEach(e => {
+          const edge = e.data ? e : { data: e };
+          const edgeColor = EDGE_COLORS[edge.data.label] || '#64748b';
+          allEdges.push({ data: { ...edge.data, _color: edgeColor } });
+        });
+      }
+
+      // Build geographical data
+      const geoDataBuilt = Array.from(countries).map(country => ({
+        country,
+        coords: COUNTRY_COORDS[country] || { x: 50, y: 50, risk: 'medium' },
+        nodeCount: allNodes.filter(n => n.data.label === country).length,
+        riskLevel: COUNTRY_COORDS[country]?.risk || 'medium'
+      }));
+      setGeoData(geoDataBuilt);
+
+      // Build hierarchy data (contract → suppliers → countries)
+      const contractNodes = allNodes.filter(n => n.data.type === 'Contract');
+      const hierarchyBuilt = contractNodes.map(contract => {
+        const supplierEdges = allEdges.filter(e => e.data.source === contract.data.id &&
+                                                    allNodes.find(n => n.data.id === e.data.target && n.data.type === 'Supplier'));
+        const suppliers = supplierEdges.map(e => {
+          const supplierNode = allNodes.find(n => n.data.id === e.data.target);
+          const countryEdges = allEdges.filter(ce => ce.data.source === supplierNode.data.id);
+          const countries = countryEdges.map(ce => allNodes.find(n => n.data.id === ce.data.target)).filter(Boolean);
+          return {
+            ...supplierNode.data,
+            countries: countries.map(c => c.data)
+          };
+        });
+        return {
+          ...contract.data,
+          suppliers
+        };
+      });
+      setHierarchyData(hierarchyBuilt);
+
+      // Compute enhanced stats
+      const nodeTypes = allNodes.map(n => n.data.type);
+      const avgRisk = riskCount > 0 ? totalRisk / riskCount : 0;
+
+      setStats({
+        nodes: allNodes.length,
+        edges: allEdges.length,
+        suppliers: nodeTypes.filter(t => t === 'Supplier').length,
+        countries: nodeTypes.filter(t => t === 'Country').length,
+        risks: nodeTypes.filter(t => t === 'GeoPoliticalRisk' || t === 'Sanction' || t === 'Liability').length,
+        totalValue: Math.floor(Math.random() * 5000000) + 1000000, // Simulated
+        avgRisk: avgRisk,
+        criticalPaths: allEdges.filter(e => e.data.label === 'DEPENDS_ON').length
+      });
+
+      setGraphElements([...allNodes, ...allEdges]);
+    } catch (err) {
+      setError(err.message || 'Failed to load graph data');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const toggleContractSelection = (id) => {
+    setSelectedContracts(prev =>
+      prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]
+    );
+  };
+
+  // Convert graph elements to 3D format
+  const get3DGraphData = () => {
+    const nodes = graphElements
+      .filter(el => el.data && !el.data.source)
+      .map(el => ({
+        id: el.data.id,
+        label: el.data.label,
+        type: el.data.type,
+        risk_score: el.data.risk_score,
+        size: el.data._size || 50
+      }));
+
+    const edges = graphElements
+      .filter(el => el.data && el.data.source)
+      .map(el => ({
+        source: el.data.source,
+        target: el.data.target,
+        label: el.data.label
+      }));
+
+    return { nodes, edges };
+  };
+
+
+  // Loading state
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="text-center">
+          <div className="relative mx-auto mb-6 w-24 h-24">
+            <div className="absolute inset-0 rounded-full border-4 border-violet-500/30 animate-ping" />
+            <div className="absolute inset-2 rounded-full border-4 border-cyan-400/40 animate-pulse" />
+            <div className="absolute inset-4 rounded-full border-4 border-emerald-400/30 animate-spin" />
+            <Network className="w-10 h-10 text-cyan-400 absolute inset-0 m-auto animate-pulse" />
+          </div>
+          <p className="text-white font-bold text-2xl mb-2">Building Knowledge Graph</p>
+          <p className="text-slate-400 text-sm">Analyzing contracts · suppliers · countries · risk networks</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="text-center max-w-md">
+          <AlertTriangle className="w-20 h-20 text-red-400 mx-auto mb-5 animate-pulse" />
+          <h2 className="text-3xl font-bold text-white mb-3">Graph Error</h2>
+          <p className="text-slate-400 mb-6">{error}</p>
+          <button
+            onClick={loadGraphData}
+            className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-600 hover:to-violet-700 text-white rounded-xl font-bold transition-all shadow-xl hover:shadow-2xl"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const selectedContractObj = availableContracts.find(c => c.id === selectedContracts[0]);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-[#0a0e1a] to-slate-950 p-6">
+
+      {/* Header */}
+      <div className="mb-6 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => navigate('/enterprise/risk-dashboard')}
+            className="p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700 hover:border-violet-500/50 transition-all backdrop-blur"
+          >
+            <ArrowLeft className="w-5 h-5 text-slate-400" />
+          </button>
+          <div className="flex items-center gap-4">
+            <div className="p-4 rounded-2xl bg-gradient-to-br from-violet-500/30 to-cyan-500/30 border-2 border-violet-500/40 shadow-[0_0_30px_rgba(139,92,246,0.4)] animate-pulse">
+              <Network className="w-10 h-10 text-violet-300" />
+            </div>
+            <div>
+              <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-violet-200 to-cyan-300">
+                Contract Knowledge Graph
+              </h1>
+              <p className="text-slate-400 text-sm mt-1">
+                {selectedContracts.length === 1 && selectedContractObj
+                  ? getContractDisplayName(selectedContractObj)
+                  : `${selectedContracts.length} contract${selectedContracts.length !== 1 ? 's' : ''} visualized`
+                } · Interactive Risk & Dependency Intelligence
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <button
+            onClick={loadGraphData}
+            className="px-5 py-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700 hover:border-violet-500/50 transition-all flex items-center gap-2 text-slate-300 text-sm font-semibold backdrop-blur"
+          >
+            <RefreshCw className="w-4 h-4" />
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      {/* Stats Bar + Contract Selector */}
+      <div className="mb-6 flex items-center gap-3 flex-wrap">
+
+        {/* Contract Selector */}
+        <div className="relative" ref={dropdownRef}>
+          <button
+            onClick={() => setShowContractDropdown(prev => !prev)}
+            className="flex items-center gap-3 px-5 py-3 rounded-xl bg-gradient-to-r from-violet-500/20 to-cyan-500/20 border-2 border-violet-500/50 hover:border-violet-400/70 backdrop-blur-xl transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] min-w-[280px]"
+          >
+            <Network className="w-5 h-5 text-violet-400 flex-shrink-0" />
+            <span className="text-sm font-bold text-white truncate flex-1 text-left">
+              {selectedContracts.length === 0
+                ? 'Select contracts…'
+                : selectedContracts.length === 1
+                ? getContractDisplayName(availableContracts.find(c => c.id === selectedContracts[0]))
+                : `${selectedContracts.length} contracts selected`}
+            </span>
+            <ChevronDown className={`w-5 h-5 text-violet-400 flex-shrink-0 transition-transform ${showContractDropdown ? 'rotate-180' : ''}`} />
+          </button>
+
+          {showContractDropdown && (
+            <div
+              className="absolute top-full left-0 mt-2 bg-slate-900/95 border-2 border-violet-500/50 rounded-2xl shadow-[0_25px_70px_rgba(0,0,0,0.9)] overflow-hidden backdrop-blur-xl"
+              style={{ zIndex: 9999, minWidth: '300px', maxWidth: '400px' }}
+            >
+              <div className="p-4 border-b border-slate-700/60">
+                <div className="flex gap-2 mb-3">
+                  <button
+                    onClick={() => { setSelectedContracts(availableContracts.map(c => c.id)); setShowContractDropdown(false); }}
+                    className="flex-1 px-4 py-2 text-sm bg-violet-500/30 hover:bg-violet-500/40 text-violet-200 rounded-lg transition-all font-bold"
+                  >
+                    Select All
+                  </button>
+                  <button
+                    onClick={() => setSelectedContracts([])}
+                    className="flex-1 px-4 py-2 text-sm bg-slate-700 hover:bg-slate-600 text-slate-300 rounded-lg transition-all font-bold"
+                  >
+                    Clear All
+                  </button>
+                </div>
+                <p className="text-xs text-slate-500 text-center font-semibold">
+                  {availableContracts.length} contract{availableContracts.length !== 1 ? 's' : ''} available
+                </p>
+              </div>
+              <div className="max-h-80 overflow-y-auto">
+                {availableContracts.map((contract) => {
+                  const isSelected = selectedContracts.includes(contract.id);
+                  const name = getContractDisplayName(contract);
+                  return (
+                    <button
+                      key={contract.id}
+                      onClick={() => toggleContractSelection(contract.id)}
+                      className={`w-full flex items-center gap-3 px-5 py-3 text-left transition-all border-b border-slate-700/40 last:border-0 ${
+                        isSelected
+                          ? 'bg-violet-500/25 hover:bg-violet-500/30'
+                          : 'hover:bg-slate-800'
+                      }`}
+                    >
+                      <div className={`w-5 h-5 rounded border-2 flex-shrink-0 flex items-center justify-center transition-all ${
+                        isSelected
+                          ? 'bg-violet-500 border-violet-400'
+                          : 'border-slate-600'
+                      }`}>
+                        {isSelected && <div className="w-2.5 h-2.5 bg-white rounded-sm" />}
+                      </div>
+                      <span className={`text-sm truncate flex-1 ${isSelected ? 'text-white font-bold' : 'text-slate-300'}`}>
+                        {name}
+                      </span>
+                      {isSelected && (
+                        <span className="text-sm text-violet-400 font-black flex-shrink-0">✓</span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Enhanced Stats Pills */}
+        {[
+          { icon: Link2,    label: 'Nodes',     val: stats.nodes,     color: 'text-cyan-400',    bg: 'from-cyan-500/20 to-blue-500/20 border-cyan-500/30' },
+          { icon: Network,  label: 'Edges',     val: stats.edges,     color: 'text-violet-400',  bg: 'from-violet-500/20 to-purple-500/20 border-violet-500/30' },
+          { icon: Package,  label: 'Suppliers', val: stats.suppliers, color: 'text-amber-400',   bg: 'from-amber-500/20 to-orange-500/20 border-amber-500/30' },
+          { icon: Globe,    label: 'Countries', val: stats.countries, color: 'text-emerald-400', bg: 'from-emerald-500/20 to-green-500/20 border-emerald-500/30' },
+          { icon: Zap,      label: 'Risks',     val: stats.risks,     color: 'text-red-400',     bg: 'from-red-500/20 to-rose-500/20 border-red-500/30' },
+        ].map(({ icon: Icon, label, val, color, bg }) => (
+          <div key={label} className={`flex items-center gap-3 px-5 py-3 rounded-xl border-2 bg-gradient-to-r ${bg} backdrop-blur-xl shadow-lg hover:scale-105 transition-transform`}>
+            <Icon className={`w-5 h-5 ${color}`} />
+            <span className={`text-2xl font-black ${color}`}>{val}</span>
+            <span className="text-xs text-slate-300 font-bold">{label}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Main 3D Knowledge Graph - Full Width */}
+      <div className="mb-6">
+        <div className="relative bg-gradient-to-br from-slate-900/90 to-[#0d1425]/90 backdrop-blur-2xl border-2 border-violet-500/30 rounded-3xl shadow-[0_0_60px_rgba(139,92,246,0.2)] overflow-hidden">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-slate-700/60 bg-slate-900/50">
+            <div className="flex items-center gap-3">
+              <div className="w-3 h-3 rounded-full bg-red-500 shadow-lg shadow-red-500/50" />
+              <div className="w-3 h-3 rounded-full bg-amber-500 shadow-lg shadow-amber-500/50" />
+              <div className="w-3 h-3 rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/50 animate-pulse" />
+              <span className="ml-3 text-sm text-slate-400 font-mono font-semibold">contract-knowledge-graph-3d.interactive</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-xs text-emerald-400 font-bold">3D LIVE</span>
+            </div>
+          </div>
+
+          {graphElements.length > 0 ? (
+            <ContractGraph3D
+              nodes={get3DGraphData().nodes}
+              edges={get3DGraphData().edges}
+              height="700px"
+              onNodeClick={(node) => setSelectedNode(node)}
+            />
+          ) : (
+            <div className="flex items-center justify-center bg-[#060d1a]" style={{ height: '700px' }}>
+              <div className="text-center">
+                <Network className="w-24 h-24 text-slate-700 mx-auto mb-6 animate-pulse" />
+                <p className="text-slate-500 text-xl">No graph data — select a contract above</p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Secondary Visualizations Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+
+        {/* Node Inspector */}
+        <div className="lg:col-span-1 bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl border-2 border-violet-500/30 rounded-3xl p-6 shadow-[0_0_40px_rgba(139,92,246,0.15)]">
+            <div className="flex items-center gap-3 mb-5">
+              <Info className="w-5 h-5 text-violet-400" />
+              <h3 className="text-lg font-black text-white">Node Inspector</h3>
+            </div>
+
+            {selectedNode ? (
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-r from-slate-700/50 to-slate-800/50 border border-slate-600/50">
+                  <div className="text-3xl">{NODE_TYPES[selectedNode.type]?.emoji || '📊'}</div>
+                  <div className="flex-1">
+                    <div
+                      className="text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full inline-block mb-2"
+                      style={{
+                        backgroundColor: (NODE_TYPES[selectedNode.type]?.color || '#64748b') + '33',
+                        color: NODE_TYPES[selectedNode.type]?.color || '#64748b',
+                      }}
+                    >
+                      {selectedNode.type}
+                    </div>
+                    <p className="text-base font-bold text-white break-words">{selectedNode.label}</p>
+                  </div>
+                </div>
+
+                {selectedNode.risk_score != null && (
+                  <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-700/50">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs text-slate-400 font-bold">Risk Score</span>
+                      <span className={`text-sm font-black ${
+                        selectedNode.risk_score > 0.7 ? 'text-red-400' :
+                        selectedNode.risk_score > 0.4 ? 'text-amber-400' : 'text-emerald-400'
+                      }`}>
+                        {(selectedNode.risk_score * 100).toFixed(1)}%
+                      </span>
+                    </div>
+                    <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full rounded-full transition-all ${
+                          selectedNode.risk_score > 0.7 ? 'bg-gradient-to-r from-red-500 to-rose-600' :
+                          selectedNode.risk_score > 0.4 ? 'bg-gradient-to-r from-amber-500 to-orange-600' :
+                          'bg-gradient-to-r from-emerald-500 to-green-600'
+                        }`}
+                        style={{ width: `${selectedNode.risk_score * 100}%` }}
+                      />
+                    </div>
+                  </div>
+                )}
+
+                <button
+                  onClick={() => setSelectedNode(null)}
+                  className="mt-3 w-full px-4 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-colors flex items-center justify-center gap-2 font-bold"
+                >
+                  <X className="w-4 h-4" /> Clear selection
+                </button>
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <Network className="w-16 h-16 text-slate-700 mx-auto mb-4 animate-pulse" />
+                <p className="text-slate-500 text-sm">Click any node in the 3D graph to inspect its details</p>
+              </div>
+            )}
+        </div>
+
+        {/* Node Types Legend */}
+        <div className="lg:col-span-1 bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl border-2 border-emerald-500/30 rounded-3xl p-6 shadow-[0_0_30px_rgba(16,185,129,0.12)]">
+            <h3 className="text-lg font-black text-white mb-5">Node Types</h3>
+            <div className="space-y-3">
+              {Object.entries(NODE_TYPES).map(([type, conf]) => (
+                <div key={type} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-700/30 transition-colors">
+                  <div className="text-2xl">{conf.emoji}</div>
+                  <div
+                    className="w-5 h-5 rounded-full flex-shrink-0 shadow-lg"
+                    style={{ backgroundColor: conf.color, boxShadow: `0 0 12px ${conf.glow}88` }}
+                  />
+                  <span className="text-sm text-slate-300 font-semibold flex-1">{type}</span>
+                </div>
+              ))}
+            </div>
+        </div>
+
+        {/* Risk Metrics */}
+        <div className="lg:col-span-1 bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl border-2 border-amber-500/30 rounded-3xl p-6 shadow-[0_0_30px_rgba(245,158,11,0.12)]">
+            <div className="flex items-center gap-3 mb-5">
+              <Activity className="w-5 h-5 text-amber-400" />
+              <h3 className="text-lg font-black text-white">Risk Metrics</h3>
+            </div>
+            <div className="space-y-4">
+              <div className="p-4 rounded-xl bg-gradient-to-r from-red-500/10 to-rose-500/10 border border-red-500/30">
+                <div className="text-xs text-red-400 font-bold mb-1">Average Risk Score</div>
+                <div className="text-3xl font-black text-red-400">{(stats.avgRisk * 100).toFixed(1)}%</div>
+              </div>
+              <div className="p-4 rounded-xl bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/30">
+                <div className="text-xs text-violet-400 font-bold mb-1">Critical Dependencies</div>
+                <div className="text-3xl font-black text-violet-400">{stats.criticalPaths}</div>
+              </div>
+              <div className="p-4 rounded-xl bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-500/30">
+                <div className="text-xs text-emerald-400 font-bold mb-1">Total Network Value</div>
+                <div className="text-2xl font-black text-emerald-400">${(stats.totalValue / 1000000).toFixed(2)}M</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Row: Simplified Visualizations */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        {/* Geographical Risk Heat Map */}
+        <div className="bg-gradient-to-br from-slate-900/90 to-[#0d1425]/90 backdrop-blur-2xl border-2 border-cyan-500/30 rounded-3xl shadow-[0_0_60px_rgba(6,182,212,0.2)] overflow-hidden">
+          <div className="px-6 py-4 border-b border-slate-700/60 bg-slate-900/50">
+            <div className="flex items-center gap-3">
+              <Globe className="w-5 h-5 text-cyan-400" />
+              <h3 className="text-lg font-black text-white">Global Portfolio Exposure Map</h3>
+              <span className="ml-auto text-xs text-slate-500 font-mono">{geoData.length} countries</span>
+            </div>
+          </div>
+
+          <div className="p-6 relative" style={{ height: '400px' }}>
+            {/* Simplified World Map SVG */}
+            <svg viewBox="0 0 100 65" className="w-full h-full">
+              {/* Background grid */}
+              <defs>
+                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#1e293b" strokeWidth="0.3"/>
+                </pattern>
+              </defs>
+              <rect width="100" height="65" fill="url(#grid)" />
+
+              {/* Simplified continents - outline style */}
+              {/* North America */}
+              <path d="M 5,20 Q 10,15 20,18 L 25,25 L 30,30 Q 25,35 20,32 L 10,30 Z"
+                    fill="#0f172a" stroke="#334155" strokeWidth="0.5" opacity="0.6"/>
+
+              {/* South America */}
+              <path d="M 25,45 Q 30,40 35,45 L 38,55 Q 35,62 30,60 L 28,50 Z"
+                    fill="#0f172a" stroke="#334155" strokeWidth="0.5" opacity="0.6"/>
+
+              {/* Europe */}
+              <path d="M 45,22 Q 50,20 55,22 L 56,28 Q 53,30 48,28 Z"
+                    fill="#0f172a" stroke="#334155" strokeWidth="0.5" opacity="0.6"/>
+
+              {/* Africa */}
+              <path d="M 48,35 Q 52,32 56,35 L 58,50 Q 54,58 50,55 L 48,45 Z"
+                    fill="#0f172a" stroke="#334155" strokeWidth="0.5" opacity="0.6"/>
+
+              {/* Asia */}
+              <path d="M 60,18 Q 70,15 80,20 L 85,30 Q 80,35 70,32 L 62,28 Z"
+                    fill="#0f172a" stroke="#334155" strokeWidth="0.5" opacity="0.6"/>
+
+              {/* Australia */}
+              <path d="M 75,55 Q 80,53 85,55 L 86,60 Q 82,62 78,60 Z"
+                    fill="#0f172a" stroke="#334155" strokeWidth="0.5" opacity="0.6"/>
+
+              {/* Plot countries as pulsing dots */}
+              {geoData.map((geo, idx) => {
+                const riskColor = geo.riskLevel === 'high' ? '#ef4444' :
+                                 geo.riskLevel === 'medium' ? '#f59e0b' : '#10b981';
+                const riskGlow = geo.riskLevel === 'high' ? 'rgba(239,68,68,0.6)' :
+                                geo.riskLevel === 'medium' ? 'rgba(245,158,11,0.6)' : 'rgba(16,185,129,0.6)';
+
+                return (
+                  <g key={idx}>
+                    {/* Glow effect */}
+                    <circle
+                      cx={geo.coords.x}
+                      cy={geo.coords.y}
+                      r="2"
+                      fill={riskGlow}
+                      className="animate-pulse"
+                    />
+                    {/* Main dot */}
+                    <circle
+                      cx={geo.coords.x}
+                      cy={geo.coords.y}
+                      r="1"
+                      fill={riskColor}
+                      stroke="#fff"
+                      strokeWidth="0.2"
+                    />
+                    {/* Country label */}
+                    <text
+                      x={geo.coords.x}
+                      y={geo.coords.y - 2}
+                      fontSize="2"
+                      fill="#cbd5e1"
+                      textAnchor="middle"
+                      className="font-bold"
+                    >
+                      {geo.country}
+                    </text>
+                  </g>
+                );
+              })}
+            </svg>
+
+            {/* Legend */}
+            <div className="absolute bottom-4 left-4 bg-slate-900/95 border border-slate-700 rounded-xl p-3 backdrop-blur">
+              <div className="text-xs text-slate-400 font-bold mb-2">Risk Level</div>
+              <div className="flex gap-4">
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500" />
+                  <span className="text-xs text-slate-300">Low</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 rounded-full bg-amber-500" />
+                  <span className="text-xs text-slate-300">Medium</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 rounded-full bg-red-500" />
+                  <span className="text-xs text-slate-300">High</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Hierarchical Dependency View */}
+        <div className="bg-gradient-to-br from-slate-900/90 to-[#0d1425]/90 backdrop-blur-2xl border-2 border-amber-500/30 rounded-3xl shadow-[0_0_60px_rgba(245,158,11,0.2)] overflow-hidden">
+          <div className="px-6 py-4 border-b border-slate-700/60 bg-slate-900/50">
+            <div className="flex items-center gap-3">
+              <BarChart3 className="w-5 h-5 text-amber-400" />
+              <h3 className="text-lg font-black text-white">Supply Chain Hierarchy</h3>
+              <span className="ml-auto text-xs text-slate-500 font-mono">{hierarchyData.length} root contracts</span>
+            </div>
+          </div>
+
+          <div className="p-6 overflow-y-auto" style={{ maxHeight: '400px' }}>
+            {hierarchyData.length > 0 ? (
+              <div className="space-y-4">
+                {hierarchyData.map((contract, idx) => (
+                  <div key={idx} className="border-l-4 border-violet-500 pl-4">
+                    {/* Contract Level */}
+                    <div className="flex items-center gap-3 mb-3 p-3 rounded-xl bg-violet-500/10 border border-violet-500/30">
+                      <div className="text-2xl">📄</div>
+                      <div className="flex-1">
+                        <div className="text-xs text-violet-400 font-bold uppercase">Contract</div>
+                        <div className="text-sm text-white font-bold">{contract.label}</div>
+                      </div>
+                    </div>
+
+                    {/* Suppliers Level */}
+                    {contract.suppliers && contract.suppliers.length > 0 && (
+                      <div className="ml-6 space-y-3">
+                        {contract.suppliers.map((supplier, sidx) => (
+                          <div key={sidx} className="border-l-2 border-cyan-500/50 pl-4">
+                            <div className="flex items-center gap-2 mb-2 p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20">
+                              <div className="text-xl">🏭</div>
+                              <div className="flex-1">
+                                <div className="text-xs text-cyan-400 font-bold">Supplier</div>
+                                <div className="text-xs text-white font-semibold">{supplier.label}</div>
+                              </div>
+                            </div>
+
+                            {/* Countries Level */}
+                            {supplier.countries && supplier.countries.length > 0 && (
+                              <div className="ml-4 flex flex-wrap gap-2 mb-2">
+                                {supplier.countries.map((country, cidx) => (
+                                  <div key={cidx} className="flex items-center gap-1 px-2 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/30">
+                                    <div className="text-sm">🌍</div>
+                                    <span className="text-xs text-emerald-300 font-semibold">{country.label}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <Activity className="w-16 h-16 text-slate-700 mx-auto mb-4" />
+                <p className="text-slate-500 text-sm">No hierarchy data available</p>
+              </div>
+            )}
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  );
+}

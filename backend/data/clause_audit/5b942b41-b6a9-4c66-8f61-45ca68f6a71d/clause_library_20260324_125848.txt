@@ -1,0 +1,89 @@
+================================================================================
+CLAUSE LIBRARY - ORGANIZED BY CATEGORY
+Contract ID: 5b942b41-b6a9-4c66-8f61-45ca68f6a71d
+Generated: 2026-03-24T12:58:48.878932
+Categories: 5
+================================================================================
+
+TABLE OF CONTENTS:
+--------------------------------------------------------------------------------
+0. Intellectual Property Rights (1 clauses)
+1. Payment Terms (2 clauses)
+2. Confidentiality (3 clauses)
+3. Governing Law (1 clauses)
+4. Termination Provisions (1 clauses)
+
+
+================================================================================
+CATEGORY 0: INTELLECTUAL PROPERTY RIGHTS
+================================================================================
+Total Clauses: 1
+
+
+--------------------------------------------------------------------------------
+Intellectual Property Rights - Clause 1
+--------------------------------------------------------------------------------
+INTELLECTUAL PROPERTY --- Page 4 --- 5. 3 No Other Rights: All intellectual property remains Supplier's exclusive property.
+
+================================================================================
+CATEGORY 1: PAYMENT TERMS
+================================================================================
+Total Clauses: 2
+
+
+--------------------------------------------------------------------------------
+Payment Terms - Clause 1
+--------------------------------------------------------------------------------
+5 Force Majeure: Neither party liable for delays beyond reasonable control (excluding payment obliga ??ons).
+
+--------------------------------------------------------------------------------
+Payment Terms - Clause 2
+--------------------------------------------------------------------------------
+3 Payment Terms: Net 45 days from invoice date.
+
+================================================================================
+CATEGORY 2: CONFIDENTIALITY
+================================================================================
+Total Clauses: 3
+
+
+--------------------------------------------------------------------------------
+Confidentiality - Clause 1
+--------------------------------------------------------------------------------
+CONFIDENTIALITY 8. 1 Cap: EXCEPT FOR INDEMNIFICATION OBLIGATIONS AND CONFIDENTIALITY BREACHES, NEITHER PARTY'S LIABILITY SHALL EXCEED THE TOTAL FEES PAID IN THE 12 MONTHS PRECEDING THE CLAIM.
+
+--------------------------------------------------------------------------------
+Confidentiality - Clause 2
+--------------------------------------------------------------------------------
+1 Cap: EXCEPT FOR INDEMNIFICATION OBLIGATIONS AND CONFIDENTIALITY BREACHES, NEITHER PARTY'S LIABILITY SHALL EXCEED THE TOTAL FEES PAID IN THE 12 MONTHS PRECEDING THE CLAIM.
+
+--------------------------------------------------------------------------------
+Confidentiality - Clause 3
+--------------------------------------------------------------------------------
+LIMITATION OF LIABILITY 9.
+
+================================================================================
+CATEGORY 3: GOVERNING LAW
+================================================================================
+Total Clauses: 1
+
+
+--------------------------------------------------------------------------------
+Governing Law - Clause 1
+--------------------------------------------------------------------------------
+1 Governing Law: Swedish law shall govern, excluding con???ict of law rules and CISG.
+
+================================================================================
+CATEGORY 4: TERMINATION PROVISIONS
+================================================================================
+Total Clauses: 1
+
+
+--------------------------------------------------------------------------------
+Termination Provisions - Clause 1
+--------------------------------------------------------------------------------
+TERMINATION 10.
+
+================================================================================
+END OF CLAUSE LIBRARY
+================================================================================

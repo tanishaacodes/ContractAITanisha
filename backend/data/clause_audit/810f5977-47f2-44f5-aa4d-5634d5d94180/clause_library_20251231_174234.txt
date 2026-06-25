@@ -1,0 +1,65 @@
+================================================================================
+CLAUSE LIBRARY - ORGANIZED BY CATEGORY
+Contract ID: 810f5977-47f2-44f5-aa4d-5634d5d94180
+Generated: 2025-12-31T17:42:34.983290
+Categories: 3
+================================================================================
+
+TABLE OF CONTENTS:
+--------------------------------------------------------------------------------
+0. Contract (1 clauses)
+1. Data Processing (2 clauses)
+2. Payment Terms (1 clauses)
+
+
+================================================================================
+CATEGORY 0: CONTRACT
+================================================================================
+Total Clauses: 1
+
+
+--------------------------------------------------------------------------------
+Contract - Clause 1
+--------------------------------------------------------------------------------
+Clause 9 
+Governing law 
+The Clauses shall be governed by the law of the Member State in which the data exporter is established, namely ________________.
+
+================================================================================
+CATEGORY 1: DATA PROCESSING
+================================================================================
+Total Clauses: 2
+
+
+--------------------------------------------------------------------------------
+Data Processing - Clause 1
+--------------------------------------------------------------------------------
+“Cybersecurity Incident” means any Indicator or combination/sequence of related Indicators that threatens 		or compromises the confidentiality, integrity, or availability of Controller Data or Controller information 		systems. Confidentiality. Processor shall ensure that the personnel it has engaged or employed for Processing 							Personal Data are informed of the confidential nature of the Personal Data, have received appropriate 							training on their responsibilities with respect to its confidentiality and have executed written confidentiality 							agreements. Processor shall ensure that the personnel it has engaged or employed for Processing 							Personal Data are informed of the confidential nature of the Personal Data, have received appropriate 							training on their responsibilities with respect to its confidentiality and have executed written confidentiality 							agreements. Processor shall ensure that such confidentiality obligations survive the termination of the 
+
+--------------------------------------------------------------------------------
+Data Processing - Clause 2
+--------------------------------------------------------------------------------
+At Controller’s sole election, to cease Processing Personal Data promptly if in Controller’s reasonable 							determination, Processor is not providing the same level of protection to Personal Data as is required by 							the Data Protection Requirements or this Data Protection Addendum. 4 shall survive termination of the Agreement and shall continue in effect until such time Processor no longer has access to, hosts or retains Personal Data. Processor shall ensure that such confidentiality obligations survive the termination of the 							personnel engagement or employment. Upon the termination of the Agreement or earlier if demanded by Controller, Processor shall immediately 			return to Controller all Personal Data in its possession or constructive possession, custody or control, 			including any copies or reproductions thereof. 1  Processor’s responsibilities under this Data Protection Addendum shall continue beyond the length or term 				of the Agreement until the later of (i) su
+
+================================================================================
+CATEGORY 2: PAYMENT TERMS
+================================================================================
+Total Clauses: 1
+
+
+--------------------------------------------------------------------------------
+Payment Terms - Clause 1
+--------------------------------------------------------------------------------
+Description of the technical and organizational security measures implemented by the data importer in accordance with Clauses 4(d) and 5(c) (or document/legislation attached): 
+__________________________________________________________________________________________________________________________________________________________________________________________________ 
+ILLUSTRATIVE INDEMNIFICATION CLAUSE (OPTIONAL) 
+Liability 
+The parties agree that if one party is held liable for a violation of the clauses committed by the other party, the latter will, to the extent to which it is liable, indemnify the first party for any cost, charge, damages, expenses or loss it has incurred. Indemnification is contingent upon: 
+(a) the data exporter promptly notifying the data importer of a claim; and 
+(b) the data importer being given the possibility to cooperate with the data exporter in the defense and settlement of 
+the claim 
+ Paragraph on liabilities is optional.
+
+================================================================================
+END OF CLAUSE LIBRARY
+================================================================================

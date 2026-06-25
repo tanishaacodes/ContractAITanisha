@@ -1,0 +1,20 @@
+[0;1;32m●[0m ollama.service - Ollama
+     Loaded: [0;1;31mbad-setting[0m (Reason: Unit ollama.service has a bad unit file setting.)
+     Active: [0;1;32mactive (running)[0m since Sat 2025-12-06 16:37:47 UTC; 1 week 6 days ago
+   Main PID: 402505 (ollama)
+      Tasks: 25 (limit: 19145)
+     Memory: 312.6M (peak: 10.7G)
+        CPU: 6min 39.542s
+     CGroup: /system.slice/ollama.service
+             └─[0;38;5;245m402505 /usr/local/bin/ollama serve[0m
+
+Dec 20 05:32:31 srv1165348 ollama[402505]: [GIN] 2025/12/20 - 05:32:31 | 405 |       6.111µs |       127.0.0.1 | GET      "/api/chat"
+Dec 20 05:34:46 srv1165348 ollama[402505]: [GIN] 2025/12/20 - 05:34:46 | 404 |    2.942406ms |       127.0.0.1 | POST     "/api/chat"
+Dec 20 05:35:33 srv1165348 ollama[402505]: [GIN] 2025/12/20 - 05:35:33 | 405 |        6.58µs |       127.0.0.1 | GET      "/api/chat"
+Dec 20 12:44:42 srv1165348 ollama[402505]: [GIN] 2025/12/20 - 12:44:42 | 200 |      38.591µs |       127.0.0.1 | HEAD     "/"
+Dec 20 12:44:42 srv1165348 ollama[402505]: [GIN] 2025/12/20 - 12:44:42 | 200 |        22.9µs |       127.0.0.1 | GET      "/api/ps"
+Dec 20 15:09:09 srv1165348 ollama[402505]: [GIN] 2025/12/20 - 15:09:09 | 200 |       27.24µs |       127.0.0.1 | HEAD     "/"
+Dec 20 15:09:09 srv1165348 ollama[402505]: [GIN] 2025/12/20 - 15:09:09 | 200 |    4.288931ms |       127.0.0.1 | GET      "/api/tags"
+Dec 20 16:23:10 srv1165348 systemd[1]: [0;1;31m[0;1;39m[0;1;31mollama.service: Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services. Refusing.[0m
+Dec 20 16:24:51 srv1165348 systemd[1]: [0;1;31m[0;1;39m[0;1;31mollama.service: Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services. Refusing.[0m
+Dec 20 16:26:23 srv1165348 systemd[1]: [0;1;31m[0;1;39m[0;1;31mollama.service: Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services. Refusing.[0m

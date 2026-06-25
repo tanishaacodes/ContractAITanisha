@@ -1,0 +1,63 @@
+================================================================================
+CONTRACT CLAUSE AUDIT TRAIL
+Contract ID: 4372f03a-455c-47da-ba01-b75e3f4c5db9
+Generated: 2025-12-29T18:06:05.715547
+Total Clauses: 2
+================================================================================
+
+METADATA:
+--------------------------------------------------------------------------------
+contract_name: Signed Contract.pdf
+total_clauses: 2
+clusters: 2
+processing_time: 8.05s
+
+
+================================================================================
+CLAUSE #1
+================================================================================
+
+Clause Name: Termination
+Clause Type: Payment Terms
+Cluster Label: 0
+Confidence: 85.00
+
+TEXT:
+--------------------------------------------------------------------------------
+?? In the event that consultant declines to approve the materials submittals which will
+be submitted by Prime Technologies or shall delete the whole of the scope of the
+supply works before the commencement thereof, then in such case sky international
+shall have the right to terminate this agreement and in either case no rights, claims or
+dues whatsoever shall accrue to Prime Technologies there under or in law arising
+from such lack of approval or deletion or resulting from such termination by sky
+international. In case of termination for SIT contract with main contractor concerning this project. Settlement of Disputes
+
+In the event that any disputes or difference of any kind whatsoever shall arise between SIT and
+the supplier in connection with or arising out of this agreement, whether during the progress of
+the supply/ Works or after the completion thereof and whether before or after the termination,
+abandonment or breach of agreement, it shall be referred to the exclusive jurisdiction
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #2
+================================================================================
+
+Clause Name: Payment Terms
+Clause Type: Payment Terms
+Cluster Label: 1
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+Payment Terms:
+
+A Materials
+
+10% CDC as advance payment of complete order to be used for copper booking.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+END OF CLAUSE AUDIT TRAIL
+================================================================================

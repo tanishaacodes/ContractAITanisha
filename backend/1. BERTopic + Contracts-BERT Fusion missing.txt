@@ -1,0 +1,151 @@
+1. BERTopic + Contracts-BERT Fusion (NOT IMPLEMENTED)
+CRITICAL GAP: The specification calls for combining BERTopic with Contracts-BERT for higher accuracy, but this is completely missing.
+What's Missing:
+❌ No Contracts-BERT intent extraction per clause
+❌ No fusion layer combining BERTopic topics + BERT intents
+❌ No weighted scoring system (60% topics + 40% intents)
+❌ No contract type rules engine
+Note: You DO have Intent Mining (intent_mining_service.py) but it's:
+Separate from classification
+Uses Ollama LLM (not Contracts-BERT)
+Not integrated into the fusion pipeline
+What Needs to Be Built:
+
+# Missing: fusion.py
+CONTRACT_RULES = {
+    "Master Services Agreement": {
+        "topics": ["Services", "Payment", "Termination"],
+        "intents": ["Liability", "Indemnity", "Termination"]
+    },
+    # ... more rules
+}
+
+def fuse(topic_dist, intent_dist):
+    # Weighted fusion logic (60% topics + 40% intents)
+    pass
+2. Portfolio-Level Analytics (NOT IMPLEMENTED)
+CRITICAL GAP: Executive dashboard with contract mix analytics is missing.
+Missing Components:
+A. Contract Mix Aggregation ❌
+
+# Missing: analytics.py
+def contract_mix():
+    # % of MSA vs Sales vs NDA across all contracts
+    pass
+
+def intent_mix():
+    # Heatmap of intents across portfolio
+    pass
+B. Portfolio Dashboard API ❌
+❌ No /api/portfolio/dashboard/ endpoint
+❌ No contract mix by type aggregation
+❌ No intent density across portfolio
+❌ No risk exposure by contract type
+C. Executive Visualizations ❌
+Frontend components NOT built:
+❌ Contract Mix Donut Chart (Recharts/Plotly)
+❌ Intent Heatmap Bars
+❌ Topic Importance Distribution
+❌ Portfolio Risk Breakdown by Contract Type
+3. Enhanced Database Schema (PARTIALLY MISSING)
+Missing Fields:
+
+-- Missing: contract_classification table
+CREATE TABLE contract_classification (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    contract_id INT,
+    
+    -- ❌ Missing: Separate classification results
+    bert_topics JSON,           -- BERTopic results
+    bert_intents JSON,          -- Contracts-BERT intents
+    fused_score JSON,           -- Combined scores
+    
+    created_at TIMESTAMP
+);
+Current Limitation: Classification results are stored directly in Contract model (only contract_type and confidence_score). No historical tracking or detailed breakdown.
+4. Advanced Visualizations (MISSING)
+Missing from Specification:
+A. Topic Distribution Charts ❌
+Donut chart showing topic weights per contract
+Bar chart showing topic importance
+B. Clause-Level Insights ❌
+Which clauses contributed to which classification
+Explainability at clause level
+C. Confidence Breakdown ❌
+Visual breakdown of how confidence was calculated
+BERTopic vs BERT contribution split
+5. Production-Grade Features (MISSING)
+A. Model Management ❌
+❌ No model versioning
+❌ No A/B testing between BERTopic and Ollama
+❌ No fallback strategy when both fail
+❌ No retraining pipeline (manual script only)
+B. Performance Optimization ❌
+❌ No batch classification endpoint
+❌ No background job processing (Celery)
+❌ No caching at API level (only in classifier)
+C. Classification History ❌
+❌ No tracking of classification changes over time
+❌ No "reclassify all" bulk operation
+❌ No classification audit log
+🔧 TECHNICAL ISSUES FOUND
+1. Ollama Service Down ⚠️
+Current Status: is_ollama_available() returns False
+Impact: Falling back to BERTopic only
+Fix Needed: Start Ollama service or remove Ollama dependency
+2. BERTopic Model Exists ✅
+Verified: Model loads successfully
+Location: django_backend/models/bertopic_contracts/
+3. Database Schema OK ✅
+contract_type and confidence_score fields exist
+No migration needed
+📋 PRIORITY IMPLEMENTATION ROADMAP
+Phase 1: Critical (Needed for MVP)
+✅ BERTopic classification (DONE)
+✅ Frontend UI (DONE)
+✅ Basic visualization (DONE)
+🟡 Fix Ollama or remove it (DECISION NEEDED)
+Phase 2: Enhanced Accuracy (Fusion)
+❌ Implement Contracts-BERT intent extraction
+❌ Build fusion layer (BERTopic + BERT)
+❌ Add contract type rules engine
+❌ Update API to return fused results
+Phase 3: Portfolio Analytics (Executive Dashboard)
+❌ Build contract mix aggregation
+❌ Build intent mix analytics
+❌ Create portfolio dashboard API
+❌ Build executive frontend visualizations
+Phase 4: Production Polish
+❌ Add classification history tracking
+❌ Build batch classification
+❌ Add model versioning
+❌ Implement background job processing
+🎯 SUMMARY
+Completion Status:
+Component	Status	Percentage
+Basic Classification	✅ Working	100%
+BERTopic Integration	✅ Working	100%
+Ollama Integration	🟡 Built but down	50%
+Frontend UI	✅ Working	90%
+Basic Visualization	✅ Working	80%
+Fusion Layer	❌ Not built	0%
+Portfolio Analytics	❌ Not built	10%
+Executive Dashboard	❌ Not built	0%
+Production Features	❌ Not built	20%
+Overall Completion: ~50%
+What Works Now:
+✅ Upload contracts and classify them
+✅ See BERTopic-based classification
+✅ View interactive cluster map
+✅ Basic confidence scores
+What's Missing:
+❌ High-accuracy fusion (BERTopic + Contracts-BERT)
+❌ Portfolio-level executive analytics
+❌ Advanced visualizations (mix charts, heatmaps)
+❌ Production-grade features (history, batch, jobs)
+Would you like me to:
+Implement the fusion layer (BERTopic + Contracts-BERT)?
+Build portfolio analytics dashboard?
+Fix the Ollama integration?
+Create advanced visualizations?
+Let me know which priority you want to tackle first!

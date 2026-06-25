@@ -1,0 +1,40 @@
+
+SUPPLY AGREEMENT
+
+Date: August 14, 2025
+
+Supplier: Zenith Corporation
+Purchaser: Acme Corporation
+
+1. PRODUCTS
+The Supplier agrees to supply software licenses to the Purchaser.
+
+2. QUANTITY AND PRICING
+Quantity: 9689 units per month
+Unit Price: $393
+Total Monthly Value: $62,500
+
+3. DELIVERY TERMS
+- Delivery Location: Chicago, IL
+- Shipping Terms: FOB Chicago, IL
+- Delivery Schedule: First Monday of each month
+
+4. PAYMENT TERMS
+Payment: Net 30 days from invoice date
+Total Contract Value: $750,000
+
+5. QUALITY STANDARDS
+All products must meet ISO 9001 standards and pass quality inspection.
+
+6. WARRANTIES
+12-month warranty on all products against defects in materials and workmanship.
+
+7. TERM
+Contract Period: 12 months from August 14, 2025
+Renewal: Automatic renewal unless 60 days written notice provided.
+
+8. TERMINATION
+Either party may terminate with 60 days written notice.
+
+_____________________          _____________________
+Zenith Corporation                    Acme Corporation

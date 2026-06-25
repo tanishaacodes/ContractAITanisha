@@ -1,0 +1,204 @@
+================================================================================
+CONTRACT CLAUSE AUDIT TRAIL
+Contract ID: 7e66a235-6aa5-4eaa-9a7e-4b374d8b5312
+Generated: 2026-02-09T15:19:27.251572
+Total Clauses: 8
+================================================================================
+
+METADATA:
+--------------------------------------------------------------------------------
+contract_name: MASTER SERVICES AGREEMENT.docx
+total_clauses: 8
+clusters: 3
+processing_time: 16.59s
+
+
+================================================================================
+CLAUSE #1
+================================================================================
+
+Clause Name: Indemnification
+Clause Type: Indemnification Clause
+Cluster Label: 0
+Confidence: 100.00
+
+TEXT:
+--------------------------------------------------------------------------------
+═══════════════════════════════════════════════════════════════════════════════
+                    ARTICLE 5: INDEMNIFICATION (UNLIMITED)
+═══════════════════════════════════════════════════════════════════════════════
+5. 1 CLIENT INDEMNIFICATION OBLIGATIONS
+Client shall defend, indemnify, and hold harmless Service Provider, its affiliates, officers,
+directors, employees, agents, and subcontractors from and against any and all claims, damages,
+losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from
+or relating to:
+(a) Client's use or misuse of the Services
+(b) Any breach of this Agreement by Client
+(c) Client's business operations, products, or services
+(d) Any third-party claims related to Client's data or content
+(e) Any regulatory violations or compliance failures
+(f) Any employment claims by Client's personnel
+(g) Any intellectual property infringement claims
+(h) Any data breaches or security incidents
+(i) Any acts or omissions of Client or its 
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #2
+================================================================================
+
+Clause Name: Termination
+Clause Type: Indemnification Clause
+Cluster Label: 0
+Confidence: 100.00
+
+TEXT:
+--------------------------------------------------------------------------------
+═══════════════════════════════════════════════════════════════════════════════
+                         ARTICLE 2: TERM AND TERMINATION
+═══════════════════════════════════════════════════════════════════════════════
+2. 2 TERMINATION FOR CONVENIENCE
+Client may terminate this Agreement at any time for any reason or no reason upon providing
+thirty (30) days written notice to Service Provider. Upon such termination, Client shall
+immediately pay all amounts due for services rendered plus termination fees equal to 100%
+of the remaining contract value. Upon such termination, Client shall
+immediately pay all amounts due for services rendered plus termination fees equal to 100%
+of the remaining contract value. 3 TERMINATION CONSEQUENCES
+Upon termination, Service Provider shall have no obligation to provide transition assistance
+or return any Client data unless Client pays all outstanding amounts plus a data retrieval
+fee of $500,000. 3 TERMINATION CONSEQUENCES
+Upon termination, Service Provide
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #3
+================================================================================
+
+Clause Name: Intellectual Property
+Clause Type: Indemnification Clause
+Cluster Label: 0
+Confidence: 85.00
+
+TEXT:
+--------------------------------------------------------------------------------
+═══════════════════════════════════════════════════════════════════════════════
+              ARTICLE 4: INTELLECTUAL PROPERTY AND OWNERSHIP
+═══════════════════════════════════════════════════════════════════════════════
+4. 1 SERVICE PROVIDER OWNERSHIP
+All work product, deliverables, code, documentation, methodologies, tools, templates, and
+any intellectual property created or developed by Service Provider in connection with this
+Agreement shall remain the exclusive property of Service Provider, regardless of whether
+Client paid for such development. 1 CLIENT INDEMNIFICATION OBLIGATIONS
+Client shall defend, indemnify, and hold harmless Service Provider, its affiliates, officers,
+directors, employees, agents, and subcontractors from and against any and all claims, damages,
+losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from
+or relating to:
+(a) Client's use or misuse of the Services
+(b) Any breach of this Agreement by Client
+(c) Client's business 
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #4
+================================================================================
+
+Clause Name: Arbitration
+Clause Type: Dispute Resolution Clause
+Cluster Label: 1
+Confidence: 70.00
+
+TEXT:
+--------------------------------------------------------------------------------
+2 DISPUTE RESOLUTION
+Any disputes shall be resolved through binding arbitration in the Cayman Islands under
+the rules of the Cayman Islands Arbitration Centre. 2 DISPUTE RESOLUTION
+Any disputes shall be resolved through binding arbitration in the Cayman Islands under
+the rules of the Cayman Islands Arbitration Centre.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #5
+================================================================================
+
+Clause Name: Governing Law
+Clause Type: Dispute Resolution Clause
+Cluster Label: 1
+Confidence: 70.00
+
+TEXT:
+--------------------------------------------------------------------------------
+═══════════════════════════════════════════════════════════════════════════════
+                      ARTICLE 10: GOVERNING LAW AND DISPUTES
+═══════════════════════════════════════════════════════════════════════════════
+10. 1 GOVERNING LAW
+This Agreement shall be governed by the laws of the Cayman Islands, without regard to
+conflicts of law principles.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #6
+================================================================================
+
+Clause Name: Dispute Resolution
+Clause Type: Dispute Resolution Clause
+Cluster Label: 1
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+2 DISPUTE RESOLUTION
+Any disputes shall be resolved through binding arbitration in the Cayman Islands under
+the rules of the Cayman Islands Arbitration Centre.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #7
+================================================================================
+
+Clause Name: Limitation of Liability
+Clause Type: Indemnification Clause
+Cluster Label: 0
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+2 CLIENT WARRANTIES
+Client represents, warrants, and covenants that:
+(a) It has full authority to enter into this Agreement
+(b) It will comply with all applicable laws and regulations
+(c) It will not use the Services for any unlawful purpose
+(d) All information provided to Service Provider is accurate and complete
+(e) It will maintain adequate insurance coverage as required herein
+(f) It will indemnify Service Provider as set forth in Article 5
+═══════════════════════════════════════════════════════════════════════════════
+                    ARTICLE 7: LIMITATION OF LIABILITY
+═══════════════════════════════════════════════════════════════════════════════
+7.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #8
+================================================================================
+
+Clause Name: Payment Terms
+Clause Type: Payment Terms
+Cluster Label: 2
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+3 PAYMENT TERMS
+All invoices are due within 15 days of receipt.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+END OF CLAUSE AUDIT TRAIL
+================================================================================

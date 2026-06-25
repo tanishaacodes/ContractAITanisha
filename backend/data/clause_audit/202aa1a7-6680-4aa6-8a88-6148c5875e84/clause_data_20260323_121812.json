@@ -1,0 +1,36 @@
+{
+  "contract_id": "202aa1a7-6680-4aa6-8a88-6148c5875e84",
+  "contract_name": "Legal Review.pdf",
+  "clusters": 5,
+  "cluster_names": {
+    "1": "Arbitration Agreement",
+    "0": "Confidentiality Obligations",
+    "2": "Force Majeure",
+    "4": "Contract",
+    "3": "Payment Terms"
+  },
+  "clause_groups": {
+    "1": [
+      "ARTICLE 13 - DISPUTE RESOLUTION AND ARBITRATION \n13. 1, either party \nmay submit the dispute to final and binding arbitration administered by the Singapore \nInternational Arbitration Centre (SIAC) in accordance with the SIAC Arbitration Rules 2025. 1, either party \nmay submit the dispute to final and binding arbitration administered by the Singapore \nInternational Arbitration Centre (SIAC) in accordance with the SIAC Arbitration Rules 2025. 1, either party \nmay submit the dispute to final and binding arbitration administered by the Singapore \nInternational Arbitration Centre (SIAC) in accordance with the SIAC Arbitration Rules 2025. The seat of arbitration shall be Singapore. The language of arbitration shall be English. 3 The parties agree to keep all arbitration proceedings, submissions, evidence, and \nawards strictly confidential, except as required by law or regulation. 2 For matters not subject to arbitration under Article 13, the parties irrevocably submit to \nthe exclusive juris",
+      "ARTICLE 13 - DISPUTE RESOLUTION AND ARBITRATION \n13."
+    ],
+    "0": [
+      "2 shall not apply to: (a) liability for death or \npersonal injury caused by negligence; (b) liability for fraud or fraudulent misrepresentation; \n(c) liability arising under the indemnification obligations in Article 4; (d) wilful breach or \ngross misconduct; or (e) breach of confidentiality obligations under Article 7. ARTICLE 7 - CONFIDENTIALITY AND NON-DISCLOSURE \n7. 2 The obligations of confidentiality shall continue for a period of five (5) years after the \nexpiration or termination of this Agreement, and indefinitely with respect to any information \nconstituting trade secrets under applicable law. 3 The Receiving Party may disclose Confidential Information to its employees, contractors, \nand professional advisers who have a strict need to know, provided such persons are bound \nby confidentiality obligations at least as protective as those in this Ag reement. 2 The Service Provider may subcontract specific technical tasks to pre-approved \nsubcontractors listed in Schedule C, provi",
+      "ARTICLE 4 - INDEMNIFICATION \n4. 3 Each party's indemnification obligations shall survive the expiration or termination of this \nAgreement for a period of six (6) years. 4 A party seeking indemnification must provide prompt written notice of the claim, \ncooperate fully with the indemnifying party, and grant the indemnifying party sole control of \nthe defence and settlement of the claim, provided that no settlement shall be  made that \nimposes any obligation on the indemnified party without its prior written consent. 2 shall not apply to: (a) liability for death or \npersonal injury caused by negligence; (b) liability for fraud or fraudulent misrepresentation; \n(c) liability arising under the indemnification obligations in Article 4; (d) wilful breach or \ngross misconduct; or (e) breach of confidentiality obligations under Article 7.",
+      "4 \"Intellectual Property Rights\" means all patents, copyrights, trademarks, trade secrets, \nmoral rights, database rights, and any other intellectual or industrial property rights existing \nanywhere in the world, whether registered or unregistered. 1 The Service Provider shall indemnify, defend, and hold harmless the Client, its directors, \nofficers, employees, agents, successors, and assigns from and against any and all claims, \ndamages, losses, costs, expenses (including reasonable attorneys' fees) , judgments, fines, \nand liabilities of any kind arising out of or related to: (a) any breach by the Service Provider \nof its representations, warranties, or obligations under this Agreement; (b) any infringement \n\n--- Page 3 ---\nor alleged infringement of any third-party Intellectual Property Rights caused by the \nDeliverables; (c) any gross negligence or wilful misconduct of the Service Provider or its \npersonnel; (d) any breach of applicable data protection laws; and (e) any death  or p",
+      "3 Each party's indemnification obligations shall survive the expiration or termination of this \nAgreement for a period of six (6) years. 2 The obligations of confidentiality shall continue for a period of five (5) years after the \nexpiration or termination of this Agreement, and indefinitely with respect to any information \nconstituting trade secrets under applicable law. 1 During the Term and for a period of twenty- four (24) months following the termination \nor expiration of this Agreement, the Service Provider shall not, directly or indirectly, engage \nin, own, manage, operate, control, be employed by, or provide services to any business that \ndirectly competes with the Client's core ERP business operations in the United States, India, \nSingapore, and the United Kingdom. 2 During the Term and for a period of eighteen (18) months following termination, neither \nparty shall directly or indirectly solicit, recruit, or hire any employee or contractor of the \nother party who was involved"
+    ],
+    "2": [
+      "ARTICLE 9 - FORCE MAJEURE \n9. 1 Neither party shall be liable for any failure or delay in the performance of its obligations \nunder this Agreement to the extent such failure or delay is caused by a Force Majeure Event. A \"Force Majeure Event\" means any event beyond a party's reasonable control, including but \nnot limited to: acts of God, war, terrorism, civil unrest, earthquake, flood, pandemic, \nepidemic (including any resurgence of COVID-19 or emergence of a new pathogen), \ngovernment sanctions, export control restrictions, cyberattacks on critical national \ninfrastructure, nationwide internet outages, or actions of governmental authorities. 2 The party claiming a Force Majeure Event must: (a) notify the other party in writing \nwithin forty-eight (48) hours of the commencement of the event; (b) use all reasonable \nendeavours to mitigate the effects of the Force Majeure Event and resume perform ance as \nsoon as reasonably practicable; and (c) provide weekly written updates on the stat"
+    ],
+    "4": [
+      "5 \"Governing Law\" means the laws of England and Wales shall govern this Agreement and \nany dispute arising hereunder, except as otherwise expressly stated for specific clauses. ARTICLE 14 - GOVERNING LAW AND JURISDICTION \n\n--- Page 8 ---\n14.",
+      "ARTICLE 5 - LIMITATION OF LIABILITY \n5. 3 The limitation of liability set out in Clause 5."
+    ],
+    "3": [
+      "ARTICLE 3 - PAYMENT TERMS AND INVOICING \n3."
+    ]
+  },
+  "total_clauses": 10,
+  "processing_timestamp": 1774248492.9126496
+}

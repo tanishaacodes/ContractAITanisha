@@ -1,0 +1,46 @@
+# ContractAI Celery Worker Dockerfile
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    DJANGO_SETTINGS_MODULE=contractai.settings
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    default-libmysqlclient-dev \
+    pkg-config \
+    curl \
+    libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY . /app/
+
+# Create necessary directories
+RUN mkdir -p /app/uploads /app/chroma_db
+
+# Create non-root user
+RUN useradd -m -u 1000 contractai && \
+    chown -R contractai:contractai /app
+
+USER contractai
+
+# Health check for Celery
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+    CMD celery -A contractai inspect ping -d celery@$HOSTNAME || exit 1
+
+# Run Celery worker
+CMD ["celery", "-A", "contractai", "worker", "-l", "info", "--concurrency", "2"]

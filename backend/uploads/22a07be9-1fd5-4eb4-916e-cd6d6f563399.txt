@@ -1,0 +1,35 @@
+
+PROFESSIONAL SERVICES AGREEMENT
+
+Agreement Date: October 12, 2025
+
+Service Provider: Catalyst Group
+Client: Nexus Technologies
+
+1. SCOPE OF SERVICES
+The Service Provider agrees to provide software development services to the Client for a period of 24 months.
+
+2. DELIVERABLES
+- Monthly progress reports
+- software development implementation
+- Documentation and training
+
+3. COMPENSATION
+Total Contract Value: $1,000,000
+Payment Schedule: Monthly installments of $41,666
+
+4. TERM AND TERMINATION
+Term: 24 months from October 12, 2025
+Termination: Either party may terminate with 30 days notice.
+
+5. CONFIDENTIALITY
+Both parties agree to maintain strict confidentiality of all proprietary information.
+
+6. LIABILITY
+Total liability is limited to $1,000,000.
+
+7. GOVERNING LAW
+Jurisdiction: Washington
+
+_____________________          _____________________
+Catalyst Group                    Nexus Technologies

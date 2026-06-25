@@ -1,0 +1,40 @@
+
+SUPPLY AGREEMENT
+
+Date: August 11, 2025
+
+Supplier: DataTech Systems
+Purchaser: CloudFirst Technologies
+
+1. PRODUCTS
+The Supplier agrees to supply computer hardware to the Purchaser.
+
+2. QUANTITY AND PRICING
+Quantity: 1513 units per month
+Unit Price: $114
+Total Monthly Value: $2,777
+
+3. DELIVERY TERMS
+- Delivery Location: Chicago, IL
+- Shipping Terms: FOB Chicago, IL
+- Delivery Schedule: First Monday of each month
+
+4. PAYMENT TERMS
+Payment: Net 30 days from invoice date
+Total Contract Value: $100,000
+
+5. QUALITY STANDARDS
+All products must meet ISO 9001 standards and pass quality inspection.
+
+6. WARRANTIES
+12-month warranty on all products against defects in materials and workmanship.
+
+7. TERM
+Contract Period: 36 months from August 11, 2025
+Renewal: Automatic renewal unless 60 days written notice provided.
+
+8. TERMINATION
+Either party may terminate with 60 days written notice.
+
+_____________________          _____________________
+DataTech Systems                    CloudFirst Technologies

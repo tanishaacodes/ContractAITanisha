@@ -1,0 +1,63 @@
+================================================================================
+CONTRACT CLAUSE AUDIT TRAIL
+Contract ID: 5c50cc78-74e6-4989-8203-c5f7ab763d24
+Generated: 2026-02-09T15:36:23.842376
+Total Clauses: 2
+================================================================================
+
+METADATA:
+--------------------------------------------------------------------------------
+contract_name: Signed Contract.pdf
+total_clauses: 2
+clusters: 2
+processing_time: 11.99s
+
+
+================================================================================
+CLAUSE #1
+================================================================================
+
+Clause Name: Payment Terms
+Clause Type: Payment Terms
+Cluster Label: 0
+Confidence: 85.00
+
+TEXT:
+--------------------------------------------------------------------------------
+00
+2Payment Terms:
+A Materials
+10% CDC as advance payment of complete order to be used for copper booking. Payment Terms: Will be discussed and agreed. )
+Payment terms:
+20% advance.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #2
+================================================================================
+
+Clause Name: Termination
+Clause Type: Contract Agreement
+Cluster Label: 1
+Confidence: 85.00
+
+TEXT:
+--------------------------------------------------------------------------------
+In the event that consultant declines to approve the materials submittals which will
+be submitted by Prime Technologies or shall delete the whole of the scope of the
+supply works before the commencement thereof, then in such case sky international
+shall have the right to terminate this agreement and in either case no rights, claims or
+dues whatsoever shall accrue to Prime Technologies there under or in law arising
+from such lack of approval or deletion or resulting from such termination by sky
+international. In case of termination for SIT contract with main contractor concerning this project. Settlement of Disputes
+In the event that any disputes or difference of any kind whatsoever shall arise between SIT and
+the supplier in connection with or arising out of this agreement, whether during the progress of
+the supply/ Works or after the completion thereof and whether before or after the termination,
+abandonment or breach of agreement, it shall be referred to the exclusive jurisdiction of
+
+--------------------------------------------------------------------------------
+
+================================================================================
+END OF CLAUSE AUDIT TRAIL
+================================================================================

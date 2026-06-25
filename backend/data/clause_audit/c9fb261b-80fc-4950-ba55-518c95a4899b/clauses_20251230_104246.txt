@@ -1,0 +1,112 @@
+================================================================================
+CONTRACT CLAUSE AUDIT TRAIL
+Contract ID: c9fb261b-80fc-4950-ba55-518c95a4899b
+Generated: 2025-12-30T10:42:46.758883
+Total Clauses: 6
+================================================================================
+
+METADATA:
+--------------------------------------------------------------------------------
+contract_name: tesy.pdf
+total_clauses: 6
+clusters: 3
+processing_time: 26.57s
+
+
+================================================================================
+CLAUSE #1
+================================================================================
+
+Clause Name: Arbitration
+Clause Type: Payment Terms
+Cluster Label: 0
+Confidence: 100.00
+
+TEXT:
+--------------------------------------------------------------------------------
+Any disputes in excess of Five Thousand Dollars ($5,000) shall be subject  to arbitration by a single arbitrator under the auspices of the American Arbitration Association  (“AAA”),  pursuant  to  its  Commercial  Arbitration  Rules. Any disputes in excess of Five Thousand Dollars ($5,000) shall be subject  to arbitration by a single arbitrator under the auspices of the American Arbitration Association  (“AAA”),  pursuant  to  its  Commercial  Arbitration  Rules. Any disputes in excess of Five Thousand Dollars ($5,000) shall be subject  to arbitration by a single arbitrator under the auspices of the American Arbitration Association  (“AAA”),  pursuant  to  its  Commercial  Arbitration  Rules. All   arbitration 
+
+--- Page 10 ---
+Master Service Agreement
+REV .
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #2
+================================================================================
+
+Clause Name: Confidentiality
+Clause Type: Force Majeure
+Cluster Label: 1
+Confidence: 85.00
+
+TEXT:
+--------------------------------------------------------------------------------
+CONFIDENTIALITY. Confidential Information does not include information that the receiving party can show: (a) is or becomes publicly known or available without breach of this Agreement: (b) is received by a receiving party from a third party without breach of any obligation of confidentiality; or (c) was previously known by the receiving party as shown by its written records. Both parties acknowledge that the breach of any of the confidentiality provisions or other agreements set forth in this Agreement would give rise to irreparable injury to the disclosing/non-defaulting party, which injury would be inadequately compensable in money damages.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #3
+================================================================================
+
+Clause Name: Payment Terms
+Clause Type: Payment Terms
+Cluster Label: 0
+Confidence: 85.00
+
+TEXT:
+--------------------------------------------------------------------------------
+PAYMENT TERMS. CLIENT agrees to the following payment terms: a. Payment terms will be determined based on credit application.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #4
+================================================================================
+
+Clause Name: Termination
+Clause Type: Payment Terms
+Cluster Label: 0
+Confidence: 85.00
+
+TEXT:
+--------------------------------------------------------------------------------
+TERM & TERMINATION. Upon termination, CLIENT shall promptly pay TSN all outstanding amounts due to TSN under this Agreement. The provisions in this document, which by their nature are intended to survive, shall survive the expiration or termination of this Agreement.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #5
+================================================================================
+
+Clause Name: Force Majeure
+Clause Type: Force Majeure
+Cluster Label: 1
+Confidence: 70.00
+
+TEXT:
+--------------------------------------------------------------------------------
+FORCE MAJEURE. Any party asserting Force Majeure as an excuse shall have the burden of proving that reasonable steps were taken (under the circumstances) to minimize delay or damages caused by foreseeable events, that all non-excused obligations were substantially fulfilled, and that the other party was timely notified of the likelihood or actual occurrence that would justify such an assertion, so that other prudent precautions could be contemplated.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #6
+================================================================================
+
+Clause Name: Governing Law
+Clause Type: Legal Clause Category Name: Contract Terms
+Cluster Label: 2
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+GOVERNING LAW.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+END OF CLAUSE AUDIT TRAIL
+================================================================================

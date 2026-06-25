@@ -1,0 +1,19 @@
+{
+  "contract_id": "a8ad1949-63f1-4b57-a6d1-8e80d9843d34",
+  "contract_name": "Signed Contract (1).pdf",
+  "clusters": 2,
+  "cluster_names": {
+    "0": "Payment Terms",
+    "1": "Payment Terms"
+  },
+  "clause_groups": {
+    "0": [
+      "00\n2Payment Terms:\nA Materials\n10% CDC as advance payment of complete order to be used for copper booking. Payment Terms: Will be discussed and agreed. )\nPayment terms:\n20% advance."
+    ],
+    "1": [
+      "In the event that consultant declines to approve the materials submittals which will\nbe submitted by Prime Technologies or shall delete the whole of the scope of the\nsupply works before the commencement thereof, then in such case sky international\nshall have the right to terminate this agreement and in either case no rights, claims or\ndues whatsoever shall accrue to Prime Technologies there under or in law arising\nfrom such lack of approval or deletion or resulting from such termination by sky\ninternational. In case of termination for SIT contract with main contractor concerning this project. Settlement of Disputes\nIn the event that any disputes or difference of any kind whatsoever shall arise between SIT and\nthe supplier in connection with or arising out of this agreement, whether during the progress of\nthe supply/ Works or after the completion thereof and whether before or after the termination,\nabandonment or breach of agreement, it shall be referred to the exclusive jurisdiction of"
+    ]
+  },
+  "total_clauses": 2,
+  "processing_timestamp": 1767793402.7446022
+}

@@ -1,0 +1,128 @@
+# ============================================================
+# CONTRACT AI MVP - PYTHON DEPENDENCIES
+# ============================================================
+# This file contains all Python dependencies required for the
+# Django backend of the Contract AI MVP application.
+#
+# Installation: pip install -r requirements.txt
+# ============================================================
+
+# ------------------------------------------------------------
+# CORE DJANGO FRAMEWORK
+# ------------------------------------------------------------
+Django==4.2.7
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+
+# ------------------------------------------------------------
+# AUTHENTICATION & SECURITY
+# ------------------------------------------------------------
+PyJWT==2.10.1
+bcrypt==4.1.1
+
+# ------------------------------------------------------------
+# CONFIGURATION MANAGEMENT
+# ------------------------------------------------------------
+python-decouple==3.8
+python-dotenv==1.0.0
+
+# ------------------------------------------------------------
+# DATABASE DRIVERS
+# ------------------------------------------------------------
+# mysqlclient==2.2.0
+
+# ------------------------------------------------------------
+# DOCUMENT PROCESSING & OCR
+# ------------------------------------------------------------
+# PDF Processing
+PyPDF2==3.0.1
+pdf2image==1.16.3
+
+# Word Document Processing
+python-docx==0.8.11
+
+# Image Processing
+Pillow==11.0.0
+
+# OCR Engine (requires Tesseract OCR to be installed on system)
+pytesseract==0.3.10
+
+# ------------------------------------------------------------
+# AI & RAG (Retrieval-Augmented Generation)
+# ------------------------------------------------------------
+# Vector Database Client
+qdrant-client==1.12.1
+
+# Sentence Embeddings & Transformers
+sentence-transformers==3.3.1
+
+# These are installed automatically by sentence-transformers
+# but listed here for transparency:
+# - torch
+# - transformers
+# - numpy
+# - scipy
+# - scikit-learn
+# - huggingface-hub
+
+# ------------------------------------------------------------
+# HTTP & API UTILITIES
+# ------------------------------------------------------------
+requests==2.32.3
+
+# ------------------------------------------------------------
+# DEVELOPMENT & TESTING (Optional)
+# ------------------------------------------------------------
+# Uncomment if needed for development:
+# pytest==7.4.3
+# pytest-django==4.7.0
+# black==23.12.0
+# flake8==6.1.0
+# ipython==8.18.1
+
+# ------------------------------------------------------------
+# PRODUCTION SERVER (Optional)
+# ------------------------------------------------------------
+# Uncomment for production deployment:
+# gunicorn==21.2.0
+# whitenoise==6.6.0
+
+# ============================================================
+# SYSTEM REQUIREMENTS (Not installed via pip)
+# ============================================================
+# - Python 3.8+
+# - MySQL 8.0+
+# - Tesseract OCR (for image/PDF OCR functionality)
+#   Windows: choco install tesseract
+#   Linux: apt-get install tesseract-ocr
+#   macOS: brew install tesseract
+#
+# - Ollama (for AI/LLM functionality)
+#   Install from: https://ollama.ai
+#   Required model: ollama pull qwen2.5:0.5b
+#
+# - Qdrant Vector Database (for RAG)
+#   Docker: docker run -p 6333:6333 qdrant/qdrant
+#   Or download from: https://qdrant.tech
+# ============================================================
+
+# ============================================================
+# NOTES
+# ============================================================
+# 1. Before installing, create a virtual environment:
+#    python -m venv venv
+#    source venv/bin/activate  (Linux/Mac)
+#    venv\Scripts\activate     (Windows)
+#
+# 2. Install all dependencies:
+#    pip install -r requirements.txt
+#
+# 3. For mysqlclient on Windows, you may need:
+#    - Microsoft C++ Build Tools
+#    - Or use: pip install pymysql (alternative to mysqlclient)
+#
+# 4. Tesseract must be installed separately on your system
+#    and configured in settings.py
+#
+# 5. For production, uncomment gunicorn and whitenoise
+# ============================================================

@@ -1,0 +1,34 @@
+{
+  "contract_id": "5b942b41-b6a9-4c66-8f61-45ca68f6a71d",
+  "contract_name": "EXCLUSIVE DISTRIBUTION AGREEMENT.pdf",
+  "clusters": 5,
+  "cluster_names": {
+    "2": "Confidentiality",
+    "0": "Intellectual Property Rights",
+    "1": "Payment Terms",
+    "3": "Governing Law",
+    "4": "Termination Provisions"
+  },
+  "clause_groups": {
+    "2": [
+      "CONFIDENTIALITY 8. 1 Cap: EXCEPT FOR INDEMNIFICATION OBLIGATIONS AND CONFIDENTIALITY BREACHES, NEITHER PARTY'S LIABILITY SHALL EXCEED THE TOTAL FEES PAID IN THE 12 MONTHS PRECEDING THE CLAIM.",
+      "1 Cap: EXCEPT FOR INDEMNIFICATION OBLIGATIONS AND CONFIDENTIALITY BREACHES, NEITHER PARTY'S LIABILITY SHALL EXCEED THE TOTAL FEES PAID IN THE 12 MONTHS PRECEDING THE CLAIM.",
+      "LIMITATION OF LIABILITY 9."
+    ],
+    "0": [
+      "INTELLECTUAL PROPERTY --- Page 4 --- 5. 3 No Other Rights: All intellectual property remains Supplier's exclusive property."
+    ],
+    "1": [
+      "5 Force Majeure: Neither party liable for delays beyond reasonable control (excluding payment obliga ??ons).",
+      "3 Payment Terms: Net 45 days from invoice date."
+    ],
+    "3": [
+      "1 Governing Law: Swedish law shall govern, excluding con???ict of law rules and CISG."
+    ],
+    "4": [
+      "TERMINATION 10."
+    ]
+  },
+  "total_clauses": 8,
+  "processing_timestamp": 1774337328.8829823
+}

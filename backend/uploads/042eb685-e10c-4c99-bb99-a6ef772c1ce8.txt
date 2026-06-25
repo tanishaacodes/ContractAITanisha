@@ -1,0 +1,35 @@
+
+PROFESSIONAL SERVICES AGREEMENT
+
+Agreement Date: May 13, 2025
+
+Service Provider: DataTech Systems
+Client: Velocity Logistics
+
+1. SCOPE OF SERVICES
+The Service Provider agrees to provide IT support services to the Client for a period of 18 months.
+
+2. DELIVERABLES
+- Monthly progress reports
+- IT support implementation
+- Documentation and training
+
+3. COMPENSATION
+Total Contract Value: $1,000,000
+Payment Schedule: Monthly installments of $55,555
+
+4. TERM AND TERMINATION
+Term: 18 months from May 13, 2025
+Termination: Either party may terminate with 30 days notice.
+
+5. CONFIDENTIALITY
+Both parties agree to maintain strict confidentiality of all proprietary information.
+
+6. LIABILITY
+Total liability is limited to $1,000,000.
+
+7. GOVERNING LAW
+Jurisdiction: California
+
+_____________________          _____________________
+DataTech Systems                    Velocity Logistics

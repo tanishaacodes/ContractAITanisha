@@ -1,0 +1,93 @@
+================================================================================
+CONTRACT CLAUSE AUDIT TRAIL
+Contract ID: b5826085-29b9-43f5-a17d-1d8b98b66332
+Generated: 2026-03-23T13:03:02.704064
+Total Clauses: 5
+================================================================================
+
+METADATA:
+--------------------------------------------------------------------------------
+contract_name: contract fm.pdf
+total_clauses: 5
+clusters: 3
+processing_time: 19.27s
+
+
+================================================================================
+CLAUSE #1
+================================================================================
+
+Clause Name: Force Majeure
+Clause Type: Contract Terms
+Cluster Label: 0
+Confidence: 100.00
+
+TEXT:
+--------------------------------------------------------------------------------
+CONTRACT VALUE: USD 1,500,000,000 (One Billion Five Hundred Million Dollars) DURATION: 36 months (Completion: December 31, 2026) JURISDICTION: Taiwan with ICC Arbitration in Singapore SCOPE OF WORK: The Contractor shall design, procure, construct, install, test and commission a 150,000 sq meter semiconductor fabrication facility including: - 50 ASML EUV lithography machines (Netherlands) - 200 Tokyo Electron etching systems (Japan) - Applied Materials deposition tools (USA) - Samsung Electronics integration systems (South Korea) - Clean room facilities (Class 1 ISO standard) - Ultra-pure water treatment plant (100,000 m3/day capacity) - Electrical substation (500 MW capacity) - Chemical storage and distribution systems - Data center for fab automation (10 MW) CRITICAL SUPPLY CHAIN DEPENDENCIES: - ASML (Netherlands): EUV lithography - Route: Rotterdam → Suez Canal → Taiwan Strait → Kaohsiung Port - Tokyo Electron (Japan): Etching equipment - Route: Yokohama → East China Sea → Taiwan
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #2
+================================================================================
+
+Clause Name: Arbitration
+Clause Type: Contract Terms
+Cluster Label: 0
+Confidence: 85.00
+
+TEXT:
+--------------------------------------------------------------------------------
+CONTRACT VALUE: USD 1,500,000,000 (One Billion Five Hundred Million Dollars) DURATION: 36 months (Completion: December 31, 2026) JURISDICTION: Taiwan with ICC Arbitration in Singapore SCOPE OF WORK: The Contractor shall design, procure, construct, install, test and commission a 150,000 sq meter semiconductor fabrication facility including: - 50 ASML EUV lithography machines (Netherlands) - 200 Tokyo Electron etching systems (Japan) - Applied Materials deposition tools (USA) - Samsung Electronics integration systems (South Korea) - Clean room facilities (Class 1 ISO standard) - Ultra-pure water treatment plant (100,000 m3/day capacity) - Electrical substation (500 MW capacity) - Chemical storage and distribution systems - Data center for fab automation (10 MW) CRITICAL SUPPLY CHAIN DEPENDENCIES: - ASML (Netherlands): EUV lithography - Route: Rotterdam → Suez Canal → Taiwan Strait → Kaohsiung Port - Tokyo Electron (Japan): Etching equipment - Route: Yokohama → East China Sea → Taiwan
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #3
+================================================================================
+
+Clause Name: Termination
+Clause Type: Payment Terms
+Cluster Label: 2
+Confidence: 85.00
+
+TEXT:
+--------------------------------------------------------------------------------
+(d) Government Actions: expropriation, embargo, import/export restrictions, or sanctions by UN Security Council, US OFAC, or European Union affecting critical semiconductor equipment or materials (e) Infrastructure Failure: prolonged electrical power grid failure exceeding 72 continuous hours, telecommunications network total collapse, or port closures exceeding 30 consecutive days EXCLUSIONS FROM FORCE MAJEURE (Contractor bears risk): - Economic hardship, cost increases, currency fluctuations, or inflation - Labor disputes, strikes, work stoppages (unless government-mandated) - Supplier delays due to commercial disputes, insolvency, or bankruptcy - Cyber attacks, ransomware, or data breaches (unless proven state-sponsored) - Routine weather conditions typical for Taiwan region - Political tensions or diplomatic disputes without kinetic military action - Terrorism, sabotage, or non-state actor attacks (NOT COVERED) - Trade restrictions or tariffs by individual countries (NOT COVER
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #4
+================================================================================
+
+Clause Name: Governing Law
+Clause Type: Contract Clause Category Name: Insurance Terms ...
+Cluster Label: 1
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+INSURANCE COVERAGE: - Comprehensive General Liability: USD 100M - Contractor's All Risk (CAR): USD 1,500M - Marine Cargo Insurance: USD 1,000M - Delay in Start-Up (DSU): USD 200M - GAPS: No terrorism insurance, No political risk insurance, No war risk insurance, No cyber insurance mandated EXPORT COMPLIANCE REQUIREMENTS: - US Export Administration Regulations (EAR) compliance required - Dutch export license for ASML machines (subject to geopolitical review) - Wassenaar Arrangement controls on dual-use technology - Taiwan Technology Protection Act compliance - Immediate notification required if export licenses suspended or denied TERMINATION CONDITIONS: - Material breach with 30-day cure period - Insolvency or bankruptcy - Force Majeure exceeding 180 days - Government prohibition or export control denial - Owner termination for convenience: 90 days notice, costs plus 10% profit GOVERNING LAW AND DISPUTES: - Taiwan Contract Law governs interpretation - ICC Arbitration in Singapore - 3 a
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #5
+================================================================================
+
+Clause Name: Payment Terms
+Clause Type: Contract Terms
+Cluster Label: 0
+Confidence: 55.00
+
+TEXT:
+--------------------------------------------------------------------------------
+CONTRACT VALUE: USD 1,500,000,000 (One Billion Five Hundred Million Dollars) DURATION: 36 months (Completion: December 31, 2026) JURISDICTION: Taiwan with ICC Arbitration in Singapore SCOPE OF WORK: The Contractor shall design, procure, construct, install, test and commission a 150,000 sq meter semiconductor fabrication facility including: - 50 ASML EUV lithography machines (Netherlands) - 200 Tokyo Electron etching systems (Japan) - Applied Materials deposition tools (USA) - Samsung Electronics integration systems (South Korea) - Clean room facilities (Class 1 ISO standard) - Ultra-pure water treatment plant (100,000 m3/day capacity) - Electrical substation (500 MW capacity) - Chemical storage and distribution systems - Data center for fab automation (10 MW) CRITICAL SUPPLY CHAIN DEPENDENCIES: - ASML (Netherlands): EUV lithography - Route: Rotterdam → Suez Canal → Taiwan Strait → Kaohsiung Port - Tokyo Electron (Japan): Etching equipment - Route: Yokohama → East China Sea → Taiwan
+
+--------------------------------------------------------------------------------
+
+================================================================================
+END OF CLAUSE AUDIT TRAIL
+================================================================================

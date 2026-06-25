@@ -1,0 +1,40 @@
+
+SUPPLY AGREEMENT
+
+Date: March 20, 2025
+
+Supplier: Enterprise Dynamics
+Purchaser: BlueSky Systems
+
+1. PRODUCTS
+The Supplier agrees to supply raw materials to the Purchaser.
+
+2. QUANTITY AND PRICING
+Quantity: 3336 units per month
+Unit Price: $145
+Total Monthly Value: $166,666
+
+3. DELIVERY TERMS
+- Delivery Location: Boston, MA
+- Shipping Terms: FOB Boston, MA
+- Delivery Schedule: First Monday of each month
+
+4. PAYMENT TERMS
+Payment: Net 30 days from invoice date
+Total Contract Value: $1,000,000
+
+5. QUALITY STANDARDS
+All products must meet ISO 9001 standards and pass quality inspection.
+
+6. WARRANTIES
+12-month warranty on all products against defects in materials and workmanship.
+
+7. TERM
+Contract Period: 6 months from March 20, 2025
+Renewal: Automatic renewal unless 60 days written notice provided.
+
+8. TERMINATION
+Either party may terminate with 60 days written notice.
+
+_____________________          _____________________
+Enterprise Dynamics                    BlueSky Systems

@@ -1,0 +1,103 @@
+# Arbitration Risk Taxonomy — PrimeContractAI
+# ============================================
+# This YAML file configures the 8-dimension arbitration risk ontology.
+# Weights range 0.0–1.0. Higher weight = stronger contribution to composite score.
+# Modify indicators/weights here without touching Python code.
+
+arbitration_risk_taxonomy:
+
+  jurisdiction_risk:
+    weight: 0.90
+    indicators:
+      - foreign seat
+      - governing law mismatch
+      - conflict of law
+      - multi-jurisdiction
+      - choice of law
+      - lex arbitri
+      - seat of arbitration
+      - place of arbitration
+
+  cost_exposure:
+    weight: 0.80
+    indicators:
+      - cost shifting
+      - loser pays
+      - tribunal cost allocation
+      - legal costs
+      - arbitration fees
+      - cost of arbitration
+      - party bears costs
+      - cost award
+
+  institutional_risk:
+    weight: 0.70
+    indicators:
+      - ICC arbitration
+      - LCIA
+      - SIAC
+      - ad hoc arbitration
+      - UNCITRAL
+      - DIAC
+      - AAA
+      - arbitration institution
+      - institutional rules
+
+  tribunal_structure:
+    weight: 0.60
+    indicators:
+      - single arbitrator
+      - tribunal appointment dispute
+      - sole arbitrator
+      - three arbitrators
+      - appointment of arbitrators
+      - challenge of arbitrator
+      - arbitrator independence
+
+  procedural_risk:
+    weight: 0.65
+    indicators:
+      - expedited procedure
+      - discovery limitations
+      - document production
+      - witness evidence
+      - expert determination
+      - fast track
+      - emergency arbitration
+      - interim relief
+
+  enforcement_risk:
+    weight: 0.75
+    indicators:
+      - enforceability
+      - sovereign immunity
+      - appeal waiver
+      - award enforcement
+      - new york convention
+      - recognition of award
+      - jurisdictional challenge
+      - annulment
+
+  delay_dispute_risk:
+    weight: 0.85
+    indicators:
+      - delay damages
+      - liquidated damages
+      - time for completion
+      - extension of time
+      - delay in completion
+      - force majeure
+      - concurrent delay
+      - critical path
+
+  subcontractor_pass_through:
+    weight: 0.72
+    indicators:
+      - back-to-back arbitration
+      - subcontractor dispute
+      - pass-through claim
+      - sub-contract
+      - nominated subcontractor
+      - multi-party arbitration
+      - consolidation of proceedings
+      - third party claims

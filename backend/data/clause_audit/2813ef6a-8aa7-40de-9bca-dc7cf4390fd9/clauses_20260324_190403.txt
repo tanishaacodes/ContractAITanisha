@@ -1,0 +1,481 @@
+================================================================================
+CONTRACT CLAUSE AUDIT TRAIL
+Contract ID: 2813ef6a-8aa7-40de-9bca-dc7cf4390fd9
+Generated: 2026-03-24T19:04:03.893019
+Total Clauses: 10
+================================================================================
+
+METADATA:
+--------------------------------------------------------------------------------
+contract_name: Legal Review.pdf
+total_clauses: 10
+clusters: 3
+processing_time: 18.19s
+
+
+================================================================================
+CLAUSE #1
+================================================================================
+
+Clause Name: Arbitration
+Clause Type: Contract Agreement
+Cluster Label: 1
+Confidence: 100.00
+
+TEXT:
+--------------------------------------------------------------------------------
+12.2 The Service Provider additionally warrants that: (a) the Services shall be performed in a 
+professional and workmanlike manner by qualified personnel; (b) the Deliverables shall 
+conform to the specifications set forth in Schedule A for a warranty perio d of twelve (12) 
+months following acceptance; (c) the software shall be free from material defects, malicious 
+code, backdoors, and undisclosed security vulnerabilities; (d) the Service Provider maintains 
+adequate professional indemnity insurance of no less than USD 5,000,000 per occurrence; 
+and (e) all Deliverables shall be original works and shall not infringe any third-party rights. 
+ 
+ARTICLE 13 - DISPUTE RESOLUTION AND ARBITRATION
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #2
+================================================================================
+
+Clause Name: Confidentiality
+Clause Type: Contract Agreement
+Cluster Label: 1
+Confidence: 80.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 7 - CONFIDENTIALITY AND NON-DISCLOSURE 
+7.1 Each party (as "Receiving Party") agrees to: (a) hold all Confidential Information of the 
+other party (the "Disclosing Party") in strict confidence using no less than the same degree 
+of care it uses to protect its own confidential information, but in n o event less than 
+reasonable care; (b) not disclose any Confidential Information to any third party without the 
+prior written consent of the Disclosing Party; and (c) use the Confidential Information solely 
+for the purpose of performing its obligations or exercising its rights under this Agreement. 
+7.2 The obligations of confidentiality shall continue for a period of five (5) years after the 
+expiration or termination of this Agreement, and indefinitely with respect to any information 
+constituting trade secrets under applicable law.  
+7.3 The Receiving Party may disclose Confidential Information to its employees, contractors, 
+and professional advisers who have a strict need to know, provided such persons are bound 
+by confidentiality obligations at least as protective as those in this Ag reement. 
+7.4 The Receiving Party must notify the Disclosing Party immediately upon becoming aware 
+of any actual or suspected unauthorised disclosure of Confidential Information, and shall 
+take all reasonable steps to mitigate any harm caused thereby.  
+ 
+
+--- Page 5 ---
+ARTICLE 8 - NON-COMPETE AND NON-SOLICITATION 
+8.1 During the Term and for a period of twenty- four (24) months following the termination 
+or expiration of this Agreement, the Service Provider shall not, directly or indirectly, engage 
+in, own, manage, operate, control, be employed by, or provide services to any business that 
+directly competes with the Client's core ERP business operations in the United States, India, 
+Singapore, and the United Kingdom. 
+8.2 During the Term and for a period of eighteen (18) months following termination, neither 
+party shall directly or indirectly solicit, recruit, or hire any employee or contractor of the 
+other party who was involved in the performance of this Agreement, without the prior 
+written consent of the other party.  
+8.3 The parties acknowledge that the restrictions in this Article are reasonable and 
+necessary to protect the legitimate business interests of the Client, given the highly sensitive 
+nature of the technical knowledge and proprietary information to which the  Service Provider 
+will be exposed. 
+ 
+ARTICLE 9 - FORCE MAJEURE 
+9.1 Neither part
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #3
+================================================================================
+
+Clause Name: Dispute Resolution
+Clause Type: Contract Terms
+Cluster Label: 2
+Confidence: 80.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 13 - DISPUTE RESOLUTION AND ARBITRATION 
+13.1 In the event of any dispute, controversy, or claim arising out of or in connection with 
+this Agreement, including any question regarding its existence, validity, or termination, the 
+parties shall first attempt to resolve such dispute amicably through good faith negotiations 
+at the senior management level for a period of thirty (30) days from the date one party 
+provides written notice of the dispute to the other.  
+13.2 If the dispute is not resolved within the period specified in Clause 13.1, either party 
+may submit the dispute to final and binding arbitration administered by the Singapore 
+International Arbitration Centre (SIAC) in accordance with the SIAC Arbitration Rules 2025. 
+The seat of arbitration shall be Singapore. The language of arbitration shall be English. The 
+tribunal shall consist of three (3) arbitrators, each party appointing one, and the two party -
+appointed arbitrators appointing the presiding arbitr ator. 
+13.3 The parties agree to keep all arbitration proceedings, submissions, evidence, and 
+awards strictly confidential, except as required by law or regulation. 
+13.4 Notwithstanding the foregoing, either party may seek emergency interim relief from 
+any court of competent jurisdiction to prevent irreparable harm pending the constitution of 
+the arbitral tribunal. 
+13.5 The award of the arbitral tribunal shall be final and binding on the parties and may be 
+enforced in any court of competent jurisdiction. Each party irrevocably waives any right to 
+appeal the arbitral award. 
+ 
+ARTICLE 14 - GOVERNING LAW AND JURISDICTION 
+
+--- Page 8 ---
+14.1 This Agreement and all disputes arising under or in connection with it shall be governed 
+by and construed in accordance with the laws of England and Wales, without regard to its 
+conflict of law principles. 
+14.2 For matters not subject to arbitration under Article 13, the parties irrevocably submit to 
+the exclusive jurisdiction of the courts of England and Wales.  
+14.3 The United Nations Convention on Contracts for the International Sale of Goods (CISG) 
+shall not apply to this Agreement. 
+ 
+ARTICLE 15 - DATA PROTECTION AND CYBERSECURITY 
+15.1 Each party shall comply with all applicable data protection laws in the jurisdictions 
+where it operates, including the GDPR, CCPA, India's Digital Personal Data Protection Act 
+2023, and Singapore's PDPA. 
+15.2 The Service Provider shall implement and maintain industry-standard technical and
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #4
+================================================================================
+
+Clause Name: Force Majeure
+Clause Type: Contract Terms
+Cluster Label: 2
+Confidence: 80.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 9 - FORCE MAJEURE 
+9.1 Neither party shall be liable for any failure or delay in the performance of its obligations 
+under this Agreement to the extent such failure or delay is caused by a Force Majeure Event. 
+A "Force Majeure Event" means any event beyond a party's reasonable control, including but 
+not limited to: acts of God, war, terrorism, civil unrest, earthquake, flood, pandemic, 
+epidemic (including any resurgence of COVID-19 or emergence of a new pathogen), 
+government sanctions, export control restrictions, cyberattacks on critical national 
+infrastructure, nationwide internet outages, or actions of governmental authorities. 
+9.2 The party claiming a Force Majeure Event must: (a) notify the other party in writing 
+within forty-eight (48) hours of the commencement of the event; (b) use all reasonable 
+endeavours to mitigate the effects of the Force Majeure Event and resume perform ance as 
+soon as reasonably practicable; and (c) provide weekly written updates on the status of the 
+Force Majeure Event. 
+9.3 If a Force Majeure Event continues for more than ninety (90) consecutive days, either 
+party may terminate this Agreement upon thirty (30) days written notice without liability, 
+except for payment obligations accrued prior to the Force Majeure Event.  
+9.4 Geopolitical risks including trade wars, international sanctions imposed by the United 
+States, United Nations, or European Union, and changes in government export licensing 
+requirements shall be classified as Force Majeure Events for the purposes of this Agreement. 
+ 
+ARTICLE 10 - LIQUIDATED DAMAGES AND PENALTIES 
+
+--- Page 6 ---
+10.1 Time is of the essence with respect to all milestones set out in Schedule B. If the Service 
+Provider fails to deliver any milestone by the date specified, the Client shall be entitled to 
+deduct from the monthly retainer liquidated damages at the rate of USD 15,000 (Fifteen 
+Thousand United States Dollars) per day of delay for each milestone, up to a maximum of 
+20% of the total contract value. 
+10.2 The parties agree that the liquidated damages specified in Clause 10.1 represent a 
+genuine and reasonable pre- estimate of the loss likely to be suffered by the Client as a result 
+of delayed delivery, and are not intended as a penalty. 
+10.3 The Service Provider shall pay a penalty of USD 75,000 (Seventy-Five Thousand United 
+States Dollars) for each material data breach caused by its negligence that results in the 
+exposure of the Client's customers'
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #5
+================================================================================
+
+Clause Name: Governing Law
+Clause Type: Contract Agreement
+Cluster Label: 1
+Confidence: 80.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 14 - GOVERNING LAW AND JURISDICTION 
+
+--- Page 8 ---
+14.1 This Agreement and all disputes arising under or in connection with it shall be governed 
+by and construed in accordance with the laws of England and Wales, without regard to its 
+conflict of law principles. 
+14.2 For matters not subject to arbitration under Article 13, the parties irrevocably submit to 
+the exclusive jurisdiction of the courts of England and Wales.  
+14.3 The United Nations Convention on Contracts for the International Sale of Goods (CISG) 
+shall not apply to this Agreement. 
+ 
+ARTICLE 15 - DATA PROTECTION AND CYBERSECURITY 
+15.1 Each party shall comply with all applicable data protection laws in the jurisdictions 
+where it operates, including the GDPR, CCPA, India's Digital Personal Data Protection Act 
+2023, and Singapore's PDPA. 
+15.2 The Service Provider shall implement and maintain industry-standard technical and 
+organisational security measures, including AES -256 encryption at rest, TLS 1.3 in transit, 
+multi-factor authentication, and annual third -party penetration testing. 
+15.3 In the event of a personal data breach, the Service Provider shall notify the Client 
+within twenty-four (24) hours of discovery, and shall cooperate fully with the Client in 
+notifying affected individuals and relevant supervisory authorities within st atutorytimeframes.  
+15.4 The Service Provider shall not transfer any personal data of the Client's customers 
+outside the country of origin without the prior written consent of the Client and the 
+implementation of appropriate transfer mechanisms including Standard Contractual Clauses 
+where required. 
+ 
+ARTICLE 16 - ASSIGNMENT AND SUBCONTRACTING 
+16.1 Neither party may assign, transfer, novate, or otherwise dispose of any of its rights or 
+obligations under this Agreement without the prior written consent of the other party, 
+which shall not be unreasonably withheld or delayed. 
+16.2 The Service Provider may subcontract specific technical tasks to pre-approved 
+subcontractors listed in Schedule C, provided that: (a) the Service Provider remains fully 
+liable for all acts and omissions of its subcontractors; (b) subcontractors are bound by 
+confidentiality and IP ownership obligations at least equivalent to those in this Agreement; 
+and (c) the Client is promptly notified of any change in the subcontractor roster.  
+16.3 Any change of control of the Service Provider (whether by merger, acquisition, or 
+otherwise) shall be deemed an assig
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #6
+================================================================================
+
+Clause Name: Indemnification
+Clause Type: Contract Agreement
+Cluster Label: 1
+Confidence: 80.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 4 - INDEMNIFICATION 
+4.1 The Service Provider shall indemnify, defend, and hold harmless the Client, its directors, 
+officers, employees, agents, successors, and assigns from and against any and all claims, 
+damages, losses, costs, expenses (including reasonable attorneys' fees) , judgments, fines, 
+and liabilities of any kind arising out of or related to: (a) any breach by the Service Provider 
+of its representations, warranties, or obligations under this Agreement; (b) any infringement 
+
+--- Page 3 ---
+or alleged infringement of any third-party Intellectual Property Rights caused by the 
+Deliverables; (c) any gross negligence or wilful misconduct of the Service Provider or its 
+personnel; (d) any breach of applicable data protection laws; and (e) any death  or personal 
+injury caused by the Service Provider's acts or omissions. 
+4.2 The Client shall indemnify, defend, and hold harmless the Service Provider from and 
+against any claims arising from: (a) the Client's use of the Deliverables in a manner not 
+authorised under this Agreement; (b) the Client's breach of any third-party licence 
+obligations; and (c) any fraudulent misrepresentation by the Client.  
+4.3 Each party's indemnification obligations shall survive the expiration or termination of this 
+Agreement for a period of six (6) years. 
+4.4 A party seeking indemnification must provide prompt written notice of the claim, 
+cooperate fully with the indemnifying party, and grant the indemnifying party sole control of 
+the defence and settlement of the claim, provided that no settlement shall be  made that 
+imposes any obligation on the indemnified party without its prior written consent.  
+ 
+ARTICLE 5 - LIMITATION OF LIABILITY 
+5.1 NOTWITHSTANDING ANY OTHER PROVISION OF THIS AGREEMENT, NEITHER PARTY 
+SHALL BE LIABLE TO THE OTHER FOR ANY INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, 
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES OF ANY KIND, INCLUDING BUT NOT LIMITED TO 
+LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF DATA, LOSS OF GOODWILL, OR BUSINESS 
+INTERRUPTION, EVEN IF SUCH PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH 
+DAMAGES. 
+5.2 The total aggregate liability of the Service Provider under or in connection with this 
+Agreement, whether arising in contract, tort (including negligence), misrepresentation, 
+restitution, or otherwise, shall in no event exceed the greater of: (a) the t otal fees paid by 
+the Client to the Service Provider in the twelve (12) calendar months immediately preceding 
+the eve
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #7
+================================================================================
+
+Clause Name: Intellectual Property
+Clause Type: Contract Agreement
+Cluster Label: 1
+Confidence: 80.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 6 - INTELLECTUAL PROPERTY AND OWNERSHIP 
+
+--- Page 4 ---
+6.1 All Deliverables created by the Service Provider specifically for the Client under this 
+Agreement shall, upon full payment of all fees due, be deemed works made for hire and 
+shall be exclusively owned by the Client. The Service Provider hereby irrevocably assigns to 
+the Client all right, title, and interest in and to such Deliverables, including all Intellectual 
+Property Rights therein. 
+6.2 The Service Provider retains exclusive ownership of all pre- existing proprietary tools, 
+frameworks, libraries, methodologies, and background intellectual property ("Background 
+IP") used to create the Deliverables. The Service Provider grants the Client a non-exclusive, 
+non-transferable, royalty-free, perpetual licence to use the Background IP solely to the 
+extent embedded in and necessary to use the Deliverables. 
+6.3 The Service Provider warrants that the Deliverables shall not infringe any third-party 
+patent, copyright, trademark, or trade secret rights existing as of the Effective Date. In the 
+event of any infringement claim, the Service Provider shall, at its option and cost: (a) procure 
+the right for the Client to continue using the Deliverables; (b) modify the Deliverables to 
+make them non- infringing without loss of functionality; or (c) replace the infringing 
+elements with non-infringing equivalents. 
+6.4 The Client shall not reverse engineer, decompile, or disassemble any software 
+components that constitute the Service Provider's Background IP.  
+ 
+ARTICLE 7 - CONFIDENTIALITY AND NON-DISCLOSURE 
+7.1 Each party (as "Receiving Party") agrees to: (a) hold all Confidential Information of the 
+other party (the "Disclosing Party") in strict confidence using no less than the same degree 
+of care it uses to protect its own confidential information, but in n o event less than 
+reasonable care; (b) not disclose any Confidential Information to any third party without the 
+prior written consent of the Disclosing Party; and (c) use the Confidential Information solely 
+for the purpose of performing its obligations or exercising its rights under this Agreement. 
+7.2 The obligations of confidentiality shall continue for a period of five (5) years after the 
+expiration or termination of this Agreement, and indefinitely with respect to any information 
+constituting trade secrets under applicable law.  
+7.3 The Receiving Party may disclose Confidential Information to its employees, contractors,
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #8
+================================================================================
+
+Clause Name: Limitation of Liability
+Clause Type: Contract Agreement
+Cluster Label: 1
+Confidence: 80.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 5 - LIMITATION OF LIABILITY 
+5.1 NOTWITHSTANDING ANY OTHER PROVISION OF THIS AGREEMENT, NEITHER PARTY 
+SHALL BE LIABLE TO THE OTHER FOR ANY INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, 
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES OF ANY KIND, INCLUDING BUT NOT LIMITED TO 
+LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF DATA, LOSS OF GOODWILL, OR BUSINESS 
+INTERRUPTION, EVEN IF SUCH PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH 
+DAMAGES. 
+5.2 The total aggregate liability of the Service Provider under or in connection with this 
+Agreement, whether arising in contract, tort (including negligence), misrepresentation, 
+restitution, or otherwise, shall in no event exceed the greater of: (a) the t otal fees paid by 
+the Client to the Service Provider in the twelve (12) calendar months immediately preceding 
+the event giving rise to the claim; or (b) USD 2,000,000 (Two Million United States Dollars). 
+5.3 The limitation of liability set out in Clause 5.2 shall not apply to: (a) liability for death or 
+personal injury caused by negligence; (b) liability for fraud or fraudulent misrepresentation; 
+(c) liability arising under the indemnification obligations in Article 4; (d) wilful breach or 
+gross misconduct; or (e) breach of confidentiality obligations under Article 7. 
+5.4 Each party acknowledges that the limitations of liability in this Article reflect a 
+reasonable allocation of risk and that neither party would have entered into this Agreement 
+without such limitations. 
+ 
+ARTICLE 6 - INTELLECTUAL PROPERTY AND OWNERSHIP 
+
+--- Page 4 ---
+6.1 All Deliverables created by the Service Provider specifically for the Client under this 
+Agreement shall, upon full payment of all fees due, be deemed works made for hire and 
+shall be exclusively owned by the Client. The Service Provider hereby irrevocably assigns to 
+the Client all right, title, and interest in and to such Deliverables, including all Intellectual 
+Property Rights therein. 
+6.2 The Service Provider retains exclusive ownership of all pre- existing proprietary tools, 
+frameworks, libraries, methodologies, and background intellectual property ("Background 
+IP") used to create the Deliverables. The Service Provider grants the Client a non-exclusive, 
+non-transferable, royalty-free, perpetual licence to use the Background IP solely to the 
+extent embedded in and necessary to use the Deliverables. 
+6.3 The Service Provider warrants that the Deliverables shall not infringe any third-party 
+patent, copyright, trademark
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #9
+================================================================================
+
+Clause Name: Payment Terms
+Clause Type: Payment Terms
+Cluster Label: 0
+Confidence: 80.00
+
+TEXT:
+--------------------------------------------------------------------------------
+ARTICLE 3 - PAYMENT TERMS AND INVOICING 
+3.1 The Client shall pay the Service Provider a fixed monthly retainer of USD 450,000 (Four 
+Hundred Fifty Thousand United States Dollars), payable in advance on the first business day 
+of each calendar month, without deduction, set-off, or counterclaim of any kind whatsoever. 
+3.2 In the event the Client fails to make any payment when due, the Service Provider shall be 
+entitled to charge compound interest on the overdue amount at the rate of 2.5% per month 
+(thirty percent per annum), calculated from the due date until the date o f actual payment, 
+without prejudice to any other right or remedy. 
+3.3 All payments shall be made by SWIFT wire transfer to the Service Provider's designated 
+account. The Client shall bear all bank charges, taxes (including GST at 18%), and currency 
+conversion costs associated with each payment. 
+3.4 The Service Provider shall issue GST-compliant invoices in accordance with the 
+requirements of the Goods and Services Tax Act, 2017 (India) and shall maintain all records 
+required under the same for a minimum period of seven (7) years. 
+3.5 The Client guarantees payment irrespective of whether the Client has itself received 
+payment from its own end customers. Payment is not contingent on the Client's business 
+performance or the achievement of any commercial objective. 
+ 
+ARTICLE 4 - INDEMNIFICATION 
+4.1 The Service Provider shall indemnify, defend, and hold harmless the Client, its directors, 
+officers, employees, agents, successors, and assigns from and against any and all claims, 
+damages, losses, costs, expenses (including reasonable attorneys' fees) , judgments, fines, 
+and liabilities of any kind arising out of or related to: (a) any breach by the Service Provider 
+of its representations, warranties, or obligations under this Agreement; (b) any infringement 
+
+--- Page 3 ---
+or alleged infringement of any third-party Intellectual Property Rights caused by the 
+Deliverables; (c) any gross negligence or wilful misconduct of the Service Provider or its 
+personnel; (d) any breach of applicable data protection laws; and (e) any death  or personal 
+injury caused by the Service Provider's acts or omissions. 
+4.2 The Client shall indemnify, defend, and hold harmless the Service Provider from and 
+against any claims arising from: (a) the Client's use of the Deliverables in a manner not 
+authorised under this Agreement; (b) the Client's breach of any third-party licence 
+obligations; and (c
+
+--------------------------------------------------------------------------------
+
+================================================================================
+CLAUSE #10
+================================================================================
+
+Clause Name: Termination
+Clause Type: Contract Terms
+Cluster Label: 2
+Confidence: 80.00
+
+TEXT:
+--------------------------------------------------------------------------------
+11.1 Termination for Convenience:  The Client may terminate this Agreement at anytime 
+upon sixty (60) days prior written notice to the Service Provider. Upon such termination, the 
+Client shall pay the Service Provider for all Services properly performed up to the date of 
+termination, plus reasonable demobilisation costs not to exceed one (1) month's retainer.  
+11.2 Termination for Cause:  Either party may terminate this Agreement immediately upon 
+written notice if: (a) the other party commits a material breach and fails to cure such breach 
+within thirty (30) days of written notice specifying the breach in detail; (b) the other party 
+becomes insolvent, enters administration, liquidation, or makes an assignment for the 
+benefit of creditors; or (c) the other party commits fraud, gross negligence, or wilful 
+misconduct. 
+11.3 Termination for Regulatory Non -Compliance:  The Client may immediately terminate 
+this Agreement if the Service Provider fails to obtain or maintain any required regulatory 
+certification, licence, or approval necessary to perform the Services, including but not 
+limited to ISO 27001 certification and SOC 2 Type II attestation. 
+11.4 Upon termination for any reason: (a) all licences granted under this Agreement shall 
+immediately terminate; (b) each party shall promptly return or destroy all Confidential 
+Information of the other party; (c) the Service Provider shall deliver all Del iverables 
+completed as of the termination date; and (d) all accrued payment obligations shall survive 
+termination. 
+ 
+
+--- Page 7 ---
+ARTICLE 12 - REPRESENTATIONS AND WARRANTIES 
+12.1 Each party represents and warrants that: (a) it has full legal authority to enter into and 
+perform this Agreement; (b) the execution and performance of this Agreement does not 
+violate any applicable law, regulation, court order, or third -party agreement to which it is a 
+party; and (c) it is not subject to any sanctions, debarment, or export control restrictions 
+that would prevent it from performing its obligations. 
+12.2 The Service Provider additionally warrants that: (a) the Services shall be performed in a 
+professional and workmanlike manner by qualified personnel; (b) the Deliverables shall 
+conform to the specifications set forth in Schedule A for a warranty perio d of twelve (12) 
+months following acceptance; (c) the software shall be free from material defects, malicious 
+code, backdoors, and undisclosed security vulnerabilities; (d) the Service Provider
+
+--------------------------------------------------------------------------------
+
+================================================================================
+END OF CLAUSE AUDIT TRAIL
+================================================================================

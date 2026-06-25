@@ -1,0 +1,19 @@
+{
+  "contract_id": "392dfec6-fac5-4240-9771-ce04f412cf1b",
+  "contract_name": "DATAP005.docx",
+  "clusters": 2,
+  "cluster_names": {
+    "0": "Confidentiality Obligations",
+    "1": "Payment Terms"
+  },
+  "clause_groups": {
+    "0": [
+      "Technical and Organizational Measures, and Confidentiality of Processing \n \n9. All Oracle and Oracle Affiliate staff, as well as any Third Party Subprocessors that may have access to Personal Data are subject to appropriate confidentiality arrangements. Oracle and Oracle Affiliate staff are required to periodically complete an information protection and confidentiality awareness training course. The third party must execute a written confidentiality agreement acceptable to Oracle or otherwise be bound by a statutory confidentiality obligation before conducting the audit. The third party must execute a written confidentiality agreement acceptable to Oracle or otherwise be bound by a statutory confidentiality obligation before conducting the audit. The goal of Oracle’s Incident response will be to restore the confidentiality, integrity, and availability of the Moat Services environment and the Personal Data that may be contained therein, and to establish root causes and remediation steps"
+    ],
+    "1": [
+      "Return and Deletion of Personal Data upon Termination of Moat Services  \n \n12. 1 Upon termination of the Moat Services or upon expiry of the retrieval period following termination of the Moat Services (if available), Oracle will promptly delete all copies of Personal Data from the Moat Services environment by rendering such Personal Data unrecoverable, except as may be required by law. 1 Upon termination of the Moat Services or upon expiry of the retrieval period following termination of the Moat Services (if available), Oracle will promptly delete all copies of Personal Data from the Moat Services environment by rendering such Personal Data unrecoverable, except as may be required by law. Sharing of account usernames, passwords, tokens, and/or PIN pertaining to any Oracle facilities, networks or applications is strictly forbidden and may be punishable by appropriate administrative action up to and including termination."
+    ]
+  },
+  "total_clauses": 2,
+  "processing_timestamp": 1767675727.0258474
+}

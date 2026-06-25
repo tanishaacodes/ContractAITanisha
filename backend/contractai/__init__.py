@@ -1,0 +1,3 @@
+"""
+ContractAI Django Application
+"""

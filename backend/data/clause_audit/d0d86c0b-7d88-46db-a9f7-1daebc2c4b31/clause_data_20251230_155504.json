@@ -1,0 +1,27 @@
+{
+  "contract_id": "d0d86c0b-7d88-46db-a9f7-1daebc2c4b31",
+  "contract_name": "2.-ChyronHego-XXXX-MPA-Enterprise-Edition-MTx120719-WEBSITE-ONLINE.pdf",
+  "clusters": 3,
+  "cluster_names": {
+    "2": "Contract Agreement",
+    "0": "Payment Terms",
+    "1": "Force Majeure"
+  },
+  "clause_groups": {
+    "2": [
+      "Without limiting \nthe scope of the foregoing, each Rec eiving Party also agrees:  \n(a) to protect and safeguard the Confidential Information \nagainst unauthorized use, publication or disclosure; (b) not to \nreveal, report, publish, disclose, transfer, copy or  otherwise  \n\n--- Page 6 ---\n6 \n191207   \n  \nuse any Confidential Information except as specifically \nauthorized by the Disclosing Party; (c) not to use any \nConfidential Information for any purpose other than as stated above; (d) to restrict access to Confidential Information to those of its advisors, officer s, directors, employees, agents, \nconsultants, contractors and lobbyists who have a need to know, who have been advised of the confidential nature \nthereof, and who are under express written obligations of \nconfidentiality or under obligations of confidential ity imposed by \nlaw or rule; and (e) to exercise at least the same standard of care and security to protect the confidentiality of the \nConfidential Information receive",
+      "Indemnification  \n9. Indemnification by ChyronHego. Indemnification by Customer. With regard to any Claim subject to \nindemnification pursuant to this Section 9: (a) the Party \nseeking indemnification shall promptly notify the indemnifying \nParty upon becoming aware of the Claim; (b) the indemnifying \nParty shal l promptly assume sole defense and control of such \nClaim upon becoming aware thereof; and (c) the indemnified \nParty shall reasonably cooperate with the indemnifying Party \nregarding such Claim. With regard to any Claim subject to \nindemnification pursuant to this Section 9: (a) the Party \nseeking indemnification shall promptly notify the indemnifying \nParty upon becoming aware of the Claim; (b) the indemnifying \nParty shal l promptly assume sole defense and control of such \nClaim upon becoming aware thereof; and (c) the indemnified \nParty shall reasonably cooperate with the indemnifying Party \nregarding such Claim.",
+      "LIMITATION OF LIABILITY."
+    ],
+    "0": [
+      "For the avoidance of doubt, ChyronHego is and shall \nremain the sole owner of all ChyronHego Products and \nServices, including without limitation any intellectual property  \nrights therein , Software, source code, algorithms, processes, \ndata, know -how, improvements, plans, arrangements, \ndevelopments, etc. Any text, data, graphics, or any other \nmaterial displayed or published on Customer’s website must \nbe free from violation of or infringement of copyright, \ntrademark, ser vice mark, patent, trad e secret, statutory, \ncommon law or proprietary or intellectual property rights of others. Subject to the limited rights expressly granted hereunder, ChyronHego and/or its l icensors reserve all \nright, title and interest in the ChyronHego Products and Services, the Documentation and resulting product including all related intellectual property rights. 8  Rights in Intellectual Property . Confidential Information shall include: (i) ChyronHego Products and Services, including any intellectu",
+      "If this Agreement is terminated \nor expires prior to the termination or expiration of the term of an exhibit(s), the t erms and conditions of this Agreement shall \ncontinue to apply but only with respect to such exhibit(s). --- Page 3 ---\n3 \n191207   \n  \nIn the event that any Products sold to Customer \ncontain Embodied Software of ChyronHego, Customer’s \nlimited right to use such Embodied Property will terminate upon \ntermination of the Order Term. Customer agrees that any violation of this section constitutes just cause fo r the immediate termination by \nChyronHego of these Terms without any liability to \nChyronHego. The obligations of this Section shall survive the termination or expiration of this  Agreement. Term and  Termination  \n7. Effect of Termination. If the Parties agree to terminate \nthis Agreement and an Order or SOW is still in effect at the \ntime of termination, then the terms and conditions contained in this Agreement shall continue to govern the outstanding Order or SO",
+      "The \nChyronHego Pro ducts and Services, Deliverables, the \nSoftware Subscription fees, Maintenance fees, Product purchase fees, Product Subscription fees, Product lease fees, Services fees, Lease fees, Hardware fees, payment terms, and any special terms of this Agreement will be specified in one or more Orders signed by both Parties and any SOW entered into \nin connection with this Agreement. ChyronHego' s payment terms, \nconditioned on approved credit, are “net” 30 days from date of invoice unless otherwise stated in writing by ChyronHego in the applicable Order or SOW. ChyronHego specifically reserves the right to modify the payment terms provided herein \nif, in ChyronHego's opinion, the payment record or financial \ncondition on the Customer so warrants."
+    ],
+    "1": [
+      "Force Majeure."
+    ]
+  },
+  "total_clauses": 7,
+  "processing_timestamp": 1767090304.9396148
+}

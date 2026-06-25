@@ -1,0 +1,132 @@
+================================================================================
+CLAUSE LIBRARY - ORGANIZED BY CATEGORY
+Contract ID: d0d86c0b-7d88-46db-a9f7-1daebc2c4b31
+Generated: 2025-12-30T15:55:04.938922
+Categories: 3
+================================================================================
+
+TABLE OF CONTENTS:
+--------------------------------------------------------------------------------
+0. Payment Terms (3 clauses)
+1. Force Majeure (1 clauses)
+2. Contract Agreement (3 clauses)
+
+
+================================================================================
+CATEGORY 0: PAYMENT TERMS
+================================================================================
+Total Clauses: 3
+
+
+--------------------------------------------------------------------------------
+Payment Terms - Clause 1
+--------------------------------------------------------------------------------
+For the avoidance of doubt, ChyronHego is and shall 
+remain the sole owner of all ChyronHego Products and 
+Services, including without limitation any intellectual property  
+rights therein , Software, source code, algorithms, processes, 
+data, know -how, improvements, plans, arrangements, 
+developments, etc. Any text, data, graphics, or any other 
+material displayed or published on Customer’s website must 
+be free from violation of or infringement of copyright, 
+trademark, ser vice mark, patent, trad e secret, statutory, 
+common law or proprietary or intellectual property rights of others. Subject to the limited rights expressly granted hereunder, ChyronHego and/or its l icensors reserve all 
+right, title and interest in the ChyronHego Products and Services, the Documentation and resulting product including all related intellectual property rights. 8  Rights in Intellectual Property . Confidential Information shall include: (i) ChyronHego Products and Services, including any intellectu
+
+--------------------------------------------------------------------------------
+Payment Terms - Clause 2
+--------------------------------------------------------------------------------
+If this Agreement is terminated 
+or expires prior to the termination or expiration of the term of an exhibit(s), the t erms and conditions of this Agreement shall 
+continue to apply but only with respect to such exhibit(s). --- Page 3 ---
+3 
+191207   
+  
+In the event that any Products sold to Customer 
+contain Embodied Software of ChyronHego, Customer’s 
+limited right to use such Embodied Property will terminate upon 
+termination of the Order Term. Customer agrees that any violation of this section constitutes just cause fo r the immediate termination by 
+ChyronHego of these Terms without any liability to 
+ChyronHego. The obligations of this Section shall survive the termination or expiration of this  Agreement. Term and  Termination  
+7. Effect of Termination. If the Parties agree to terminate 
+this Agreement and an Order or SOW is still in effect at the 
+time of termination, then the terms and conditions contained in this Agreement shall continue to govern the outstanding Order or SO
+
+--------------------------------------------------------------------------------
+Payment Terms - Clause 3
+--------------------------------------------------------------------------------
+The 
+ChyronHego Pro ducts and Services, Deliverables, the 
+Software Subscription fees, Maintenance fees, Product purchase fees, Product Subscription fees, Product lease fees, Services fees, Lease fees, Hardware fees, payment terms, and any special terms of this Agreement will be specified in one or more Orders signed by both Parties and any SOW entered into 
+in connection with this Agreement. ChyronHego' s payment terms, 
+conditioned on approved credit, are “net” 30 days from date of invoice unless otherwise stated in writing by ChyronHego in the applicable Order or SOW. ChyronHego specifically reserves the right to modify the payment terms provided herein 
+if, in ChyronHego's opinion, the payment record or financial 
+condition on the Customer so warrants.
+
+================================================================================
+CATEGORY 1: FORCE MAJEURE
+================================================================================
+Total Clauses: 1
+
+
+--------------------------------------------------------------------------------
+Force Majeure - Clause 1
+--------------------------------------------------------------------------------
+Force Majeure.
+
+================================================================================
+CATEGORY 2: CONTRACT AGREEMENT
+================================================================================
+Total Clauses: 3
+
+
+--------------------------------------------------------------------------------
+Contract Agreement - Clause 1
+--------------------------------------------------------------------------------
+Without limiting 
+the scope of the foregoing, each Rec eiving Party also agrees:  
+(a) to protect and safeguard the Confidential Information 
+against unauthorized use, publication or disclosure; (b) not to 
+reveal, report, publish, disclose, transfer, copy or  otherwise  
+
+--- Page 6 ---
+6 
+191207   
+  
+use any Confidential Information except as specifically 
+authorized by the Disclosing Party; (c) not to use any 
+Confidential Information for any purpose other than as stated above; (d) to restrict access to Confidential Information to those of its advisors, officer s, directors, employees, agents, 
+consultants, contractors and lobbyists who have a need to know, who have been advised of the confidential nature 
+thereof, and who are under express written obligations of 
+confidentiality or under obligations of confidential ity imposed by 
+law or rule; and (e) to exercise at least the same standard of care and security to protect the confidentiality of the 
+Confidential Information receive
+
+--------------------------------------------------------------------------------
+Contract Agreement - Clause 2
+--------------------------------------------------------------------------------
+Indemnification  
+9. Indemnification by ChyronHego. Indemnification by Customer. With regard to any Claim subject to 
+indemnification pursuant to this Section 9: (a) the Party 
+seeking indemnification shall promptly notify the indemnifying 
+Party upon becoming aware of the Claim; (b) the indemnifying 
+Party shal l promptly assume sole defense and control of such 
+Claim upon becoming aware thereof; and (c) the indemnified 
+Party shall reasonably cooperate with the indemnifying Party 
+regarding such Claim. With regard to any Claim subject to 
+indemnification pursuant to this Section 9: (a) the Party 
+seeking indemnification shall promptly notify the indemnifying 
+Party upon becoming aware of the Claim; (b) the indemnifying 
+Party shal l promptly assume sole defense and control of such 
+Claim upon becoming aware thereof; and (c) the indemnified 
+Party shall reasonably cooperate with the indemnifying Party 
+regarding such Claim.
+
+--------------------------------------------------------------------------------
+Contract Agreement - Clause 3
+--------------------------------------------------------------------------------
+LIMITATION OF LIABILITY.
+
+================================================================================
+END OF CLAUSE LIBRARY
+================================================================================
